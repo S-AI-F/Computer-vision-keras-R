@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Neural Networks | Computer vision with R and keras</title>
+  <meta name="description" content="This book conains tutorials for deep learning applications in computer vision" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Neural Networks | Computer vision with R and keras" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book conains tutorials for deep learning applications in computer vision" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Neural Networks | Computer vision with R and keras" />
+  
+  <meta name="twitter:description" content="This book conains tutorials for deep learning applications in computer vision" />
+  
+
+<meta name="author" content="Saif Shabou" />
+
+
+<meta name="date" content="2020-04-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="foundamental-of-machine-learning.html"/>
+<link rel="next" href="deep-learning-for-computer-vision.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentation</a></li>
+<li class="chapter" data-level="2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Foundamental of machine learning</a><ul>
+<li class="chapter" data-level="2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#types"><i class="fa fa-check"></i><b>2.1</b> Types</a></li>
+<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-of-ml-models"><i class="fa fa-check"></i><b>2.2</b> Evaluation of ML models</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#training-validation-and-test-sets"><i class="fa fa-check"></i><b>2.2.1</b> Training, validation and test sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>2.3</b> Overfitting and underfitting</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>2.3.1</b> Reducing the network’s size</a></li>
+<li class="chapter" data-level="2.3.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-weight-regularization"><i class="fa fa-check"></i><b>2.3.2</b> Adding weight regularization</a></li>
+<li class="chapter" data-level="2.3.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-dropout"><i class="fa fa-check"></i><b>2.3.3</b> Adding dropout</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="neural-networks.html"><a href="neural-networks.html"><i class="fa fa-check"></i><b>3</b> Neural Networks</a><ul>
+<li class="chapter" data-level="3.1" data-path="neural-networks.html"><a href="neural-networks.html#structure-of-neural-network"><i class="fa fa-check"></i><b>3.1</b> Structure of neural network</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="neural-networks.html"><a href="neural-networks.html#tensors"><i class="fa fa-check"></i><b>3.1.1</b> Tensors</a></li>
+<li class="chapter" data-level="3.1.2" data-path="neural-networks.html"><a href="neural-networks.html#layers"><i class="fa fa-check"></i><b>3.1.2</b> Layers</a></li>
+<li class="chapter" data-level="3.1.3" data-path="neural-networks.html"><a href="neural-networks.html#activation-functions"><i class="fa fa-check"></i><b>3.1.3</b> Activation functions</a></li>
+<li class="chapter" data-level="3.1.4" data-path="neural-networks.html"><a href="neural-networks.html#loss-functions-and-optimizers"><i class="fa fa-check"></i><b>3.1.4</b> Loss functions and optimizers</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.2</b> Building a Neural Network from scratch</a></li>
+<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.3</b> Introduction to Keras</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.3.1</b> Installing keras</a></li>
+<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.3.2</b> building model with keras</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#classifying-movie-reviews-a-binary-classification-example"><i class="fa fa-check"></i><b>3.4</b> Classifying movie reviews: a binary classification example</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="neural-networks.html"><a href="neural-networks.html#the-imdb-dataset"><i class="fa fa-check"></i><b>3.4.1</b> The IMDB dataset</a></li>
+<li class="chapter" data-level="3.4.2" data-path="neural-networks.html"><a href="neural-networks.html#preparing-the-data"><i class="fa fa-check"></i><b>3.4.2</b> preparing the data</a></li>
+<li class="chapter" data-level="3.4.3" data-path="neural-networks.html"><a href="neural-networks.html#build-the-network"><i class="fa fa-check"></i><b>3.4.3</b> Build the network</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.5</b> The Kears Functional API</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#multi-input-models"><i class="fa fa-check"></i><b>3.5.1</b> Multi-input models</a></li>
+<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#multi-output-models"><i class="fa fa-check"></i><b>3.5.2</b> Multi-output models</a></li>
+<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#directed-acuclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.5.3</b> Directed acuclic graphs of layers</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.6</b> Monitoring deep learning models</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.6.1</b> Using callbacks</a></li>
+<li class="chapter" data-level="3.6.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.6.2</b> TensorBoard</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.7</b> Batch normalization</a></li>
+<li class="chapter" data-level="3.8" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.8</b> Hyperparameters optimization</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html"><i class="fa fa-check"></i><b>4</b> Deep learning for computer vision</a><ul>
+<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#loading-image-data"><i class="fa fa-check"></i><b>4.1</b> Loading image data</a></li>
+<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.2</b> Image classification with Keras</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.2.1</b> download and prepare the data</a></li>
+<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.2.2</b> Build the model</a></li>
+<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.2.3</b> Compile the model</a></li>
+<li class="chapter" data-level="4.2.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.2.4</b> Fit the model</a></li>
+<li class="chapter" data-level="4.2.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.2.5</b> Make predictions</a></li>
+<li class="chapter" data-level="4.2.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.2.6</b> Evaluate the model</a></li>
+<li class="chapter" data-level="4.2.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.2.7</b> Save the model</a></li>
+<li class="chapter" data-level="4.2.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.2.8</b> reload the model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.3</b> Introduction to COnvolution Neural Networks</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.3.1</b> Example</a></li>
+<li class="chapter" data-level="4.3.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.3.2</b> The convolution operation</a></li>
+<li class="chapter" data-level="4.3.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.3.3</b> The max-pooling operation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.4</b> Architectures of CNN</a></li>
+<li class="chapter" data-level="4.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#application-dog-vs-cats"><i class="fa fa-check"></i><b>4.5</b> Application Dog VS Cats</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#downloading-data"><i class="fa fa-check"></i><b>4.5.1</b> Downloading data</a></li>
+<li class="chapter" data-level="4.5.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#building-the-network"><i class="fa fa-check"></i><b>4.5.2</b> Building the network</a></li>
+<li class="chapter" data-level="4.5.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-preprocessing"><i class="fa fa-check"></i><b>4.5.3</b> Data preprocessing</a></li>
+<li class="chapter" data-level="4.5.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-augmentation"><i class="fa fa-check"></i><b>4.5.4</b> Data augmentation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-cifar10-dataset"><i class="fa fa-check"></i><b>4.6</b> CNN with CIFAR10 dataset</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-cifar10-dataset"><i class="fa fa-check"></i><b>4.6.1</b> Download and prepare the CIFAR10 dataset</a></li>
+<li class="chapter" data-level="4.6.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model-1"><i class="fa fa-check"></i><b>4.6.2</b> Build the model</a></li>
+<li class="chapter" data-level="4.6.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-and-train-the-model"><i class="fa fa-check"></i><b>4.6.3</b> Compile and train the model</a></li>
+<li class="chapter" data-level="4.6.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model-1"><i class="fa fa-check"></i><b>4.6.4</b> Evaluate the model</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-fruits-images"><i class="fa fa-check"></i><b>4.7</b> CNN with fruits images</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="transfer-learning.html"><a href="transfer-learning.html"><i class="fa fa-check"></i><b>5</b> Transfer learning</a><ul>
+<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#knowledge"><i class="fa fa-check"></i><b>5.1</b> Knowledge</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-transfer-learning"><i class="fa fa-check"></i><b>5.1.1</b> What is Transfer Learning</a></li>
+<li class="chapter" data-level="5.1.2" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-tensforflow-hub"><i class="fa fa-check"></i><b>5.1.2</b> What is TensforFlow Hub</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learning-with-tensforflow-hub"><i class="fa fa-check"></i><b>5.2</b> Transfer learning with TensforFlow Hub</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="transfer-learning.html"><a href="transfer-learning.html#imagenet-classifier"><i class="fa fa-check"></i><b>5.2.1</b> ImageNet classifier</a></li>
+<li class="chapter" data-level="5.2.2" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learning-1"><i class="fa fa-check"></i><b>5.2.2</b> Transfer learning</a></li>
+<li class="chapter" data-level="5.2.3" data-path="transfer-learning.html"><a href="transfer-learning.html#run-the-classifier-on-a-batch-of-images"><i class="fa fa-check"></i><b>5.2.3</b> Run the classifier on a batch of images</a></li>
+<li class="chapter" data-level="5.2.4" data-path="transfer-learning.html"><a href="transfer-learning.html#download-a-headless-model"><i class="fa fa-check"></i><b>5.2.4</b> Download a headless model</a></li>
+<li class="chapter" data-level="5.2.5" data-path="transfer-learning.html"><a href="transfer-learning.html#attach-a-classification-head"><i class="fa fa-check"></i><b>5.2.5</b> Attach a classification head</a></li>
+<li class="chapter" data-level="5.2.6" data-path="transfer-learning.html"><a href="transfer-learning.html#train-the-model"><i class="fa fa-check"></i><b>5.2.6</b> Train the model</a></li>
+<li class="chapter" data-level="5.2.7" data-path="transfer-learning.html"><a href="transfer-learning.html#export-the-model"><i class="fa fa-check"></i><b>5.2.7</b> Export the model</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learningusing-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learningusing a pretrained CONVNET</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="transfer-learning.html"><a href="transfer-learning.html#feature-extraction"><i class="fa fa-check"></i><b>5.3.1</b> feature extraction</a></li>
+<li class="chapter" data-level="5.3.2" data-path="transfer-learning.html"><a href="transfer-learning.html#fine-tuning"><i class="fa fa-check"></i><b>5.3.2</b> Fine-tuning</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a><ul>
+<li class="chapter" data-level="6.1" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-intermediate-activations"><i class="fa fa-check"></i><b>6.1</b> Visualizing intermediate activations</a></li>
+<li class="chapter" data-level="6.2" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-convnet-filters"><i class="fa fa-check"></i><b>6.2</b> Visualizing convnet filters</a></li>
+<li class="chapter" data-level="6.3" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-heatmaps-of-class-activation"><i class="fa fa-check"></i><b>6.3</b> Visualizing heatmaps of class activation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Computer vision with R and keras</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="neural-networks" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Neural Networks</h1>
+<div id="structure-of-neural-network" class="section level2">
+<h2><span class="header-section-number">3.1</span> Structure of neural network</h2>
+<p>Training a neural network concerns these objects: layers, input data and corresponding targets, loss function and optimizer.
+The network is composed of layers stacked together, maps the input data to predictions. The loss function is used to compare the predictions to the targes and generats a <em>loss value</em> (difference between perdicted and expected values or classes). Then, an <em>optimizer</em> is used used to minimize the loss value by updating the network’s weights.</p>
+<div class="figure">
+<img src="images/03fig01.jpg" alt="Neural network structure (source:https://livebook.manning.com/book/deep-learning-with-r/chapter-3/19)" />
+<p class="caption">Neural network structure (source:<a href="https://livebook.manning.com/book/deep-learning-with-r/chapter-3/19" class="uri">https://livebook.manning.com/book/deep-learning-with-r/chapter-3/19</a>)</p>
+</div>
+<div id="tensors" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Tensors</h3>
+<div id="dimensions" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Dimensions</h4>
+<p>The fundamental data structure manipulated by neural networks is <em>Tensors</em>. Tensors are a generalization of vectors and matrices to an arbitrary number of dimensions (called <em>axis</em>).</p>
+<ul>
+<li><em>scalars (0D tensors)</em>: A tensor with only one number is called <em>scalar</em></li>
+<li><em>Vectors (1D tensors)</em>: A tensor with one dimension is called <em>vector</em>.</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">x =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">str</span>(x)</a></code></pre></div>
+<pre><code>##  num [1:3] 1 2 3</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">dim</span>(<span class="kw">as.array</span>(x))</a></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>This vector has 3 possible values, so it is <em>three-dimensional</em> vector. This 3D vector has only one axis and 3 dimensions along its axis. In opposition to 3D tensor that has 3 axis, with any number of dimensions in each axis. <em>Dimensionality</em> can represent either the number of entries along a specific axis or the number of axes in a tensor.</p>
+<ul>
+<li><em>Matrices (2D tensors)</em>: A tensor with two axes (rows and columns).</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">3</span><span class="op">*</span><span class="dv">5</span>), <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb9-2" title="2">x</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    0    0    0    0    0
+## [2,]    0    0    0    0    0
+## [3,]    0    0    0    0    0</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">dim</span>(x)</a></code></pre></div>
+<pre><code>## [1] 3 5</code></pre>
+<ul>
+<li><em>3D and higher dimensions tensors</em>: We can obtain a 2D tensor by packing matrices in a new array. The obtained object can be represented visually as a cube. By packing the 3D tensors in an array we obtain a 4D tensor and so on.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">x &lt;-<span class="st"> </span><span class="kw">array</span>(<span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span><span class="dv">3</span><span class="op">*</span><span class="dv">2</span>), <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="kw">str</span>(x)</a></code></pre></div>
+<pre><code>##  num [1:2, 1:3, 1:2] 0 0 0 0 0 0 0 0 0 0 ...</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">dim</span>(x)</a></code></pre></div>
+<pre><code>## [1] 2 3 2</code></pre>
+</div>
+<div id="properties" class="section level4">
+<h4><span class="header-section-number">3.1.1.2</span> Properties</h4>
+<p>A tensor is defined by three main prperties:</p>
+<ul>
+<li><em>Number of axis</em>: For example, a 3D tensor has 3 axis</li>
+<li><em>Shape</em>: It is an integer vector that denotes the number of dimensions the tensor has along each axis. For example, a matriw with 3 rows and 5 columns is a tensor with the shape <code>(3,5)</code>.</li>
+<li><em>Data type</em>: The type o data stored in the tensor: integer, double, character…</li>
+</ul>
+<p>Let’s present an example with the <code>mnist</code> dataset</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb17-2" title="2">mnist &lt;-<span class="st"> </span><span class="kw">dataset_mnist</span>()</a>
+<a class="sourceLine" id="cb17-3" title="3">train_images &lt;-<span class="st"> </span>mnist<span class="op">$</span>train<span class="op">$</span>x</a></code></pre></div>
+<p>Now we display the properties the tensor <code>train_images</code></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co"># number of axis</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="kw">length</span>(<span class="kw">dim</span>(train_images))</a></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="co"># shape</span></a>
+<a class="sourceLine" id="cb20-2" title="2"><span class="kw">dim</span>(train_images)</a></code></pre></div>
+<pre><code>## [1] 60000    28    28</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="co"># data type</span></a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="kw">typeof</span>(train_images)</a></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p>So we have a 3D tensor of integer. It is an array of 60,000 matrices of 28x28 integers. Let’s plot one matrix</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1">digit &lt;-<span class="st"> </span>train_images[<span class="dv">1</span>,,]</a>
+<a class="sourceLine" id="cb24-2" title="2"><span class="kw">plot</span>(<span class="kw">as.raster</span>(digit, <span class="dt">max =</span> <span class="dv">255</span>))</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="data-batches" class="section level4">
+<h4><span class="header-section-number">3.1.1.3</span> Data batches</h4>
+<p>In deep-learning models we don’t process the whole dataset at once, but we break it into small batches. It consists of slicing the samples dimension. For example we will take a batch of MNIST digits of size 128:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">batch &lt;-<span class="st"> </span>train_images[<span class="dv">1</span><span class="op">:</span><span class="dv">128</span>,,]</a></code></pre></div>
+</div>
+<div id="examples-of-data-tensors" class="section level4">
+<h4><span class="header-section-number">3.1.1.4</span> Examples of data tensors</h4>
+<ul>
+<li><em>Vector data</em> They are 2D tensors of shape <code>(samples, features)</code></li>
+<li><em>Timeseries and sequence data</em> They are 3D tensors of shape <code>(samples, timesteps, features)</code></li>
+<li><em>Image data</em> They are 4D tensors of shape <code>(samples, height, width, channels)</code></li>
+<li><em>Video data</em> They are 5D tensors of shape <code>(samples,frames, channels, height, width)</code></li>
+</ul>
+</div>
+<div id="tensors-operations" class="section level4">
+<h4><span class="header-section-number">3.1.1.5</span> Tensors operations</h4>
+<p><a href="https://livebook.manning.com/book/deep-learning-with-r/chapter-2/244" class="uri">https://livebook.manning.com/book/deep-learning-with-r/chapter-2/244</a></p>
+</div>
+</div>
+<div id="layers" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Layers</h3>
+<p>The layers cnsists on data-processing modules that take as input one or more tensors and generates as outputs one or more tensors. The layers conrain the <em>learned weights</em> taht represent the network’s knowledge.
+The layers’ types depend on the data types used as input:</p>
+<ul>
+<li><em>Densly connecte (fully connected)</em> layers: they are used for <code>vector</code> data taht are stored in 2D tensors of shape <code>(samples, features)</code></li>
+<li><em>Recurrent</em> layers: they are used for <code>sequence</code> data that are stred in 3D tensors of shape <code>samples, timsteps, features</code></li>
+<li><em>Convolution</em> layers: they are used for <code>ìmage</code> data, taht are stored in 4D tensors</li>
+</ul>
+<p>Building deep-learning model in Keras is done by stacking compatible layers together. To respect layer compatibilty, every layer only accept input tensors with a specific shape.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">layer =<span class="st"> </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">784</span>))</a></code></pre></div>
+<p>In this example, we are creating a layer that only accept as input 2D tensors where the first dimension is 784. This layer will return a tensor where the first dimension has been transformed to be 32. Then, this layer can only be connected to a layer taht expects as 32-dimensional vector as input. In keras, the layers we add to our models are automatically built to match the shape of the incoming mayer.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-2" title="2"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">784</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>)</a></code></pre></div>
+<p>SO here we didn’t specify the input shape of the second layer. It was automatically inferred based on the shape of the previous layer (32).</p>
+</div>
+<div id="activation-functions" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Activation functions</h3>
+<ul>
+<li>Rectified linear unit (ReLU)</li>
+<li>Sigmoid</li>
+<li>Softmax</li>
+</ul>
+</div>
+<div id="loss-functions-and-optimizers" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Loss functions and optimizers</h3>
+<p>Once the network layers architectue is defined, we have specify two elements:</p>
+<ul>
+<li><em>loss function</em>: It represents the quantity that we want to minimize during the training phase.</li>
+<li><em>Optimizer</em>: It represnts the method used by the network to update the weight based on loss function. It consists on implementing a specific variant of stochastic graient descent optimization.</li>
+</ul>
+<p>We can have a network with multiple loss funtions (when the network ghave multiple outpus). Since the gradient-descent process need to be based on a sigle loss value, all loasses values have to be combined i a single measure (by averaging for example).</p>
+<p>It is important to select the appropriate loss function depending in the learning problem. There are some guidlines we can follow for common situations:</p>
+<ul>
+<li>We use <em>binary crossentropy</em> for a Two-class classification problem</li>
+<li>We use <em>categorical crossentropy</em> for a Two-class classification problem</li>
+<li>we use the <em>mean-squared error</em> for a regression problem</li>
+</ul>
+</div>
+</div>
+<div id="building-a-neural-network-from-scratch" class="section level2">
+<h2><span class="header-section-number">3.2</span> Building a Neural Network from scratch</h2>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># input matrix</span></a>
+<a class="sourceLine" id="cb28-2" title="2">X=<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>,<span class="dt">byrow =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb28-3" title="3">X</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    0    1    0
+## [2,]    1    0    1    1
+## [3,]    0    1    0    1</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="co"># output matrix</span></a>
+<a class="sourceLine" id="cb30-2" title="2">Y=<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),<span class="dt">byrow=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb30-3" title="3">Y</a></code></pre></div>
+<pre><code>##      [,1]
+## [1,]    1
+## [2,]    1
+## [3,]    0</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co">#sigmoid function</span></a>
+<a class="sourceLine" id="cb32-2" title="2">sigmoid&lt;-<span class="cf">function</span>(x){</a>
+<a class="sourceLine" id="cb32-3" title="3">  <span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span><span class="kw">exp</span>(<span class="op">-</span>x))</a>
+<a class="sourceLine" id="cb32-4" title="4">}</a>
+<a class="sourceLine" id="cb32-5" title="5"></a>
+<a class="sourceLine" id="cb32-6" title="6"><span class="co"># derivative of sigmoid function</span></a>
+<a class="sourceLine" id="cb32-7" title="7">derivatives_sigmoid&lt;-<span class="cf">function</span>(x){</a>
+<a class="sourceLine" id="cb32-8" title="8">  x<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x)</a>
+<a class="sourceLine" id="cb32-9" title="9">}</a>
+<a class="sourceLine" id="cb32-10" title="10"></a>
+<a class="sourceLine" id="cb32-11" title="11"><span class="co"># variable initialization</span></a>
+<a class="sourceLine" id="cb32-12" title="12">epoch=<span class="dv">1000</span></a>
+<a class="sourceLine" id="cb32-13" title="13">lr=<span class="fl">0.1</span></a>
+<a class="sourceLine" id="cb32-14" title="14">inputlayer_neurons=<span class="kw">ncol</span>(X)</a>
+<a class="sourceLine" id="cb32-15" title="15">hiddenlayer_neurons=<span class="dv">3</span></a>
+<a class="sourceLine" id="cb32-16" title="16">output_neurons=<span class="dv">1</span></a>
+<a class="sourceLine" id="cb32-17" title="17"></a>
+<a class="sourceLine" id="cb32-18" title="18"><span class="co">#weight and bias initialization</span></a>
+<a class="sourceLine" id="cb32-19" title="19">wh=<span class="kw">matrix</span>( <span class="kw">rnorm</span>(inputlayer_neurons<span class="op">*</span>hiddenlayer_neurons,<span class="dt">mean=</span><span class="dv">0</span>,<span class="dt">sd=</span><span class="dv">1</span>), inputlayer_neurons, hiddenlayer_neurons)</a>
+<a class="sourceLine" id="cb32-20" title="20">bias_in=<span class="kw">runif</span>(hiddenlayer_neurons)</a>
+<a class="sourceLine" id="cb32-21" title="21">bias_in_temp=<span class="kw">rep</span>(bias_in, <span class="kw">nrow</span>(X))</a>
+<a class="sourceLine" id="cb32-22" title="22">bh=<span class="kw">matrix</span>(bias_in_temp, <span class="dt">nrow =</span> <span class="kw">nrow</span>(X), <span class="dt">byrow =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb32-23" title="23">wout=<span class="kw">matrix</span>( <span class="kw">rnorm</span>(hiddenlayer_neurons<span class="op">*</span>output_neurons,<span class="dt">mean=</span><span class="dv">0</span>,<span class="dt">sd=</span><span class="dv">1</span>), hiddenlayer_neurons, output_neurons)</a>
+<a class="sourceLine" id="cb32-24" title="24"></a>
+<a class="sourceLine" id="cb32-25" title="25">bias_out=<span class="kw">runif</span>(output_neurons)</a>
+<a class="sourceLine" id="cb32-26" title="26">bias_out_temp=<span class="kw">rep</span>(bias_out,<span class="kw">nrow</span>(X))</a>
+<a class="sourceLine" id="cb32-27" title="27">bout=<span class="kw">matrix</span>(bias_out_temp,<span class="dt">nrow =</span> <span class="kw">nrow</span>(X),<span class="dt">byrow =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb32-28" title="28"><span class="co"># forward propagation</span></a>
+<a class="sourceLine" id="cb32-29" title="29"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>epoch){</a>
+<a class="sourceLine" id="cb32-30" title="30">  </a>
+<a class="sourceLine" id="cb32-31" title="31">  hidden_layer_input1=<span class="st"> </span>X<span class="op">%*%</span>wh</a>
+<a class="sourceLine" id="cb32-32" title="32">  hidden_layer_input=hidden_layer_input1<span class="op">+</span>bh</a>
+<a class="sourceLine" id="cb32-33" title="33">  hidden_layer_activations=<span class="kw">sigmoid</span>(hidden_layer_input)</a>
+<a class="sourceLine" id="cb32-34" title="34">  output_layer_input1=hidden_layer_activations<span class="op">%*%</span>wout</a>
+<a class="sourceLine" id="cb32-35" title="35">  output_layer_input=output_layer_input1<span class="op">+</span>bout</a>
+<a class="sourceLine" id="cb32-36" title="36">  output=<span class="st"> </span><span class="kw">sigmoid</span>(output_layer_input)</a>
+<a class="sourceLine" id="cb32-37" title="37">  </a>
+<a class="sourceLine" id="cb32-38" title="38">  <span class="co"># Back Propagation</span></a>
+<a class="sourceLine" id="cb32-39" title="39">  </a>
+<a class="sourceLine" id="cb32-40" title="40">  E=Y<span class="op">-</span>output</a>
+<a class="sourceLine" id="cb32-41" title="41">  slope_output_layer=<span class="kw">derivatives_sigmoid</span>(output)</a>
+<a class="sourceLine" id="cb32-42" title="42">  slope_hidden_layer=<span class="kw">derivatives_sigmoid</span>(hidden_layer_activations)</a>
+<a class="sourceLine" id="cb32-43" title="43">  d_output=E<span class="op">*</span>slope_output_layer</a>
+<a class="sourceLine" id="cb32-44" title="44">  Error_at_hidden_layer=d_output<span class="op">%*%</span><span class="kw">t</span>(wout)</a>
+<a class="sourceLine" id="cb32-45" title="45">  d_hiddenlayer=Error_at_hidden_layer<span class="op">*</span>slope_hidden_layer</a>
+<a class="sourceLine" id="cb32-46" title="46">  wout=<span class="st"> </span>wout <span class="op">+</span><span class="st"> </span>(<span class="kw">t</span>(hidden_layer_activations)<span class="op">%*%</span>d_output)<span class="op">*</span>lr</a>
+<a class="sourceLine" id="cb32-47" title="47">  bout=<span class="st"> </span>bout<span class="op">+</span><span class="kw">rowSums</span>(d_output)<span class="op">*</span>lr</a>
+<a class="sourceLine" id="cb32-48" title="48">  wh =<span class="st"> </span>wh <span class="op">+</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>d_hiddenlayer)<span class="op">*</span>lr</a>
+<a class="sourceLine" id="cb32-49" title="49">  bh =<span class="st"> </span>bh <span class="op">+</span><span class="st"> </span><span class="kw">rowSums</span>(d_hiddenlayer)<span class="op">*</span>lr</a>
+<a class="sourceLine" id="cb32-50" title="50">  </a>
+<a class="sourceLine" id="cb32-51" title="51">}</a>
+<a class="sourceLine" id="cb32-52" title="52">output</a></code></pre></div>
+<pre><code>##            [,1]
+## [1,] 0.93909289
+## [2,] 0.94014690
+## [3,] 0.07354235</code></pre>
+</div>
+<div id="introduction-to-keras" class="section level2">
+<h2><span class="header-section-number">3.3</span> Introduction to Keras</h2>
+<p>Keras is library for developing deep learning models. It dosen’t handle low-level operations such as tensor manipulation. But it relies on specialized tensor libraries as backend engine such as TensorFlown Theano and Mirosoft Cognitive Toolkit (CNTK).
+Via TensorFlow, Keras is able to run on both CPUs and GPUs. When running on CPU, TensorFlow is itself wrapping a low-lvel library for tensor operations called Eigen. On GPU, TensorFlow wraps a library called NIVIDIA CUDA Neural Network library (cuDNN).</p>
+<div id="installing-keras" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Installing keras</h3>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="co"># Installing keras package</span></a>
+<a class="sourceLine" id="cb34-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;keras&quot;</span>)</a>
+<a class="sourceLine" id="cb34-3" title="3"><span class="co"># Install the core keras library and TensorFlow</span></a>
+<a class="sourceLine" id="cb34-4" title="4"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb34-5" title="5"><span class="kw">install_keras</span>()</a></code></pre></div>
+<p>This installation provide us with a default CPU-based installation of keras and TensoFlow.
+If we wan to train our models on a GPU and we have properly configured CUDA and cuDNN libraries, we can install the GPU-based version of TensroFlow backend engine as follows:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1"><span class="kw">install_keras</span>(<span class="dt">tensorflow =</span> <span class="st">&quot;gpu&quot;</span>)</a></code></pre></div>
+</div>
+<div id="building-model-with-keras" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> building model with keras</h3>
+<p>Here is a typical keras workflow:</p>
+<ol style="list-style-type: decimal">
+<li>Define training data: iput tensors and target tensors</li>
+<li>Define a network of layers that maps the inputs to the targets</li>
+</ol>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">784</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb36-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Specify the learning process by defining a losss function, an optimizer, and some metrics to monitor</li>
+</ol>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb37-2" title="2">  <span class="dt">optimizer =</span> <span class="kw">optimizer_rmsprop</span>(<span class="dt">lr =</span> <span class="fl">0.0001</span>),</a>
+<a class="sourceLine" id="cb37-3" title="3">  <span class="dt">loss =</span> <span class="st">&quot;mse&quot;</span>,</a>
+<a class="sourceLine" id="cb37-4" title="4">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;accuracy&quot;</span>)</a>
+<a class="sourceLine" id="cb37-5" title="5">)</a></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Iterate on the training data using the <code>fit()</code> method of our model</li>
+</ol>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">fit</span>(<span class="dt">batch_size =</span> <span class="dv">128</span>, <span class="dt">epochs =</span> <span class="dv">10</span>)</a></code></pre></div>
+</div>
+</div>
+<div id="classifying-movie-reviews-a-binary-classification-example" class="section level2">
+<h2><span class="header-section-number">3.4</span> Classifying movie reviews: a binary classification example</h2>
+<div id="the-imdb-dataset" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> The IMDB dataset</h3>
+<p>The IMDB dataset contains a set of 50,000 reviews from the Internet Movie Databse. They are split into 25,000 reiews for training and 25,000 reviews for testing. each set contains 50% negative and 50% positive reviews.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb39-2" title="2">imdb =<span class="st"> </span><span class="kw">dataset_imdb</span>(<span class="dt">num_words =</span> <span class="dv">10000</span>)</a></code></pre></div>
+<p>The arguent <code>num_words = 10000</code> is used to keep only the top 10,000 most frequetly occuring words in the training data. I helps for reducing the size of vector data.</p>
+<p>The imdb dataset is a nested lists of traingin and test data.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1">train_data =<span class="st"> </span>imdb<span class="op">$</span>train<span class="op">$</span>x</a>
+<a class="sourceLine" id="cb40-2" title="2">train_labels =<span class="st"> </span>imdb<span class="op">$</span>train<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb40-3" title="3">test_data =<span class="st"> </span>imdb<span class="op">$</span>test<span class="op">$</span>x</a>
+<a class="sourceLine" id="cb40-4" title="4">test_labels =<span class="st"> </span>imdb<span class="op">$</span>test<span class="op">$</span>y</a></code></pre></div>
+<p>we can extract the train and test datasets using hte multi-assignement operator <code>%&lt;-%</code>.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1"><span class="kw">c</span>(<span class="kw">c</span>(train_data, train_labels), <span class="kw">c</span>(test_data, test_labels)) <span class="op">%&lt;-%</span><span class="st"> </span>imdb</a></code></pre></div>
+<ul>
+<li><code>train_data</code> and <code>test_data</code> are lists of reviews. Each review is a list of word indices (encoding a sequence of words.</li>
+<li><code>train_labels</code> and <code>test_labels</code> are lists of 0 (negative review) ad 1 (positive reviews).</li>
+</ul>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="kw">str</span>(train_data[[<span class="dv">1</span>]])</a>
+<a class="sourceLine" id="cb42-2" title="2">train_labels[[<span class="dv">1</span>]]</a></code></pre></div>
+</div>
+<div id="preparing-the-data" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> preparing the data</h3>
+<p>We can’t feed lists of integers into a neural network. We have to transform them into tensors.
+We can one-hot encode our lists to tranform them into vectors of 0s and 1s. For example, we can transform the sequence [3,5] into a 10,000 dimensional vector with 0 everywhere except for indices 3 and 5 that contain 1s.</p>
+<p>Let’s make a function to vectorize our data</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1">vectorize_sequences =<span class="st"> </span><span class="cf">function</span>(sequences, <span class="dt">dimension =</span> <span class="dv">10000</span>){</a>
+<a class="sourceLine" id="cb43-2" title="2">  <span class="co"># create an all-zero matrix </span></a>
+<a class="sourceLine" id="cb43-3" title="3">  results =<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">nrow =</span> <span class="kw">length</span>(sequences), <span class="dt">ncol =</span> dimension)</a>
+<a class="sourceLine" id="cb43-4" title="4">  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(sequences))</a>
+<a class="sourceLine" id="cb43-5" title="5">    results[i, sequences[[i]]] =<span class="st"> </span><span class="dv">1</span> <span class="co"># sets specific indices of results[i] to 1s</span></a>
+<a class="sourceLine" id="cb43-6" title="6">  results</a>
+<a class="sourceLine" id="cb43-7" title="7">}</a>
+<a class="sourceLine" id="cb43-8" title="8"></a>
+<a class="sourceLine" id="cb43-9" title="9">x_train =<span class="st"> </span><span class="kw">vectorize_sequences</span>(train_data)</a>
+<a class="sourceLine" id="cb43-10" title="10">x_test =<span class="st"> </span><span class="kw">vectorize_sequences</span>(test_data)</a>
+<a class="sourceLine" id="cb43-11" title="11"></a>
+<a class="sourceLine" id="cb43-12" title="12"><span class="co"># show a sample</span></a>
+<a class="sourceLine" id="cb43-13" title="13"><span class="kw">str</span>(x_train[<span class="dv">1</span>, ])</a></code></pre></div>
+<p>We have to convert our labels from integer to numeric</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1">y_train =<span class="st"> </span><span class="kw">as.numeric</span>(train_labels)</a>
+<a class="sourceLine" id="cb44-2" title="2">y_test =<span class="st"> </span><span class="kw">as.numeric</span>(test_labels)</a></code></pre></div>
+</div>
+<div id="build-the-network" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Build the network</h3>
+<p>Since the input data have vector types and the labels are scalars (1 or 0), we can use fully connected (dense) layers with <code>relu</code> activations: <code>layer_dense(units=16, activation = "relu"</code></p>
+</div>
+</div>
+<div id="the-kears-functional-api" class="section level2">
+<h2><span class="header-section-number">3.5</span> The Kears Functional API</h2>
+<p>The common configuration of keras models is based on sequential layer stacking <code>keras_model_sequential</code>. However, in some applications we may need to develop models with multiple inputs, multiple outputs and more complex interactions between layers. These make these model look lik <em>graphs</em>.
+Example of multi-inputs: let’s imagine we are facing to a learning problem based on text ad image data (for example predicting item prices based on text description and pictures). We can propose two seperate models and average the prediction outputs at the end. Another way consists on jointly learn a more accurate model based on both text and image inputs.
+Example of multi-outpus: let’s imagine we have some text corpus and we want to predict both the type (romance vs thriller classification) and the date when it was written. We can train two sperate models: a classifier for text types and a regressor for date prediction. But since these properties may be dependents and correlated, it would be more accurate to build a odel that jointly learn to predict types and date.
+Example of complex architectures: Many recent networks architecture require complex connexions between layers or group of layers: The <em>Inception</em> family of CNN process several parallel convolutional branches whose outputs are merged back into a single tensor, the <em>ResNet</em> family add <em>residual connections</em> that consists of reinjecting past output tensor to later output tensor in order to prevent inofmation loss along the data processing flow.</p>
+<div class="figure">
+<img src="images/inception-module.png" alt="Inception module (source: https://www.oreilly.com/library/view/hands-on-convolutional-neural/9781789130331/41617ecf-cd1e-467c-93d9-ecf265979317.xhtml)" />
+<p class="caption">Inception module (source: <a href="https://www.oreilly.com/library/view/hands-on-convolutional-neural/9781789130331/41617ecf-cd1e-467c-93d9-ecf265979317.xhtml" class="uri">https://www.oreilly.com/library/view/hands-on-convolutional-neural/9781789130331/41617ecf-cd1e-467c-93d9-ecf265979317.xhtml</a>)</p>
+</div>
+<div class="figure">
+<img src="images/residual-connection.png" alt="Residual connections (source: https://towardsdatascience.com/introduction-to-resnets-c0a830a288a4)" />
+<p class="caption">Residual connections (source: <a href="https://towardsdatascience.com/introduction-to-resnets-c0a830a288a4" class="uri">https://towardsdatascience.com/introduction-to-resnets-c0a830a288a4</a>)</p>
+</div>
+<p>Here is how to define an equivalent to sequential model but using the functional API in a graph like model.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1"><span class="co"># sequential model</span></a>
+<a class="sourceLine" id="cb45-2" title="2">seq_model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb45-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">72</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> (<span class="dv">64</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb45-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb45-5" title="5"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
+<a class="sourceLine" id="cb45-6" title="6"><span class="co"># equivalent functional model</span></a>
+<a class="sourceLine" id="cb45-7" title="7">input_tensor =<span class="st"> </span><span class="kw">layer_input</span>(<span class="dt">shape =</span> <span class="kw">c</span>(<span class="dv">64</span>))</a>
+<a class="sourceLine" id="cb45-8" title="8">output_tensor =<span class="st"> </span>input_tensor <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb45-9" title="9"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb45-10" title="10"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb45-11" title="11"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
+<a class="sourceLine" id="cb45-12" title="12">model =<span class="st"> </span><span class="kw">keras_model</span>(input_tensor,output_tensor)</a>
+<a class="sourceLine" id="cb45-13" title="13">model</a></code></pre></div>
+<div id="multi-input-models" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Multi-input models</h3>
+</div>
+<div id="multi-output-models" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Multi-output models</h3>
+</div>
+<div id="directed-acuclic-graphs-of-layers" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Directed acuclic graphs of layers</h3>
+<p>With the functional API, we can build models with complex architecture. Keras provides the possibility of modeling layers as <em>direcetd acyclic graphs</em>. It can be used for building models with <em>inception</em> like topology</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1">branch_a =<span class="st"> </span>input <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">strides =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb46-2" title="2"></a>
+<a class="sourceLine" id="cb46-3" title="3">branch_b =<span class="st"> </span>input <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-4" title="4"><span class="st">  </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-5" title="5"><span class="st">  </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">3</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">strides =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb46-6" title="6"></a>
+<a class="sourceLine" id="cb46-7" title="7">branch_c =<span class="st"> </span>input <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-8" title="8"><span class="st">  </span><span class="kw">layer_average_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="dv">3</span>, <span class="dt">strides =</span> <span class="dv">2</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-9" title="9"><span class="st">  </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">3</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>)</a>
+<a class="sourceLine" id="cb46-10" title="10"></a>
+<a class="sourceLine" id="cb46-11" title="11">branch_d =<span class="st"> </span>input <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-12" title="12"><span class="st">  </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-13" title="13"><span class="st">  </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">3</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-14" title="14"><span class="st">  </span><span class="kw">layer_conv2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="dv">3</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">strides =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb46-15" title="15"></a>
+<a class="sourceLine" id="cb46-16" title="16">output =<span class="st"> </span><span class="kw">layer_concatenate</span>(<span class="kw">list</span>(branch_a, branch_b, branch_c, branch_d))</a></code></pre></div>
+</div>
+</div>
+<div id="monitoring-deep-learning-models" class="section level2">
+<h2><span class="header-section-number">3.6</span> Monitoring deep learning models</h2>
+<div id="using-callbacks" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Using callbacks</h3>
+<p>A <em>callback</em> is an object integrated to the model in the <code>fit</code> operation and is caled at different points durinf training phase. The <code>callback</code> object has access toall information about the state of the model and its performance. It can also act during the training for:</p>
+<ul>
+<li>Model checkpointing: saving the current weights of the mode at different points during the training</li>
+<li>Early stopping: Interrupting training when the validation loss is no longer improving and saving the best model obtained during training</li>
+<li>Dynamically adjusting the value of certain parameters during training such as the learning rate and the optimizer</li>
+<li>Logging training and validation metrics</li>
+</ul>
+<p>Keras provides some built-in callbacks:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1"><span class="kw">callback_model_checkpoint</span>()</a>
+<a class="sourceLine" id="cb47-2" title="2"><span class="kw">callback_early_stopping</span>()</a>
+<a class="sourceLine" id="cb47-3" title="3"><span class="kw">callback_learning_rate_scheduler</span>()</a>
+<a class="sourceLine" id="cb47-4" title="4"><span class="kw">callback_reduce_lr_on_plateau</span>()</a>
+<a class="sourceLine" id="cb47-5" title="5"><span class="kw">callback_csv_logger</span>()</a></code></pre></div>
+<p>We can use <code>callback_early_stopping</code> to interrupt training once a target monitored metric gas stopped improving during some epochs. This type of callback can be used to stop training when the model starts overfitting. This callback is used in simultaneously with <code>callback_model_checkpoint</code> that enables saving continually the model during the training phase. We can also choose to save the optimal version of the model: the version that ends with best performance at the end of an epoch.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1">callbacks_list =<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb48-2" title="2">  <span class="co"># stop training when no improvement</span></a>
+<a class="sourceLine" id="cb48-3" title="3">  <span class="kw">callback_early_stopping</span>(</a>
+<a class="sourceLine" id="cb48-4" title="4">    <span class="co"># monitor accuracy metric</span></a>
+<a class="sourceLine" id="cb48-5" title="5">    <span class="dt">monitor =</span> <span class="st">&quot;acc&quot;</span>,</a>
+<a class="sourceLine" id="cb48-6" title="6">    <span class="co"># Stop training when accuracy has stopped improving for more than one epoch</span></a>
+<a class="sourceLine" id="cb48-7" title="7">    <span class="dt">patience =</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb48-8" title="8">  ),</a>
+<a class="sourceLine" id="cb48-9" title="9">  <span class="co"># saving the current weights after every epoch</span></a>
+<a class="sourceLine" id="cb48-10" title="10">  <span class="kw">callback_model_checkpoint</span>(</a>
+<a class="sourceLine" id="cb48-11" title="11">    <span class="dt">filepath =</span> <span class="st">&quot;my_model.h5&quot;</span>,</a>
+<a class="sourceLine" id="cb48-12" title="12">    <span class="co"># we avoide overwriting the model file unless val_loss has improved. We keen the best model seen during training.</span></a>
+<a class="sourceLine" id="cb48-13" title="13">    <span class="dt">monitor =</span> <span class="st">&quot;val_loss&quot;</span>,</a>
+<a class="sourceLine" id="cb48-14" title="14">    <span class="dt">save_best_only =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb48-15" title="15">  )</a>
+<a class="sourceLine" id="cb48-16" title="16">)</a>
+<a class="sourceLine" id="cb48-17" title="17"></a>
+<a class="sourceLine" id="cb48-18" title="18">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb48-19" title="19">  <span class="dt">optimizer =</span> <span class="st">&quot;rmsprop&quot;</span>,</a>
+<a class="sourceLine" id="cb48-20" title="20">  <span class="dt">loss =</span> <span class="st">&quot;binary_crossentropy&quot;</span>,</a>
+<a class="sourceLine" id="cb48-21" title="21">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;acc&quot;</span>)</a>
+<a class="sourceLine" id="cb48-22" title="22">)</a>
+<a class="sourceLine" id="cb48-23" title="23"></a>
+<a class="sourceLine" id="cb48-24" title="24">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit</span>(</a>
+<a class="sourceLine" id="cb48-25" title="25">  x, y,</a>
+<a class="sourceLine" id="cb48-26" title="26">  <span class="dt">epochs =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb48-27" title="27">  <span class="dt">batch_size =</span> <span class="dv">32</span>,</a>
+<a class="sourceLine" id="cb48-28" title="28">  <span class="dt">callbacks =</span> callbacks_list,</a>
+<a class="sourceLine" id="cb48-29" title="29">  <span class="co"># because the callback ill monitor the validation loss, we ned to pass validation_data to the call to fit</span></a>
+<a class="sourceLine" id="cb48-30" title="30">  <span class="dt">validation_data =</span> <span class="kw">list</span>(x_val, y_val)</a>
+<a class="sourceLine" id="cb48-31" title="31">)</a></code></pre></div>
+<p>The ‘callbacks’ can be used for reducing the learning rate once validation loss has stopped improving. reducing or increasing the learning rate in case of loss plateau is consiedered as an effective strategy to get out of local minima dring training.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1">callbacks_list =<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb49-2" title="2">  <span class="kw">callback_reduce_lr_on_plateau</span>(</a>
+<a class="sourceLine" id="cb49-3" title="3">    <span class="co"># monitor the model validation loss</span></a>
+<a class="sourceLine" id="cb49-4" title="4">    <span class="dt">monitor =</span> <span class="st">&quot;val_loss&quot;</span>,</a>
+<a class="sourceLine" id="cb49-5" title="5">    <span class="co"># dividing the learning rate by 10 when triggered</span></a>
+<a class="sourceLine" id="cb49-6" title="6">    <span class="dt">factor =</span> <span class="fl">0.1</span>,</a>
+<a class="sourceLine" id="cb49-7" title="7">    <span class="co"># the callback is triggered after the validation loss has stopped improving for 10 epochs</span></a>
+<a class="sourceLine" id="cb49-8" title="8">    <span class="dt">patience =</span> <span class="dv">10</span></a>
+<a class="sourceLine" id="cb49-9" title="9">  )</a>
+<a class="sourceLine" id="cb49-10" title="10">)</a>
+<a class="sourceLine" id="cb49-11" title="11"></a>
+<a class="sourceLine" id="cb49-12" title="12">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit</span>(</a>
+<a class="sourceLine" id="cb49-13" title="13">  x, y,</a>
+<a class="sourceLine" id="cb49-14" title="14">  <span class="dt">epochs =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb49-15" title="15">  <span class="dt">batch_size =</span> <span class="dv">32</span>,</a>
+<a class="sourceLine" id="cb49-16" title="16">  <span class="dt">callbacks =</span> callbacks_list,</a>
+<a class="sourceLine" id="cb49-17" title="17">  <span class="co"># because the callback ill monitor the validation loss, we ned to pass validation_data to the call to fit</span></a>
+<a class="sourceLine" id="cb49-18" title="18">  <span class="dt">validation_data =</span> <span class="kw">list</span>(x_val, y_val)</a>
+<a class="sourceLine" id="cb49-19" title="19">)</a></code></pre></div>
+</div>
+<div id="tensorboard" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> TensorBoard</h3>
+<p>TensorBoard is a browser-based visualization tool packaged with TensorFlow. It helps to visually montor mterics during training, show model architecture, visalize histograms and activations and gradients…</p>
+<p>Here is an example of using TensorBoard fo IMDB sentiment-analysis application.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1"><span class="co"># limiing the number of words to consider as features for this example</span></a>
+<a class="sourceLine" id="cb50-2" title="2">max_features =<span class="st"> </span><span class="dv">2000</span></a>
+<a class="sourceLine" id="cb50-3" title="3"><span class="co"># cut text in 500 words for this example</span></a>
+<a class="sourceLine" id="cb50-4" title="4">max_len =<span class="st"> </span><span class="dv">500</span></a>
+<a class="sourceLine" id="cb50-5" title="5"><span class="co"># load data</span></a>
+<a class="sourceLine" id="cb50-6" title="6">imdb =<span class="st"> </span><span class="kw">dataset_imdb</span>(<span class="dt">num_words =</span> max_features)</a>
+<a class="sourceLine" id="cb50-7" title="7"><span class="co"># split train and test</span></a>
+<a class="sourceLine" id="cb50-8" title="8"><span class="kw">c</span>(<span class="kw">c</span>(x_train, y_train),<span class="kw">c</span>(x_test, y_test)) <span class="op">%&lt;-%</span><span class="st"> </span>imdb</a>
+<a class="sourceLine" id="cb50-9" title="9"><span class="co"># pad sequences</span></a>
+<a class="sourceLine" id="cb50-10" title="10">x_train =<span class="st"> </span><span class="kw">pad_sequences</span>(x_train, <span class="dt">maxlen =</span> max_len)</a>
+<a class="sourceLine" id="cb50-11" title="11">x_test =<span class="st"> </span><span class="kw">pad_sequences</span>(x_test, <span class="dt">maxlen =</span> max_len)</a>
+<a class="sourceLine" id="cb50-12" title="12"><span class="co"># build model</span></a>
+<a class="sourceLine" id="cb50-13" title="13">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-14" title="14"><span class="st">  </span><span class="kw">layer_embedding</span>(<span class="dt">input_dim =</span> max_features, <span class="dt">output_dim =</span> <span class="dv">128</span>, <span class="dt">input_length =</span> max_len, <span class="dt">name =</span> <span class="st">&quot;embed&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-15" title="15"><span class="st">  </span><span class="kw">layer_conv_1d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="dv">7</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-16" title="16"><span class="st">  </span><span class="kw">layer_max_pooling_1d</span>(<span class="dt">pool_size =</span> <span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-17" title="17"><span class="st">  </span><span class="kw">layer_conv_1d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="dv">7</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-18" title="18"><span class="st">  </span><span class="kw">layer_global_max_pooling_1d</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-19" title="19"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb50-20" title="20"><span class="kw">summary</span>(model)</a>
+<a class="sourceLine" id="cb50-21" title="21"><span class="co"># compile model</span></a>
+<a class="sourceLine" id="cb50-22" title="22">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb50-23" title="23">  <span class="dt">optimizer =</span> <span class="st">&quot;rmsprop&quot;</span>,</a>
+<a class="sourceLine" id="cb50-24" title="24">  <span class="dt">loss =</span> <span class="st">&quot;binary_crossentropy&quot;</span>,</a>
+<a class="sourceLine" id="cb50-25" title="25">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;acc&quot;</span>)</a>
+<a class="sourceLine" id="cb50-26" title="26">)</a></code></pre></div>
+<p>We create a directory where we can store the log files generated</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1"><span class="kw">dir.create</span>(<span class="st">&quot;log_directory&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="co"># lunch tensorboard</span></a>
+<a class="sourceLine" id="cb52-2" title="2"><span class="kw">tensorboard</span>(<span class="st">&quot;log_directory&quot;</span>)</a>
+<a class="sourceLine" id="cb52-3" title="3"></a>
+<a class="sourceLine" id="cb52-4" title="4"><span class="co"># define callbacks</span></a>
+<a class="sourceLine" id="cb52-5" title="5">callbacks =<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb52-6" title="6">  <span class="kw">callback_tensorboard</span>(</a>
+<a class="sourceLine" id="cb52-7" title="7">    <span class="dt">log_dir =</span> <span class="st">&quot;log_directory&quot;</span>,</a>
+<a class="sourceLine" id="cb52-8" title="8">    <span class="co"># record activation histograms every 1 epoch</span></a>
+<a class="sourceLine" id="cb52-9" title="9">    <span class="dt">histogram_freq =</span> <span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb52-10" title="10">    <span class="co"># record embedding data every 1 epoch</span></a>
+<a class="sourceLine" id="cb52-11" title="11">    <span class="dt">embeddings_freq =</span> <span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb52-12" title="12">  )</a>
+<a class="sourceLine" id="cb52-13" title="13">)</a>
+<a class="sourceLine" id="cb52-14" title="14"></a>
+<a class="sourceLine" id="cb52-15" title="15"><span class="co"># fit the model</span></a>
+<a class="sourceLine" id="cb52-16" title="16">history =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">fit</span>(</a>
+<a class="sourceLine" id="cb52-17" title="17">  x_train, y_train,</a>
+<a class="sourceLine" id="cb52-18" title="18">  <span class="dt">epochs =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb52-19" title="19">  <span class="dt">batch_size =</span> <span class="dv">128</span>,</a>
+<a class="sourceLine" id="cb52-20" title="20">  <span class="dt">validation_split =</span> <span class="fl">0.2</span>,</a>
+<a class="sourceLine" id="cb52-21" title="21">  <span class="dt">calbacks =</span> callbacks</a>
+<a class="sourceLine" id="cb52-22" title="22">)</a></code></pre></div>
+</div>
+</div>
+<div id="batch-normalization" class="section level2">
+<h2><span class="header-section-number">3.7</span> Batch normalization</h2>
+<p>Batch normalization helps mdels learn and generalize better on new data. The most common methods for batch normalization consists of centering the data on zero by substracting the mean from the data and changing standard deviation of data to 1 by dif=viding the data by ots standard deviation.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">mean =<span class="st"> </span><span class="kw">apply</span>(train_data, <span class="dv">2</span>, mean)</a>
+<a class="sourceLine" id="cb53-2" title="2">std =<span class="st"> </span><span class="kw">apply</span>(train_data, <span class="dv">2</span>, sd)</a>
+<a class="sourceLine" id="cb53-3" title="3">train_data =<span class="st"> </span><span class="kw">scale</span>(train_data, <span class="dt">center =</span> mean, <span class="dt">scale =</span> std)</a>
+<a class="sourceLine" id="cb53-4" title="4">test_data =<span class="st"> </span><span class="kw">scale</span>(test_data, <span class="dt">center =</span> mean, <span class="dt">scale =</span> std)</a></code></pre></div>
+<p>Batch normalization should be implemented after every transofmation operated by the network. In keras, it is represenred as a specific layer: <code>layer_batch_normalization</code>. It is commonly used after a convolution or densly connected layers:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1"><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="dv">3</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb54-2" title="2"><span class="kw">layer_batch_normalization</span>()</a>
+<a class="sourceLine" id="cb54-3" title="3"><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">32</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb54-4" title="4"><span class="kw">layer_batch_normalization</span>()</a></code></pre></div>
+</div>
+<div id="hyperparameters-optimization" class="section level2">
+<h2><span class="header-section-number">3.8</span> Hyperparameters optimization</h2>
+<p><a href="https://tensorflow.rstudio.com/tools/tfruns/overview/" class="uri">https://tensorflow.rstudio.com/tools/tfruns/overview/</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="foundamental-of-machine-learning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deep-learning-for-computer-vision.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DeepLearning-ComputerVision.pdf", "DeepLearning-ComputerVision.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
