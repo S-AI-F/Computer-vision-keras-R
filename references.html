@@ -24,7 +24,7 @@
 <meta name="author" content="Saif Shabou" />
 
 
-<meta name="date" content="2020-04-19" />
+<meta name="date" content="2020-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,19 +128,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Computer vision with Keras and R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentation</a></li>
 <li class="chapter" data-level="2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Foundamental of machine learning</a><ul>
 <li class="chapter" data-level="2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#types"><i class="fa fa-check"></i><b>2.1</b> Types</a></li>
-<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-of-ml-models"><i class="fa fa-check"></i><b>2.2</b> Evaluation of ML models</a><ul>
+<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#model-performance-evaluation"><i class="fa fa-check"></i><b>2.2</b> Model performance evaluation</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#training-validation-and-test-sets"><i class="fa fa-check"></i><b>2.2.1</b> Training, validation and test sets</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>2.3</b> Overfitting and underfitting</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>2.3.1</b> Reducing the network’s size</a></li>
-<li class="chapter" data-level="2.3.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-weight-regularization"><i class="fa fa-check"></i><b>2.3.2</b> Adding weight regularization</a></li>
-<li class="chapter" data-level="2.3.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-dropout"><i class="fa fa-check"></i><b>2.3.3</b> Adding dropout</a></li>
+<li class="chapter" data-level="2.2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-metrics"><i class="fa fa-check"></i><b>2.2.2</b> Evaluation metrics</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="neural-networks.html"><a href="neural-networks.html"><i class="fa fa-check"></i><b>3</b> Neural Networks</a><ul>
@@ -149,63 +145,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.2" data-path="neural-networks.html"><a href="neural-networks.html#layers"><i class="fa fa-check"></i><b>3.1.2</b> Layers</a></li>
 <li class="chapter" data-level="3.1.3" data-path="neural-networks.html"><a href="neural-networks.html#activation-functions"><i class="fa fa-check"></i><b>3.1.3</b> Activation functions</a></li>
 <li class="chapter" data-level="3.1.4" data-path="neural-networks.html"><a href="neural-networks.html#loss-functions-and-optimizers"><i class="fa fa-check"></i><b>3.1.4</b> Loss functions and optimizers</a></li>
+<li class="chapter" data-level="3.1.5" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.1.5</b> Building a Neural Network from scratch</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.2</b> Building a Neural Network from scratch</a></li>
-<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.3</b> Introduction to Keras</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.3.1</b> Installing keras</a></li>
-<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.3.2</b> building model with keras</a></li>
+<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.2</b> Introduction to Keras</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.2.1</b> Installing keras</a></li>
+<li class="chapter" data-level="3.2.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.2.2</b> building model with keras</a></li>
+<li class="chapter" data-level="3.2.3" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.2.3</b> The Kears Functional API</a></li>
+<li class="chapter" data-level="3.2.4" data-path="neural-networks.html"><a href="neural-networks.html#models-as-directed-acyclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.2.4</b> Models as Directed acyclic graphs of layers</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#classifying-movie-reviews-a-binary-classification-example"><i class="fa fa-check"></i><b>3.4</b> Classifying movie reviews: a binary classification example</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="neural-networks.html"><a href="neural-networks.html#the-imdb-dataset"><i class="fa fa-check"></i><b>3.4.1</b> The IMDB dataset</a></li>
-<li class="chapter" data-level="3.4.2" data-path="neural-networks.html"><a href="neural-networks.html#preparing-the-data"><i class="fa fa-check"></i><b>3.4.2</b> preparing the data</a></li>
-<li class="chapter" data-level="3.4.3" data-path="neural-networks.html"><a href="neural-networks.html#build-the-network"><i class="fa fa-check"></i><b>3.4.3</b> Build the network</a></li>
+<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.3</b> Monitoring deep learning models</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.3.1</b> Using callbacks</a></li>
+<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.3.2</b> TensorBoard</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.5</b> The Kears Functional API</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#multi-input-models"><i class="fa fa-check"></i><b>3.5.1</b> Multi-input models</a></li>
-<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#multi-output-models"><i class="fa fa-check"></i><b>3.5.2</b> Multi-output models</a></li>
-<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#directed-acuclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.5.3</b> Directed acuclic graphs of layers</a></li>
+<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.4</b> Batch normalization</a></li>
+<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#overfitting-handling"><i class="fa fa-check"></i><b>3.5</b> Overfitting handling</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>3.5.1</b> Reducing the network’s size</a></li>
+<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#adding-weight-regularization"><i class="fa fa-check"></i><b>3.5.2</b> Adding weight regularization</a></li>
+<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#adding-dropout"><i class="fa fa-check"></i><b>3.5.3</b> Adding dropout</a></li>
+<li class="chapter" data-level="3.5.4" data-path="neural-networks.html"><a href="neural-networks.html#data-augmentation"><i class="fa fa-check"></i><b>3.5.4</b> Data augmentation</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.6</b> Monitoring deep learning models</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.6.1</b> Using callbacks</a></li>
-<li class="chapter" data-level="3.6.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.6.2</b> TensorBoard</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.7</b> Batch normalization</a></li>
-<li class="chapter" data-level="3.8" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.8</b> Hyperparameters optimization</a></li>
+<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.6</b> Hyperparameters optimization</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html"><i class="fa fa-check"></i><b>4</b> Deep learning for computer vision</a><ul>
-<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#loading-image-data"><i class="fa fa-check"></i><b>4.1</b> Loading image data</a></li>
-<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.2</b> Image classification with Keras</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.2.1</b> download and prepare the data</a></li>
-<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.2.2</b> Build the model</a></li>
-<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.2.3</b> Compile the model</a></li>
-<li class="chapter" data-level="4.2.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.2.4</b> Fit the model</a></li>
-<li class="chapter" data-level="4.2.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.2.5</b> Make predictions</a></li>
-<li class="chapter" data-level="4.2.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.2.6</b> Evaluate the model</a></li>
-<li class="chapter" data-level="4.2.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.2.7</b> Save the model</a></li>
-<li class="chapter" data-level="4.2.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.2.8</b> reload the model</a></li>
+<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.1</b> Image classification with Keras</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.1.1</b> download and prepare the data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.1.2</b> Build the model</a></li>
+<li class="chapter" data-level="4.1.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.1.3</b> Compile the model</a></li>
+<li class="chapter" data-level="4.1.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.1.4</b> Fit the model</a></li>
+<li class="chapter" data-level="4.1.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.1.5</b> Make predictions</a></li>
+<li class="chapter" data-level="4.1.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.1.6</b> Evaluate the model</a></li>
+<li class="chapter" data-level="4.1.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.1.7</b> Save the model</a></li>
+<li class="chapter" data-level="4.1.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.1.8</b> reload the model</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.3</b> Introduction to COnvolution Neural Networks</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.3.1</b> Example</a></li>
-<li class="chapter" data-level="4.3.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.3.2</b> The convolution operation</a></li>
-<li class="chapter" data-level="4.3.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.3.3</b> The max-pooling operation</a></li>
+<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.2</b> Introduction to Convolution Neural Networks</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.2.2</b> The convolution operation</a></li>
+<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.2.3</b> The max-pooling operation</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.4</b> Architectures of CNN</a></li>
-<li class="chapter" data-level="4.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#application-dog-vs-cats"><i class="fa fa-check"></i><b>4.5</b> Application Dog VS Cats</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#downloading-data"><i class="fa fa-check"></i><b>4.5.1</b> Downloading data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#building-the-network"><i class="fa fa-check"></i><b>4.5.2</b> Building the network</a></li>
-<li class="chapter" data-level="4.5.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-preprocessing"><i class="fa fa-check"></i><b>4.5.3</b> Data preprocessing</a></li>
-<li class="chapter" data-level="4.5.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-augmentation"><i class="fa fa-check"></i><b>4.5.4</b> Data augmentation</a></li>
+<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.3</b> Architectures of CNN</a></li>
+<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#classifcation-examples"><i class="fa fa-check"></i><b>4.4</b> Classifcation examples</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#dataset-dog-vs-cats"><i class="fa fa-check"></i><b>4.4.1</b> Dataset: Dog VS Cats</a></li>
+<li class="chapter" data-level="4.4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#dataset-cifar10"><i class="fa fa-check"></i><b>4.4.2</b> Dataset: CIFAR10</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-cifar10-dataset"><i class="fa fa-check"></i><b>4.6</b> CNN with CIFAR10 dataset</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-cifar10-dataset"><i class="fa fa-check"></i><b>4.6.1</b> Download and prepare the CIFAR10 dataset</a></li>
-<li class="chapter" data-level="4.6.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model-1"><i class="fa fa-check"></i><b>4.6.2</b> Build the model</a></li>
-<li class="chapter" data-level="4.6.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-and-train-the-model"><i class="fa fa-check"></i><b>4.6.3</b> Compile and train the model</a></li>
-<li class="chapter" data-level="4.6.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model-1"><i class="fa fa-check"></i><b>4.6.4</b> Evaluate the model</a></li>
-</ul></li>
-<li class="chapter" data-level="4.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-fruits-images"><i class="fa fa-check"></i><b>4.7</b> CNN with fruits images</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="transfer-learning.html"><a href="transfer-learning.html"><i class="fa fa-check"></i><b>5</b> Transfer learning</a><ul>
-<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#knowledge"><i class="fa fa-check"></i><b>5.1</b> Knowledge</a><ul>
+<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
 <li class="chapter" data-level="5.1.1" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-transfer-learning"><i class="fa fa-check"></i><b>5.1.1</b> What is Transfer Learning</a></li>
 <li class="chapter" data-level="5.1.2" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-tensforflow-hub"><i class="fa fa-check"></i><b>5.1.2</b> What is TensforFlow Hub</a></li>
 </ul></li>
@@ -218,16 +202,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.6" data-path="transfer-learning.html"><a href="transfer-learning.html#train-the-model"><i class="fa fa-check"></i><b>5.2.6</b> Train the model</a></li>
 <li class="chapter" data-level="5.2.7" data-path="transfer-learning.html"><a href="transfer-learning.html#export-the-model"><i class="fa fa-check"></i><b>5.2.7</b> Export the model</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learningusing-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learningusing a pretrained CONVNET</a><ul>
+<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learning-using-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learning using a pretrained CONVNET</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="transfer-learning.html"><a href="transfer-learning.html#feature-extraction"><i class="fa fa-check"></i><b>5.3.1</b> feature extraction</a></li>
 <li class="chapter" data-level="5.3.2" data-path="transfer-learning.html"><a href="transfer-learning.html#fine-tuning"><i class="fa fa-check"></i><b>5.3.2</b> Fine-tuning</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a><ul>
-<li class="chapter" data-level="6.1" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-intermediate-activations"><i class="fa fa-check"></i><b>6.1</b> Visualizing intermediate activations</a></li>
-<li class="chapter" data-level="6.2" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-convnet-filters"><i class="fa fa-check"></i><b>6.2</b> Visualizing convnet filters</a></li>
-<li class="chapter" data-level="6.3" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-heatmaps-of-class-activation"><i class="fa fa-check"></i><b>6.3</b> Visualizing heatmaps of class activation</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -309,6 +289,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

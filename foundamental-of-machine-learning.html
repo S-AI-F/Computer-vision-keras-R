@@ -24,7 +24,7 @@
 <meta name="author" content="Saif Shabou" />
 
 
-<meta name="date" content="2020-04-19" />
+<meta name="date" content="2020-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,19 +128,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Computer vision with Keras and R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentation</a></li>
 <li class="chapter" data-level="2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Foundamental of machine learning</a><ul>
 <li class="chapter" data-level="2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#types"><i class="fa fa-check"></i><b>2.1</b> Types</a></li>
-<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-of-ml-models"><i class="fa fa-check"></i><b>2.2</b> Evaluation of ML models</a><ul>
+<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#model-performance-evaluation"><i class="fa fa-check"></i><b>2.2</b> Model performance evaluation</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#training-validation-and-test-sets"><i class="fa fa-check"></i><b>2.2.1</b> Training, validation and test sets</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>2.3</b> Overfitting and underfitting</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>2.3.1</b> Reducing the network’s size</a></li>
-<li class="chapter" data-level="2.3.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-weight-regularization"><i class="fa fa-check"></i><b>2.3.2</b> Adding weight regularization</a></li>
-<li class="chapter" data-level="2.3.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-dropout"><i class="fa fa-check"></i><b>2.3.3</b> Adding dropout</a></li>
+<li class="chapter" data-level="2.2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-metrics"><i class="fa fa-check"></i><b>2.2.2</b> Evaluation metrics</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="neural-networks.html"><a href="neural-networks.html"><i class="fa fa-check"></i><b>3</b> Neural Networks</a><ul>
@@ -149,63 +145,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.2" data-path="neural-networks.html"><a href="neural-networks.html#layers"><i class="fa fa-check"></i><b>3.1.2</b> Layers</a></li>
 <li class="chapter" data-level="3.1.3" data-path="neural-networks.html"><a href="neural-networks.html#activation-functions"><i class="fa fa-check"></i><b>3.1.3</b> Activation functions</a></li>
 <li class="chapter" data-level="3.1.4" data-path="neural-networks.html"><a href="neural-networks.html#loss-functions-and-optimizers"><i class="fa fa-check"></i><b>3.1.4</b> Loss functions and optimizers</a></li>
+<li class="chapter" data-level="3.1.5" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.1.5</b> Building a Neural Network from scratch</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.2</b> Building a Neural Network from scratch</a></li>
-<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.3</b> Introduction to Keras</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.3.1</b> Installing keras</a></li>
-<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.3.2</b> building model with keras</a></li>
+<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.2</b> Introduction to Keras</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.2.1</b> Installing keras</a></li>
+<li class="chapter" data-level="3.2.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.2.2</b> building model with keras</a></li>
+<li class="chapter" data-level="3.2.3" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.2.3</b> The Kears Functional API</a></li>
+<li class="chapter" data-level="3.2.4" data-path="neural-networks.html"><a href="neural-networks.html#models-as-directed-acyclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.2.4</b> Models as Directed acyclic graphs of layers</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#classifying-movie-reviews-a-binary-classification-example"><i class="fa fa-check"></i><b>3.4</b> Classifying movie reviews: a binary classification example</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="neural-networks.html"><a href="neural-networks.html#the-imdb-dataset"><i class="fa fa-check"></i><b>3.4.1</b> The IMDB dataset</a></li>
-<li class="chapter" data-level="3.4.2" data-path="neural-networks.html"><a href="neural-networks.html#preparing-the-data"><i class="fa fa-check"></i><b>3.4.2</b> preparing the data</a></li>
-<li class="chapter" data-level="3.4.3" data-path="neural-networks.html"><a href="neural-networks.html#build-the-network"><i class="fa fa-check"></i><b>3.4.3</b> Build the network</a></li>
+<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.3</b> Monitoring deep learning models</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.3.1</b> Using callbacks</a></li>
+<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.3.2</b> TensorBoard</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.5</b> The Kears Functional API</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#multi-input-models"><i class="fa fa-check"></i><b>3.5.1</b> Multi-input models</a></li>
-<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#multi-output-models"><i class="fa fa-check"></i><b>3.5.2</b> Multi-output models</a></li>
-<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#directed-acuclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.5.3</b> Directed acuclic graphs of layers</a></li>
+<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.4</b> Batch normalization</a></li>
+<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#overfitting-handling"><i class="fa fa-check"></i><b>3.5</b> Overfitting handling</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>3.5.1</b> Reducing the network’s size</a></li>
+<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#adding-weight-regularization"><i class="fa fa-check"></i><b>3.5.2</b> Adding weight regularization</a></li>
+<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#adding-dropout"><i class="fa fa-check"></i><b>3.5.3</b> Adding dropout</a></li>
+<li class="chapter" data-level="3.5.4" data-path="neural-networks.html"><a href="neural-networks.html#data-augmentation"><i class="fa fa-check"></i><b>3.5.4</b> Data augmentation</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.6</b> Monitoring deep learning models</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.6.1</b> Using callbacks</a></li>
-<li class="chapter" data-level="3.6.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.6.2</b> TensorBoard</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.7</b> Batch normalization</a></li>
-<li class="chapter" data-level="3.8" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.8</b> Hyperparameters optimization</a></li>
+<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.6</b> Hyperparameters optimization</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html"><i class="fa fa-check"></i><b>4</b> Deep learning for computer vision</a><ul>
-<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#loading-image-data"><i class="fa fa-check"></i><b>4.1</b> Loading image data</a></li>
-<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.2</b> Image classification with Keras</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.2.1</b> download and prepare the data</a></li>
-<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.2.2</b> Build the model</a></li>
-<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.2.3</b> Compile the model</a></li>
-<li class="chapter" data-level="4.2.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.2.4</b> Fit the model</a></li>
-<li class="chapter" data-level="4.2.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.2.5</b> Make predictions</a></li>
-<li class="chapter" data-level="4.2.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.2.6</b> Evaluate the model</a></li>
-<li class="chapter" data-level="4.2.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.2.7</b> Save the model</a></li>
-<li class="chapter" data-level="4.2.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.2.8</b> reload the model</a></li>
+<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.1</b> Image classification with Keras</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.1.1</b> download and prepare the data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.1.2</b> Build the model</a></li>
+<li class="chapter" data-level="4.1.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.1.3</b> Compile the model</a></li>
+<li class="chapter" data-level="4.1.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.1.4</b> Fit the model</a></li>
+<li class="chapter" data-level="4.1.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.1.5</b> Make predictions</a></li>
+<li class="chapter" data-level="4.1.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.1.6</b> Evaluate the model</a></li>
+<li class="chapter" data-level="4.1.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.1.7</b> Save the model</a></li>
+<li class="chapter" data-level="4.1.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.1.8</b> reload the model</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.3</b> Introduction to COnvolution Neural Networks</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.3.1</b> Example</a></li>
-<li class="chapter" data-level="4.3.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.3.2</b> The convolution operation</a></li>
-<li class="chapter" data-level="4.3.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.3.3</b> The max-pooling operation</a></li>
+<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.2</b> Introduction to Convolution Neural Networks</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.2.2</b> The convolution operation</a></li>
+<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.2.3</b> The max-pooling operation</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.4</b> Architectures of CNN</a></li>
-<li class="chapter" data-level="4.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#application-dog-vs-cats"><i class="fa fa-check"></i><b>4.5</b> Application Dog VS Cats</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#downloading-data"><i class="fa fa-check"></i><b>4.5.1</b> Downloading data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#building-the-network"><i class="fa fa-check"></i><b>4.5.2</b> Building the network</a></li>
-<li class="chapter" data-level="4.5.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-preprocessing"><i class="fa fa-check"></i><b>4.5.3</b> Data preprocessing</a></li>
-<li class="chapter" data-level="4.5.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-augmentation"><i class="fa fa-check"></i><b>4.5.4</b> Data augmentation</a></li>
+<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.3</b> Architectures of CNN</a></li>
+<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#classifcation-examples"><i class="fa fa-check"></i><b>4.4</b> Classifcation examples</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#dataset-dog-vs-cats"><i class="fa fa-check"></i><b>4.4.1</b> Dataset: Dog VS Cats</a></li>
+<li class="chapter" data-level="4.4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#dataset-cifar10"><i class="fa fa-check"></i><b>4.4.2</b> Dataset: CIFAR10</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-cifar10-dataset"><i class="fa fa-check"></i><b>4.6</b> CNN with CIFAR10 dataset</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-cifar10-dataset"><i class="fa fa-check"></i><b>4.6.1</b> Download and prepare the CIFAR10 dataset</a></li>
-<li class="chapter" data-level="4.6.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model-1"><i class="fa fa-check"></i><b>4.6.2</b> Build the model</a></li>
-<li class="chapter" data-level="4.6.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-and-train-the-model"><i class="fa fa-check"></i><b>4.6.3</b> Compile and train the model</a></li>
-<li class="chapter" data-level="4.6.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model-1"><i class="fa fa-check"></i><b>4.6.4</b> Evaluate the model</a></li>
-</ul></li>
-<li class="chapter" data-level="4.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-fruits-images"><i class="fa fa-check"></i><b>4.7</b> CNN with fruits images</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="transfer-learning.html"><a href="transfer-learning.html"><i class="fa fa-check"></i><b>5</b> Transfer learning</a><ul>
-<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#knowledge"><i class="fa fa-check"></i><b>5.1</b> Knowledge</a><ul>
+<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
 <li class="chapter" data-level="5.1.1" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-transfer-learning"><i class="fa fa-check"></i><b>5.1.1</b> What is Transfer Learning</a></li>
 <li class="chapter" data-level="5.1.2" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-tensforflow-hub"><i class="fa fa-check"></i><b>5.1.2</b> What is TensforFlow Hub</a></li>
 </ul></li>
@@ -218,16 +202,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.6" data-path="transfer-learning.html"><a href="transfer-learning.html#train-the-model"><i class="fa fa-check"></i><b>5.2.6</b> Train the model</a></li>
 <li class="chapter" data-level="5.2.7" data-path="transfer-learning.html"><a href="transfer-learning.html#export-the-model"><i class="fa fa-check"></i><b>5.2.7</b> Export the model</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learningusing-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learningusing a pretrained CONVNET</a><ul>
+<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learning-using-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learning using a pretrained CONVNET</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="transfer-learning.html"><a href="transfer-learning.html#feature-extraction"><i class="fa fa-check"></i><b>5.3.1</b> feature extraction</a></li>
 <li class="chapter" data-level="5.3.2" data-path="transfer-learning.html"><a href="transfer-learning.html#fine-tuning"><i class="fa fa-check"></i><b>5.3.2</b> Fine-tuning</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a><ul>
-<li class="chapter" data-level="6.1" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-intermediate-activations"><i class="fa fa-check"></i><b>6.1</b> Visualizing intermediate activations</a></li>
-<li class="chapter" data-level="6.2" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-convnet-filters"><i class="fa fa-check"></i><b>6.2</b> Visualizing convnet filters</a></li>
-<li class="chapter" data-level="6.3" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-heatmaps-of-class-activation"><i class="fa fa-check"></i><b>6.3</b> Visualizing heatmaps of class activation</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -251,8 +231,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="foundamental-of-machine-learning" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Foundamental of machine learning</h1>
-<p><a href="https://tensorflow.rstudio.com/tutorials/advanced/customization/tensors-operations/" class="uri">https://tensorflow.rstudio.com/tutorials/advanced/customization/tensors-operations/</a>
-<a href="https://keras.rstudio.com/articles/guide_keras.html" class="uri">https://keras.rstudio.com/articles/guide_keras.html</a></p>
 <div id="types" class="section level2">
 <h2><span class="header-section-number">2.1</span> Types</h2>
 <ul>
@@ -262,28 +240,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Unsupervised learning</li>
 </ul>
-<p>It consists of identifying interesting transformations of the input data without the use of any targets and labels. It is genrally used for: noise detection, data visualization, understanding correlation etween data features, data compression and reduction… he main objectives that need unsupervised learning are: <em>clustering</em> and <em>dimensions reduction</em>.</p>
+<p>It consists of identifying interesting transformations of the input data without the use of any targets and labels. It is genrally used for: noise detection, data visualization, understanding correlation between data features, data compression and reduction… he main objectives that need unsupervised learning are: <em>clustering</em> and <em>dimensions reduction</em>.</p>
 <ul>
 <li>Self-supervised learning</li>
 </ul>
-<p>It is a specific type of supervised learning but without huan-annotated labels. The labels used for supervising the learning process are genrated from input data itself. We can nlist: <em>Autoencoders</em>, <em>temporally supervised learning</em> (which consists of predicting the next frame in a video based the past frames).</p>
+<p>It is a specific type of supervised learning but without human-annotated labels. The labels used for supervising the learning process are genrated from input data itself. We can list: <em>Autoencoders</em>, <em>temporally supervised learning</em> (which consists of predicting the next frame in a video based the past frames).</p>
 <ul>
 <li>Reinforcement learning</li>
 </ul>
 <p>It is based on agents that receives information from the environment and learn to select actions that maximize some reward. This technique is used for learning game playing (Atari, Go…), self-driving cars…</p>
 </div>
-<div id="evaluation-of-ml-models" class="section level2">
-<h2><span class="header-section-number">2.2</span> Evaluation of ML models</h2>
+<div id="model-performance-evaluation" class="section level2">
+<h2><span class="header-section-number">2.2</span> Model performance evaluation</h2>
 <p>The main goal of machine learning models is to make them generalize and perform well on data that they have never seen. This is why we try to minimize <em>overfitting</em>.</p>
 <div id="training-validation-and-test-sets" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Training, validation and test sets</h3>
 <p>For evaluating models we need to split the available data into three sets: training, validation, and test. We train our model on the training set and we evaluate it on the validation set. We can modify parameters and tuning the model using these two sets (for example changing the number of layers and the hypermarameters). Once our model is ready and we identified a goog configuration, we test it on the test set.</p>
 <div id="hold-out-validation" class="section level4">
 <h4><span class="header-section-number">2.2.1.1</span> Hold-out validation</h4>
-<p>Ot consists of splitting our train data into two sets: train and validation. We train our model and evaluate it on the validation set by computing validation metrics.</p>
+<p>It consists of splitting our train data into two sets: train and validation. We train our model and evaluate it on the validation set by computing validation metrics.</p>
 <div class="figure">
-<img src="images/dataiku-holdout-strategy.jpg" alt="Hold-out validation (https://www.kdnuggets.com/2017/08/dataiku-predictive-model-holdout-cross-validation.html)" />
-<p class="caption">Hold-out validation (<a href="https://www.kdnuggets.com/2017/08/dataiku-predictive-model-holdout-cross-validation.html" class="uri">https://www.kdnuggets.com/2017/08/dataiku-predictive-model-holdout-cross-validation.html</a>)</p>
+<img src="images/dataiku-holdout-strategy.jpg" alt="Hold-out validation (source: https://www.kdnuggets.com/2017/08/dataiku-predictive-model-holdout-cross-validation.html)" />
+<p class="caption">Hold-out validation (source: <a href="https://www.kdnuggets.com/2017/08/dataiku-predictive-model-holdout-cross-validation.html" class="uri">https://www.kdnuggets.com/2017/08/dataiku-predictive-model-holdout-cross-validation.html</a>)</p>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># we suffle the data</span></a>
 <a class="sourceLine" id="cb1-2" title="2">indices =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(data), <span class="dt">size =</span> <span class="fl">0.8</span> <span class="op">*</span><span class="kw">nrow</span>(data))</a>
@@ -299,7 +277,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-12" title="12">model =<span class="st"> </span><span class="kw">get_model</span>()</a>
 <a class="sourceLine" id="cb1-13" title="13">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">train</span>(data)</a>
 <a class="sourceLine" id="cb1-14" title="14">test_score =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">evaluate</span>(test_data)</a></code></pre></div>
-<p>This technique is not reommanded when we have little data available: the validation and test data contain few samples. This issue can be identified once we have different mdel performance for different shuffling round in train data splitting. In order to address this issue, we can use <em>k-fold</em> validation method.</p>
+<p>This technique is not reommanded when we have little data available: the validation and test data contain few samples. This issue can be identified once we have different model performance for various shuffling round in train data splitting. In order to address this issue, we can use <em>k-fold</em> validation method.</p>
 </div>
 <div id="k-fold-validation" class="section level4">
 <h4><span class="header-section-number">2.2.1.2</span> k-fold validation</h4>
@@ -310,48 +288,308 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-</div>
-<div id="overfitting-and-underfitting" class="section level2">
-<h2><span class="header-section-number">2.3</span> Overfitting and underfitting</h2>
-<div id="reducing-the-networks-size" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Reducing the network’s size</h3>
-<p>The simplest way to avoid overfitting is to reduce the size of the model: the number of learnable parameters whiwh are dependant on the number of layers and the number of units by layer.</p>
-</div>
-<div id="adding-weight-regularization" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Adding weight regularization</h3>
-<p>The weight regularizaion technics is based on the hypothesis that a <em>simple model</em>, with fewer parametrs or where the distribution of parameter values has less entropy, may behave better with new unseed data.
-Tehrefore, we can avoid overfitting by adding constraints in the model and forcing its weights to take only small values. This makes the distribution of weight vales more <em>regular</em>. This technic is called <em>weight regularization</em>. It is implemented by adding to the loss function of the netork a <em>cost</em> associated with having large weights.
-We can define the cost in two ays:</p>
+<div id="evaluation-metrics" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Evaluation metrics</h3>
+<p>There are several metrics for evaluating the performance of a trained model. The metric choice depends largely on the learning task (regression or classification) and on the objective of the developed model.</p>
+<div id="classification-models-evaluation" class="section level4">
+<h4><span class="header-section-number">2.2.2.1</span> Classification models evaluation</h4>
+<p>Since classification models aim at predicting lables of new observations based on training data, the main evaluation metrics are based on the differences between the real/observed classes and predicted classes.
+In order to review the different possible metrics we will implement a simple example of classification model.
+We sill used the <code>PimaIndiansDiabetes2</code> dataset provided by <code>mlbench</code> package. We will develop a model to predict the probabiliy of diabetes test positiviy based on some clinical variables.</p>
+<p>Let’s load and split the data on training and test sets.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(mlbench)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">library</span>(dplyr)</a></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">library</span>(caret)</a></code></pre></div>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="co"># Load the data</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="kw">data</span>(<span class="st">&quot;PimaIndiansDiabetes2&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;mlbench&quot;</span>)</a>
+<a class="sourceLine" id="cb9-3" title="3">pima.data &lt;-<span class="st"> </span><span class="kw">na.omit</span>(PimaIndiansDiabetes2)</a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="co"># Inspect the data</span></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="kw">sample_n</span>(pima.data, <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##   pregnant glucose pressure triceps insulin mass pedigree age diabetes
+## 1        1     103       80      11      82 19.4    0.491  22      neg
+## 2        3     116       74      15     105 26.3    0.107  24      neg
+## 3        4     129       86      20     270 35.1    0.231  23      neg</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co"># Split the data into training and test set</span></a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="kw">set.seed</span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb11-3" title="3">training.samples &lt;-<span class="st"> </span>pima.data<span class="op">$</span>diabetes <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="st">  </span><span class="kw">createDataPartition</span>(<span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb11-5" title="5">train.data  &lt;-<span class="st"> </span>pima.data[training.samples, ]</a>
+<a class="sourceLine" id="cb11-6" title="6">test.data &lt;-<span class="st"> </span>pima.data[<span class="op">-</span>training.samples, ]</a></code></pre></div>
+<p>Let’s fit LDA model on the training set and make predictions on the test data</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">library</span>(MASS)</a></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="co"># Fit LDA</span></a>
+<a class="sourceLine" id="cb15-2" title="2">fit &lt;-<span class="st"> </span><span class="kw">lda</span>(diabetes <span class="op">~</span>., <span class="dt">data =</span> train.data)</a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="co"># Make predictions on the test data</span></a>
+<a class="sourceLine" id="cb15-4" title="4">predictions &lt;-<span class="st"> </span><span class="kw">predict</span>(fit, test.data)</a>
+<a class="sourceLine" id="cb15-5" title="5">prediction.probabilities &lt;-<span class="st"> </span>predictions<span class="op">$</span>posterior[,<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb15-6" title="6">predicted.classes &lt;-<span class="st"> </span>predictions<span class="op">$</span>class </a>
+<a class="sourceLine" id="cb15-7" title="7">observed.classes &lt;-<span class="st"> </span>test.data<span class="op">$</span>diabetes</a></code></pre></div>
+<p>We can use <code>the confusion matrix</code> in order to count the number of ibservations correcly and incorrecty classified:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="co"># Confusion matrix, number of cases</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="kw">table</span>(observed.classes, predicted.classes)</a></code></pre></div>
+<pre><code>##                 predicted.classes
+## observed.classes neg pos
+##              neg  44   8
+##              pos  10  16</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co"># Confusion matrix, proportion of cases</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="kw">table</span>(observed.classes, predicted.classes) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="st">  </span><span class="kw">prop.table</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(<span class="dt">digits =</span> <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##                 predicted.classes
+## observed.classes   neg   pos
+##              neg 0.564 0.103
+##              pos 0.128 0.205</code></pre>
+<p>The confusion matrix cells indcates the correct/false prediction in this way:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>Observed classes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.</td>
+<td></td>
+<td>Negative</td>
+<td>Positive</td>
+</tr>
+<tr class="even">
+<td>predicted classes</td>
+<td>Negative</td>
+<td>True Negatives (TN)</td>
+<td>False Positives (FP)</td>
+</tr>
+<tr class="odd">
+<td>.</td>
+<td>Positive</td>
+<td>False Negatives (FN)</td>
+<td>True Positives (TP)</td>
+</tr>
+</tbody>
+</table>
+<p>Vased on the confusion matriw, we can determine various metrics to assess the classificaton performance:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1">CM =<span class="st"> </span><span class="kw">confusionMatrix</span>(predicted.classes, observed.classes,</a>
+<a class="sourceLine" id="cb20-2" title="2">                <span class="dt">positive =</span> <span class="st">&quot;pos&quot;</span>)</a>
+<a class="sourceLine" id="cb20-3" title="3">CM</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction neg pos
+##        neg  44  10
+##        pos   8  16
+##                                         
+##                Accuracy : 0.7692        
+##                  95% CI : (0.66, 0.8571)
+##     No Information Rate : 0.6667        
+##     P-Value [Acc &gt; NIR] : 0.03295       
+##                                         
+##                   Kappa : 0.4706        
+##                                         
+##  Mcnemar&#39;s Test P-Value : 0.81366       
+##                                         
+##             Sensitivity : 0.6154        
+##             Specificity : 0.8462        
+##          Pos Pred Value : 0.6667        
+##          Neg Pred Value : 0.8148        
+##              Prevalence : 0.3333        
+##          Detection Rate : 0.2051        
+##    Detection Prevalence : 0.3077        
+##       Balanced Accuracy : 0.7308        
+##                                         
+##        &#39;Positive&#39; Class : pos           
+## </code></pre>
 <ul>
-<li><em>L1 regularization</em>: The cost added is propotional to the <em>absolute</em> value of the weight coefficients</li>
-<li><em>L2 regularization (weight decay)</em>: The cost added is propotional to the square of the value of the weight coefficients</li>
+<li><p>Accuracy: the proportion of observations that have been correctly classified
+<span class="math display">\[Accuracy = (TP + TN) / SampleSize\]</span></p></li>
+<li><p>Precision: The proportion of positive identifications that were actually correct.
+<span class="math display">\[Precision = TP / (TP + FP)\]</span></p></li>
+<li><p>Sensitiviy (or recall): It is the <strong>True Positive Rate</strong> or the proportion correct positive identifications
+<span class="math display">\[Sensitiviy = TP / (TP + FN)\]</span></p></li>
+<li><p>Specificity: It is the <strong>True Negative Rate</strong> or the proportion correct negative identifications
+<span class="math display">\[Specificity = TN / (TN + FP)\]</span></p></li>
+<li><p>F1 score: The F1 score conveys the balance between the precision and the recall.
+<span class="math display">\[F1 = 2 * precision * recall/ (precision + recall)\]</span></p></li>
+<li><p>Kappa: Kappa is similar to Accuracy score, but it takes into account the accuracy that would have happened anyway through random predictions
+<span class="math display">\[Kapa = (Observed Accuracy - Expected Accuracy) / (1 - Expected Accuracy)\]</span></p></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">16</span>, <span class="dt">kernel_regularizer =</span> <span class="kw">regularizer_l2</span>(<span class="fl">0.001</span>),</a>
-<a class="sourceLine" id="cb2-3" title="3">              <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">10000</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">16</span>, <span class="dt">kernel_regularizer =</span> <span class="kw">regularizer_l2</span>(<span class="fl">0.001</span>),</a>
-<a class="sourceLine" id="cb2-5" title="5">              <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">10000</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-6" title="6"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;sigmoid&quot;</span>)</a></code></pre></div>
-<p><code>regularizer_l2(0.001)</code> means that every coefficien in the weight matrix of the layer will add <code>0.001*weight_coefficient_value</code> to the total loss of the network.
-Since the penality is only added at training phase, the loss at the training phase will be much higher thatn the loss in the test phase.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">cm =<span class="st"> </span><span class="kw">as.matrix</span>(CM)</a>
+<a class="sourceLine" id="cb22-2" title="2">n =<span class="st"> </span><span class="kw">sum</span>(cm) <span class="co"># number of instances</span></a>
+<a class="sourceLine" id="cb22-3" title="3">nc =<span class="st"> </span><span class="kw">nrow</span>(cm) <span class="co"># number of classes</span></a>
+<a class="sourceLine" id="cb22-4" title="4">diag =<span class="st"> </span><span class="kw">diag</span>(cm) <span class="co"># number of correctly classified instances per class </span></a>
+<a class="sourceLine" id="cb22-5" title="5">rowsums =<span class="st"> </span><span class="kw">apply</span>(cm, <span class="dv">1</span>, sum) <span class="co"># number of instances per class</span></a>
+<a class="sourceLine" id="cb22-6" title="6">colsums =<span class="st"> </span><span class="kw">apply</span>(cm, <span class="dv">2</span>, sum) <span class="co"># number of predictions per class</span></a>
+<a class="sourceLine" id="cb22-7" title="7">p =<span class="st"> </span>rowsums <span class="op">/</span><span class="st"> </span>n <span class="co"># distribution of instances over the actual classes</span></a>
+<a class="sourceLine" id="cb22-8" title="8">q =<span class="st"> </span>colsums <span class="op">/</span><span class="st"> </span>n <span class="co"># distribution of instances over the predicted classes</span></a>
+<a class="sourceLine" id="cb22-9" title="9">accuracy =<span class="st"> </span><span class="kw">sum</span>(diag) <span class="op">/</span><span class="st"> </span>n</a>
+<a class="sourceLine" id="cb22-10" title="10">expAccuracy =<span class="st"> </span><span class="kw">sum</span>(p<span class="op">*</span>q)</a>
+<a class="sourceLine" id="cb22-11" title="11">kappa =<span class="st"> </span>(accuracy <span class="op">-</span><span class="st"> </span>expAccuracy) <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>expAccuracy)</a>
+<a class="sourceLine" id="cb22-12" title="12">kappa</a></code></pre></div>
+<pre><code>## [1] 0.4705882</code></pre>
+<ul>
+<li>ROC curve (Receiver Operating Characetristics Curve): It is a graphical way for assessing the performance or the accuracy of a classifier, which corresponds to the total proportion of correctly classified observations. The ROC curve is typically used to plot the true positive rate (or sensitivity on y-axis) against the false positive rate (or “1-specificity” on x-axis) at all possible probability cutoffs. This shows the trade off between the rate at which you can correctly predict something with the rate of incorrectly predicting something. The **Area Under the Curve *(AUC)** summarizes the overall performance of the classifier, over all possible probability cutoffs. It represents the ability of a classification algorithm to distinguish 1s from 0s</li>
+</ul>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">library</span>(pROC)</a></code></pre></div>
+<pre><code>## Type &#39;citation(&quot;pROC&quot;)&#39; for a citation.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;pROC&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     cov, smooth, var</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># Compute roc</span></a>
+<a class="sourceLine" id="cb28-2" title="2">res.roc &lt;-<span class="st"> </span><span class="kw">roc</span>(observed.classes, prediction.probabilities)</a></code></pre></div>
+<pre><code>## Setting levels: control = neg, case = pos</code></pre>
+<pre><code>## Setting direction: controls &lt; cases</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="kw">plot.roc</span>(res.roc, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The gray diagonal line represents a classifier no better than random chance. A highly performant classifier will have an ROC that rises steeply to the top-left corner, that is it will correctly identify lots of positives without misclassifying lots of negatives as positives. If we want a classifier model with a specificity of at least 60%, then the sensitivity is about 0.88%. The corresponding probability threshold can be extract as follow:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># Extract some interesting results</span></a>
+<a class="sourceLine" id="cb32-2" title="2">roc.data &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
+<a class="sourceLine" id="cb32-3" title="3">  <span class="dt">thresholds =</span> res.roc<span class="op">$</span>thresholds,</a>
+<a class="sourceLine" id="cb32-4" title="4">  <span class="dt">sensitivity =</span> res.roc<span class="op">$</span>sensitivities,</a>
+<a class="sourceLine" id="cb32-5" title="5">  <span class="dt">specificity =</span> res.roc<span class="op">$</span>specificities</a>
+<a class="sourceLine" id="cb32-6" title="6">)</a></code></pre></div>
+<pre><code>## Warning: `data_frame()` is deprecated as of tibble 1.1.0.
+## Please use `tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="co"># Get the probality threshold for specificity = 0.6</span></a>
+<a class="sourceLine" id="cb34-2" title="2">roc.data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(specificity <span class="op">&gt;=</span><span class="st"> </span><span class="fl">0.6</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 45 x 3
+##    thresholds sensitivity specificity
+##         &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+##  1      0.180       0.923       0.615
+##  2      0.186       0.923       0.635
+##  3      0.193       0.885       0.635
+##  4      0.208       0.846       0.635
+##  5      0.227       0.846       0.654
+##  6      0.237       0.846       0.673
+##  7      0.249       0.846       0.692
+##  8      0.267       0.808       0.692
+##  9      0.278       0.808       0.712
+## 10      0.284       0.808       0.731
+## # ... with 35 more rows</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="co"># plot the best threshold with the highest sum sensitivity + specificity</span></a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="kw">plot.roc</span>(res.roc, <span class="dt">print.auc =</span> <span class="ot">TRUE</span>, <span class="dt">print.thres =</span> <span class="st">&quot;best&quot;</span>)</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<ul>
+<li>Logloss: A perfect model would have a log loss of 0. Log loss increases as the predicted probability diverges from the actual label. Instead of accuracy metric, Log Loss takes into account the uncertainty of the prediction based on how much it varies from the actual label. This gives us a more nuanced view into the performance of our model. We can find in this article, an intereseting explanation of the log loss metric: <a href="https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a" class="uri">https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a</a>.
+<span class="math display">\[LogLoss = -\frac{1}{N} \sum_{i=1}^{N} y_{i}*log(p(y_{i})) + (1-y_{i})*log(1-p(y_{i}))\]</span></li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="co"># convert labels to 0/1</span></a>
+<a class="sourceLine" id="cb37-2" title="2">observed.classes.binary =<span class="st"> </span><span class="kw">as.character</span>(observed.classes) </a>
+<a class="sourceLine" id="cb37-3" title="3">observed.classes.binary[observed.classes.binary <span class="op">==</span><span class="st"> &quot;neg&quot;</span>] =<span class="st"> </span><span class="dv">0</span></a>
+<a class="sourceLine" id="cb37-4" title="4">observed.classes.binary[observed.classes.binary <span class="op">==</span><span class="st"> &quot;pos&quot;</span>] =<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb37-5" title="5">observed.classes.binary =<span class="st"> </span><span class="kw">as.numeric</span>(observed.classes.binary)</a>
+<a class="sourceLine" id="cb37-6" title="6"><span class="co"># log loss function</span></a>
+<a class="sourceLine" id="cb37-7" title="7">LogLossMetric=<span class="cf">function</span>(actual, predicted)</a>
+<a class="sourceLine" id="cb37-8" title="8">{</a>
+<a class="sourceLine" id="cb37-9" title="9">  result=<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="kw">length</span>(actual)<span class="op">*</span>(<span class="kw">sum</span>((actual<span class="op">*</span><span class="kw">log</span>(predicted)<span class="op">+</span>(<span class="dv">1</span><span class="op">-</span>actual)<span class="op">*</span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span>predicted))))</a>
+<a class="sourceLine" id="cb37-10" title="10">  <span class="kw">return</span>(result)</a>
+<a class="sourceLine" id="cb37-11" title="11">}</a>
+<a class="sourceLine" id="cb37-12" title="12"><span class="co"># result</span></a>
+<a class="sourceLine" id="cb37-13" title="13"><span class="kw">LogLossMetric</span>(<span class="dt">actual =</span> observed.classes.binary,</a>
+<a class="sourceLine" id="cb37-14" title="14">              <span class="dt">predicted =</span> prediction.probabilities)</a></code></pre></div>
+<pre><code>## [1] 0.5086568</code></pre>
 </div>
-<div id="adding-dropout" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Adding dropout</h3>
-<p>Dropout consists on randomly setting to zero a number of output features of a layer during the training.
-The idea behind dropout technic is to introduce noise in the output values of a layer in order to remove non significant features.
-The <em>dropout rate</em> is the fraction of the features that are set to zero. It is usually between <code>0.2</code> and <code>0.5</code>.
-During the test phase, no units are dopped out but the layer’s output values are scaled down by a factor equal to the dropout rate to have same number of units active.</p>
-<p>We can implement the both operations at training phase in order to have unchanged output at test phase. Therefore, we scale up by the <em>dropout rate</em> rather than scaling down.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">layer_dropout =<span class="st"> </span>layer_dropout <span class="op">*</span><span class="st"> </span><span class="kw">sample</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">1</span>, <span class="kw">length</span>(layer_output), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb3-2" title="2">layer_dropout =<span class="st"> </span>layer_dropout <span class="op">/</span><span class="st"> </span><span class="fl">0.5</span></a></code></pre></div>
-<p>let’s see how to add dropout in our model with keras</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">16</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">10000</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="st">  </span><span class="kw">layer_dropout</span>(<span class="dt">rate =</span> <span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">16</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="st">  </span><span class="kw">layer_dropout</span>(<span class="dt">rate =</span> <span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-6" title="6"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;sigmoid&quot;</span>)</a></code></pre></div>
+<div id="regression-models-evaluation" class="section level4">
+<h4><span class="header-section-number">2.2.2.2</span> Regression models evaluation</h4>
+<ul>
+<li><p>MSE (Mean Suared Error): It is the average squared difference between the observed actual outome values and the values predicted by the model
+<span class="math display">\[MSE = \frac{1}{n} \sum_{i=1}^{n} (\hat{y_{i}}-y_{i})^2\]</span></p></li>
+<li><p>RMSE (Root Mean Suared Error):It s the squared root of the MSE.</p></li>
+</ul>
+<p><span class="math display">\[RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{y_{i}}-y_{i})^2}\]</span>
+- RSE (Residual Standard Error): It is a variant of the RMSE adjusted for the number of predictors in the model</p>
+<ul>
+<li><p>MAE (Mean Absolute Error): It is the average absolute difference between observed and predicted outcomes
+<span class="math display">\[MSE = \frac{1}{n} \sum_{i=1}^{n} |\hat{y_{i}}-y_{i}|\]</span></p></li>
+<li><p>R-squared (R2): It is the proportion of variation in the outcome that is explained by the predictor variables. The closer R-Squared is to 1 or 100% the better our model will be at predicting our dependent variable.
+<span class="math display">\[R^2 = 1 - \frac{SS_{residual}}{SS_{total}} = 1 -  \frac{\sum_{i=1}^{n} (y_{i}-\hat{y_{i}})^2}{\sum_{i=1}^{n} (y_{i}-\overline{y_{i}})^2}\]</span></p></li>
+<li><p>AIC (Akaike’s Information Criteria): The basic idea of AIC is to penalize the inclusion of additional variables to a model. It adds a penalty that increases the error when including additional terms. The lower the AIC, the better the model.</p></li>
+<li><p>BIC (Bayesian information criteria): It is a variant of AIC with a stronger penalty for including additional variables to the model</p></li>
+</ul>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<pre><code>## -- Attaching packages ------------------ tidyverse 1.3.0 --</code></pre>
+<pre><code>## v tibble  3.0.0     v purrr   0.3.3
+## v tidyr   1.0.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts --------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## x purrr::lift()   masks caret::lift()
+## x MASS::select()  masks dplyr::select()</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="kw">library</span>(modelr)</a>
+<a class="sourceLine" id="cb43-2" title="2"><span class="kw">library</span>(broom)</a></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;broom&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:modelr&#39;:
+## 
+##     bootstrap</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1"><span class="co"># Load the data</span></a>
+<a class="sourceLine" id="cb46-2" title="2"><span class="kw">data</span>(<span class="st">&quot;swiss&quot;</span>)</a>
+<a class="sourceLine" id="cb46-3" title="3"><span class="co"># Inspect the data</span></a>
+<a class="sourceLine" id="cb46-4" title="4"><span class="kw">sample_n</span>(swiss, <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##   Fertility Agriculture Examination Education Catholic Infant.Mortality
+## 1      77.6        37.6          15         7     4.97             20.0
+## 2      77.3        89.7           5         2   100.00             18.3
+## 3      54.3        15.2          31        20     2.15             10.8</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="co"># build model</span></a>
+<a class="sourceLine" id="cb48-2" title="2">model &lt;-<span class="st"> </span><span class="kw">lm</span>(Fertility <span class="op">~</span>., <span class="dt">data =</span> swiss)</a>
+<a class="sourceLine" id="cb48-3" title="3"><span class="co"># generate summary</span></a>
+<a class="sourceLine" id="cb48-4" title="4"><span class="kw">summary</span>(model)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Fertility ~ ., data = swiss)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -15.2743  -5.2617   0.5032   4.1198  15.3213 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)      66.91518   10.70604   6.250 1.91e-07 ***
+## Agriculture      -0.17211    0.07030  -2.448  0.01873 *  
+## Examination      -0.25801    0.25388  -1.016  0.31546    
+## Education        -0.87094    0.18303  -4.758 2.43e-05 ***
+## Catholic          0.10412    0.03526   2.953  0.00519 ** 
+## Infant.Mortality  1.07705    0.38172   2.822  0.00734 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 7.165 on 41 degrees of freedom
+## Multiple R-squared:  0.7067, Adjusted R-squared:  0.671 
+## F-statistic: 19.76 on 5 and 41 DF,  p-value: 5.594e-10</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1"><span class="co"># evaluate the model</span></a>
+<a class="sourceLine" id="cb50-2" title="2"><span class="kw">AIC</span>(model)</a></code></pre></div>
+<pre><code>## [1] 326.0716</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="kw">BIC</span>(model)</a></code></pre></div>
+<pre><code>## [1] 339.0226</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1"><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb54-2" title="2">  <span class="dt">R2 =</span> <span class="kw">rsquare</span>(model, <span class="dt">data =</span> swiss),</a>
+<a class="sourceLine" id="cb54-3" title="3">  <span class="dt">RMSE =</span> <span class="kw">rmse</span>(model, <span class="dt">data =</span> swiss),</a>
+<a class="sourceLine" id="cb54-4" title="4">  <span class="dt">MAE =</span> <span class="kw">mae</span>(model, <span class="dt">data =</span> swiss)</a>
+<a class="sourceLine" id="cb54-5" title="5">)</a></code></pre></div>
+<pre><code>##         R2     RMSE     MAE
+## 1 0.706735 6.692395 5.32138</code></pre>
 
+</div>
 </div>
 </div>
 </div>
@@ -411,6 +649,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

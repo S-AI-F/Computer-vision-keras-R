@@ -24,7 +24,7 @@
 <meta name="author" content="Saif Shabou" />
 
 
-<meta name="date" content="2020-04-19" />
+<meta name="date" content="2020-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,19 +128,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Computer vision with Keras and R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentation</a></li>
 <li class="chapter" data-level="2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Foundamental of machine learning</a><ul>
 <li class="chapter" data-level="2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#types"><i class="fa fa-check"></i><b>2.1</b> Types</a></li>
-<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-of-ml-models"><i class="fa fa-check"></i><b>2.2</b> Evaluation of ML models</a><ul>
+<li class="chapter" data-level="2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#model-performance-evaluation"><i class="fa fa-check"></i><b>2.2</b> Model performance evaluation</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#training-validation-and-test-sets"><i class="fa fa-check"></i><b>2.2.1</b> Training, validation and test sets</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>2.3</b> Overfitting and underfitting</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>2.3.1</b> Reducing the network’s size</a></li>
-<li class="chapter" data-level="2.3.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-weight-regularization"><i class="fa fa-check"></i><b>2.3.2</b> Adding weight regularization</a></li>
-<li class="chapter" data-level="2.3.3" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#adding-dropout"><i class="fa fa-check"></i><b>2.3.3</b> Adding dropout</a></li>
+<li class="chapter" data-level="2.2.2" data-path="foundamental-of-machine-learning.html"><a href="foundamental-of-machine-learning.html#evaluation-metrics"><i class="fa fa-check"></i><b>2.2.2</b> Evaluation metrics</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="neural-networks.html"><a href="neural-networks.html"><i class="fa fa-check"></i><b>3</b> Neural Networks</a><ul>
@@ -149,63 +145,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.2" data-path="neural-networks.html"><a href="neural-networks.html#layers"><i class="fa fa-check"></i><b>3.1.2</b> Layers</a></li>
 <li class="chapter" data-level="3.1.3" data-path="neural-networks.html"><a href="neural-networks.html#activation-functions"><i class="fa fa-check"></i><b>3.1.3</b> Activation functions</a></li>
 <li class="chapter" data-level="3.1.4" data-path="neural-networks.html"><a href="neural-networks.html#loss-functions-and-optimizers"><i class="fa fa-check"></i><b>3.1.4</b> Loss functions and optimizers</a></li>
+<li class="chapter" data-level="3.1.5" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.1.5</b> Building a Neural Network from scratch</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-a-neural-network-from-scratch"><i class="fa fa-check"></i><b>3.2</b> Building a Neural Network from scratch</a></li>
-<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.3</b> Introduction to Keras</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.3.1</b> Installing keras</a></li>
-<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.3.2</b> building model with keras</a></li>
+<li class="chapter" data-level="3.2" data-path="neural-networks.html"><a href="neural-networks.html#introduction-to-keras"><i class="fa fa-check"></i><b>3.2</b> Introduction to Keras</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="neural-networks.html"><a href="neural-networks.html#installing-keras"><i class="fa fa-check"></i><b>3.2.1</b> Installing keras</a></li>
+<li class="chapter" data-level="3.2.2" data-path="neural-networks.html"><a href="neural-networks.html#building-model-with-keras"><i class="fa fa-check"></i><b>3.2.2</b> building model with keras</a></li>
+<li class="chapter" data-level="3.2.3" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.2.3</b> The Kears Functional API</a></li>
+<li class="chapter" data-level="3.2.4" data-path="neural-networks.html"><a href="neural-networks.html#models-as-directed-acyclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.2.4</b> Models as Directed acyclic graphs of layers</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#classifying-movie-reviews-a-binary-classification-example"><i class="fa fa-check"></i><b>3.4</b> Classifying movie reviews: a binary classification example</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="neural-networks.html"><a href="neural-networks.html#the-imdb-dataset"><i class="fa fa-check"></i><b>3.4.1</b> The IMDB dataset</a></li>
-<li class="chapter" data-level="3.4.2" data-path="neural-networks.html"><a href="neural-networks.html#preparing-the-data"><i class="fa fa-check"></i><b>3.4.2</b> preparing the data</a></li>
-<li class="chapter" data-level="3.4.3" data-path="neural-networks.html"><a href="neural-networks.html#build-the-network"><i class="fa fa-check"></i><b>3.4.3</b> Build the network</a></li>
+<li class="chapter" data-level="3.3" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.3</b> Monitoring deep learning models</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.3.1</b> Using callbacks</a></li>
+<li class="chapter" data-level="3.3.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.3.2</b> TensorBoard</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#the-kears-functional-api"><i class="fa fa-check"></i><b>3.5</b> The Kears Functional API</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#multi-input-models"><i class="fa fa-check"></i><b>3.5.1</b> Multi-input models</a></li>
-<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#multi-output-models"><i class="fa fa-check"></i><b>3.5.2</b> Multi-output models</a></li>
-<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#directed-acuclic-graphs-of-layers"><i class="fa fa-check"></i><b>3.5.3</b> Directed acuclic graphs of layers</a></li>
+<li class="chapter" data-level="3.4" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.4</b> Batch normalization</a></li>
+<li class="chapter" data-level="3.5" data-path="neural-networks.html"><a href="neural-networks.html#overfitting-handling"><i class="fa fa-check"></i><b>3.5</b> Overfitting handling</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="neural-networks.html"><a href="neural-networks.html#reducing-the-networks-size"><i class="fa fa-check"></i><b>3.5.1</b> Reducing the network’s size</a></li>
+<li class="chapter" data-level="3.5.2" data-path="neural-networks.html"><a href="neural-networks.html#adding-weight-regularization"><i class="fa fa-check"></i><b>3.5.2</b> Adding weight regularization</a></li>
+<li class="chapter" data-level="3.5.3" data-path="neural-networks.html"><a href="neural-networks.html#adding-dropout"><i class="fa fa-check"></i><b>3.5.3</b> Adding dropout</a></li>
+<li class="chapter" data-level="3.5.4" data-path="neural-networks.html"><a href="neural-networks.html#data-augmentation"><i class="fa fa-check"></i><b>3.5.4</b> Data augmentation</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#monitoring-deep-learning-models"><i class="fa fa-check"></i><b>3.6</b> Monitoring deep learning models</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="neural-networks.html"><a href="neural-networks.html#using-callbacks"><i class="fa fa-check"></i><b>3.6.1</b> Using callbacks</a></li>
-<li class="chapter" data-level="3.6.2" data-path="neural-networks.html"><a href="neural-networks.html#tensorboard"><i class="fa fa-check"></i><b>3.6.2</b> TensorBoard</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="neural-networks.html"><a href="neural-networks.html#batch-normalization"><i class="fa fa-check"></i><b>3.7</b> Batch normalization</a></li>
-<li class="chapter" data-level="3.8" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.8</b> Hyperparameters optimization</a></li>
+<li class="chapter" data-level="3.6" data-path="neural-networks.html"><a href="neural-networks.html#hyperparameters-optimization"><i class="fa fa-check"></i><b>3.6</b> Hyperparameters optimization</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html"><i class="fa fa-check"></i><b>4</b> Deep learning for computer vision</a><ul>
-<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#loading-image-data"><i class="fa fa-check"></i><b>4.1</b> Loading image data</a></li>
-<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.2</b> Image classification with Keras</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.2.1</b> download and prepare the data</a></li>
-<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.2.2</b> Build the model</a></li>
-<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.2.3</b> Compile the model</a></li>
-<li class="chapter" data-level="4.2.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.2.4</b> Fit the model</a></li>
-<li class="chapter" data-level="4.2.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.2.5</b> Make predictions</a></li>
-<li class="chapter" data-level="4.2.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.2.6</b> Evaluate the model</a></li>
-<li class="chapter" data-level="4.2.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.2.7</b> Save the model</a></li>
-<li class="chapter" data-level="4.2.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.2.8</b> reload the model</a></li>
+<li class="chapter" data-level="4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#image-classification-with-keras"><i class="fa fa-check"></i><b>4.1</b> Image classification with Keras</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-data"><i class="fa fa-check"></i><b>4.1.1</b> download and prepare the data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model"><i class="fa fa-check"></i><b>4.1.2</b> Build the model</a></li>
+<li class="chapter" data-level="4.1.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-the-model"><i class="fa fa-check"></i><b>4.1.3</b> Compile the model</a></li>
+<li class="chapter" data-level="4.1.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#fit-the-model"><i class="fa fa-check"></i><b>4.1.4</b> Fit the model</a></li>
+<li class="chapter" data-level="4.1.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#make-predictions"><i class="fa fa-check"></i><b>4.1.5</b> Make predictions</a></li>
+<li class="chapter" data-level="4.1.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model"><i class="fa fa-check"></i><b>4.1.6</b> Evaluate the model</a></li>
+<li class="chapter" data-level="4.1.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#save-the-model"><i class="fa fa-check"></i><b>4.1.7</b> Save the model</a></li>
+<li class="chapter" data-level="4.1.8" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#reload-the-model"><i class="fa fa-check"></i><b>4.1.8</b> reload the model</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.3</b> Introduction to COnvolution Neural Networks</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.3.1</b> Example</a></li>
-<li class="chapter" data-level="4.3.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.3.2</b> The convolution operation</a></li>
-<li class="chapter" data-level="4.3.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.3.3</b> The max-pooling operation</a></li>
+<li class="chapter" data-level="4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#introduction-to-convolution-neural-networks"><i class="fa fa-check"></i><b>4.2</b> Introduction to Convolution Neural Networks</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+<li class="chapter" data-level="4.2.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-convolution-operation"><i class="fa fa-check"></i><b>4.2.2</b> The convolution operation</a></li>
+<li class="chapter" data-level="4.2.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#the-max-pooling-operation"><i class="fa fa-check"></i><b>4.2.3</b> The max-pooling operation</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.4</b> Architectures of CNN</a></li>
-<li class="chapter" data-level="4.5" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#application-dog-vs-cats"><i class="fa fa-check"></i><b>4.5</b> Application Dog VS Cats</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#downloading-data"><i class="fa fa-check"></i><b>4.5.1</b> Downloading data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#building-the-network"><i class="fa fa-check"></i><b>4.5.2</b> Building the network</a></li>
-<li class="chapter" data-level="4.5.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-preprocessing"><i class="fa fa-check"></i><b>4.5.3</b> Data preprocessing</a></li>
-<li class="chapter" data-level="4.5.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#data-augmentation"><i class="fa fa-check"></i><b>4.5.4</b> Data augmentation</a></li>
+<li class="chapter" data-level="4.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#architectures-of-cnn"><i class="fa fa-check"></i><b>4.3</b> Architectures of CNN</a></li>
+<li class="chapter" data-level="4.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#classifcation-examples"><i class="fa fa-check"></i><b>4.4</b> Classifcation examples</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#dataset-dog-vs-cats"><i class="fa fa-check"></i><b>4.4.1</b> Dataset: Dog VS Cats</a></li>
+<li class="chapter" data-level="4.4.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#dataset-cifar10"><i class="fa fa-check"></i><b>4.4.2</b> Dataset: CIFAR10</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-cifar10-dataset"><i class="fa fa-check"></i><b>4.6</b> CNN with CIFAR10 dataset</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#download-and-prepare-the-cifar10-dataset"><i class="fa fa-check"></i><b>4.6.1</b> Download and prepare the CIFAR10 dataset</a></li>
-<li class="chapter" data-level="4.6.2" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#build-the-model-1"><i class="fa fa-check"></i><b>4.6.2</b> Build the model</a></li>
-<li class="chapter" data-level="4.6.3" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#compile-and-train-the-model"><i class="fa fa-check"></i><b>4.6.3</b> Compile and train the model</a></li>
-<li class="chapter" data-level="4.6.4" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#evaluate-the-model-1"><i class="fa fa-check"></i><b>4.6.4</b> Evaluate the model</a></li>
-</ul></li>
-<li class="chapter" data-level="4.7" data-path="deep-learning-for-computer-vision.html"><a href="deep-learning-for-computer-vision.html#cnn-with-fruits-images"><i class="fa fa-check"></i><b>4.7</b> CNN with fruits images</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="transfer-learning.html"><a href="transfer-learning.html"><i class="fa fa-check"></i><b>5</b> Transfer learning</a><ul>
-<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#knowledge"><i class="fa fa-check"></i><b>5.1</b> Knowledge</a><ul>
+<li class="chapter" data-level="5.1" data-path="transfer-learning.html"><a href="transfer-learning.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
 <li class="chapter" data-level="5.1.1" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-transfer-learning"><i class="fa fa-check"></i><b>5.1.1</b> What is Transfer Learning</a></li>
 <li class="chapter" data-level="5.1.2" data-path="transfer-learning.html"><a href="transfer-learning.html#what-is-tensforflow-hub"><i class="fa fa-check"></i><b>5.1.2</b> What is TensforFlow Hub</a></li>
 </ul></li>
@@ -218,16 +202,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.6" data-path="transfer-learning.html"><a href="transfer-learning.html#train-the-model"><i class="fa fa-check"></i><b>5.2.6</b> Train the model</a></li>
 <li class="chapter" data-level="5.2.7" data-path="transfer-learning.html"><a href="transfer-learning.html#export-the-model"><i class="fa fa-check"></i><b>5.2.7</b> Export the model</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learningusing-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learningusing a pretrained CONVNET</a><ul>
+<li class="chapter" data-level="5.3" data-path="transfer-learning.html"><a href="transfer-learning.html#transfer-learning-using-a-pretrained-convnet"><i class="fa fa-check"></i><b>5.3</b> Transfer learning using a pretrained CONVNET</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="transfer-learning.html"><a href="transfer-learning.html#feature-extraction"><i class="fa fa-check"></i><b>5.3.1</b> feature extraction</a></li>
 <li class="chapter" data-level="5.3.2" data-path="transfer-learning.html"><a href="transfer-learning.html#fine-tuning"><i class="fa fa-check"></i><b>5.3.2</b> Fine-tuning</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a><ul>
-<li class="chapter" data-level="6.1" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-intermediate-activations"><i class="fa fa-check"></i><b>6.1</b> Visualizing intermediate activations</a></li>
-<li class="chapter" data-level="6.2" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-convnet-filters"><i class="fa fa-check"></i><b>6.2</b> Visualizing convnet filters</a></li>
-<li class="chapter" data-level="6.3" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html#visualizing-heatmaps-of-class-activation"><i class="fa fa-check"></i><b>6.3</b> Visualizing heatmaps of class activation</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="visualizing-what-convnets-leran.html"><a href="visualizing-what-convnets-leran.html"><i class="fa fa-check"></i><b>6</b> Visualizing what CONVNETS leran</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -251,142 +231,241 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="deep-learning-for-computer-vision" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Deep learning for computer vision</h1>
-<div id="loading-image-data" class="section level2">
-<h2><span class="header-section-number">4.1</span> Loading image data</h2>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" title="1"><span class="kw">library</span>(keras)</a>
-<a class="sourceLine" id="cb55-2" title="2"><span class="kw">library</span>(tfdatasets)</a>
-<a class="sourceLine" id="cb55-3" title="3"></a>
-<a class="sourceLine" id="cb55-4" title="4"><span class="co"># downloading the data in a local directory</span></a>
-<a class="sourceLine" id="cb55-5" title="5">data_dir =<span class="st"> </span><span class="kw">get_file</span>(</a>
-<a class="sourceLine" id="cb55-6" title="6">  <span class="dt">origin =</span> <span class="st">&quot;https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz&quot;</span>,</a>
-<a class="sourceLine" id="cb55-7" title="7">  <span class="dt">fname =</span> <span class="st">&quot;D:/image/DeepLearning-ComputerVision/data/flower_photos.tgz&quot;</span>,</a>
-<a class="sourceLine" id="cb55-8" title="8">  <span class="dt">extract =</span> <span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb55-9" title="9">)</a>
-<a class="sourceLine" id="cb55-10" title="10"></a>
-<a class="sourceLine" id="cb55-11" title="11">data_dir =<span class="st">  </span><span class="kw">file.path</span>(<span class="kw">dirname</span>(data_dir), <span class="st">&quot;flower_photos&quot;</span>)</a></code></pre></div>
-</div>
 <div id="image-classification-with-keras" class="section level2">
-<h2><span class="header-section-number">4.2</span> Image classification with Keras</h2>
+<h2><span class="header-section-number">4.1</span> Image classification with Keras</h2>
 <p>We will see here a simple image classification example using Keras based on the MNIST dataset.</p>
 <div id="download-and-prepare-the-data" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> download and prepare the data</h3>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1"><span class="kw">library</span>(keras)</a>
-<a class="sourceLine" id="cb56-2" title="2"></a>
-<a class="sourceLine" id="cb56-3" title="3"><span class="co"># load data</span></a>
-<a class="sourceLine" id="cb56-4" title="4">mnist =<span class="st"> </span><span class="kw">dataset_mnist</span>()</a>
-<a class="sourceLine" id="cb56-5" title="5"><span class="co"># rescale the data</span></a>
-<a class="sourceLine" id="cb56-6" title="6">mnist<span class="op">$</span>train<span class="op">$</span>x =<span class="st"> </span>mnist<span class="op">$</span>train<span class="op">$</span>x <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
-<a class="sourceLine" id="cb56-7" title="7">mnist<span class="op">$</span>test<span class="op">$</span>x =<span class="st"> </span>mnist<span class="op">$</span>test<span class="op">$</span>x <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
-<a class="sourceLine" id="cb56-8" title="8"><span class="co"># dimensions</span></a>
-<a class="sourceLine" id="cb56-9" title="9"><span class="kw">dim</span>(mnist<span class="op">$</span>train[[<span class="dv">1</span>]])</a>
-<a class="sourceLine" id="cb56-10" title="10"><span class="kw">dim</span>(mnist<span class="op">$</span>test[[<span class="dv">1</span>]])</a></code></pre></div>
+<h3><span class="header-section-number">4.1.1</span> download and prepare the data</h3>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" title="1"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb104-2" title="2"></a>
+<a class="sourceLine" id="cb104-3" title="3"><span class="co"># load data</span></a>
+<a class="sourceLine" id="cb104-4" title="4">mnist =<span class="st"> </span><span class="kw">dataset_mnist</span>()</a>
+<a class="sourceLine" id="cb104-5" title="5"><span class="co"># rescale the data</span></a>
+<a class="sourceLine" id="cb104-6" title="6">mnist<span class="op">$</span>train<span class="op">$</span>x =<span class="st"> </span>mnist<span class="op">$</span>train<span class="op">$</span>x <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
+<a class="sourceLine" id="cb104-7" title="7">mnist<span class="op">$</span>test<span class="op">$</span>x =<span class="st"> </span>mnist<span class="op">$</span>test<span class="op">$</span>x <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
+<a class="sourceLine" id="cb104-8" title="8"><span class="co"># dimensions</span></a>
+<a class="sourceLine" id="cb104-9" title="9"><span class="kw">dim</span>(mnist<span class="op">$</span>train[[<span class="dv">1</span>]])</a></code></pre></div>
+<pre><code>## [1] 60000    28    28</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" title="1"><span class="kw">dim</span>(mnist<span class="op">$</span>test[[<span class="dv">1</span>]])</a></code></pre></div>
+<pre><code>## [1] 10000    28    28</code></pre>
 </div>
 <div id="build-the-model" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> Build the model</h3>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb57-2" title="2"><span class="st">  </span><span class="kw">layer_flatten</span>(<span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">28</span>,<span class="dv">28</span>)) <span class="op">%&gt;%</span><span class="st">  </span><span class="co"># we have to specify the input dimensions for the first layer. In our case we have imahes of 28x28</span></a>
-<a class="sourceLine" id="cb57-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">128</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb57-4" title="4"><span class="st">  </span><span class="kw">layer_dropout</span>(<span class="fl">0.2</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb57-5" title="5"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
-<a class="sourceLine" id="cb57-6" title="6"></a>
-<a class="sourceLine" id="cb57-7" title="7"><span class="kw">summary</span>(model)</a></code></pre></div>
+<h3><span class="header-section-number">4.1.2</span> Build the model</h3>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb108-2" title="2"><span class="st">  </span><span class="kw">layer_flatten</span>(<span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">28</span>,<span class="dv">28</span>)) <span class="op">%&gt;%</span><span class="st">  </span><span class="co"># we have to specify the input dimensions for the first layer. In our case we have imahes of 28x28</span></a>
+<a class="sourceLine" id="cb108-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">128</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb108-4" title="4"><span class="st">  </span><span class="kw">layer_dropout</span>(<span class="fl">0.2</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb108-5" title="5"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
+<a class="sourceLine" id="cb108-6" title="6"></a>
+<a class="sourceLine" id="cb108-7" title="7"><span class="kw">summary</span>(model)</a></code></pre></div>
+<pre><code>## Model: &quot;sequential_1&quot;
+## ________________________________________________________________________________
+## Layer (type)                        Output Shape                    Param #     
+## ================================================================================
+## flatten (Flatten)                   (None, 784)                     0           
+## ________________________________________________________________________________
+## dense_6 (Dense)                     (None, 128)                     100480      
+## ________________________________________________________________________________
+## dropout (Dropout)                   (None, 128)                     0           
+## ________________________________________________________________________________
+## dense_7 (Dense)                     (None, 10)                      1290        
+## ================================================================================
+## Total params: 101,770
+## Trainable params: 101,770
+## Non-trainable params: 0
+## ________________________________________________________________________________</code></pre>
 </div>
 <div id="compile-the-model" class="section level3">
-<h3><span class="header-section-number">4.2.3</span> Compile the model</h3>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb58-2" title="2"><span class="st">  </span><span class="kw">compile</span>(</a>
-<a class="sourceLine" id="cb58-3" title="3">    <span class="dt">loss =</span> <span class="st">&quot;sparse_categorical_crossentropy&quot;</span>,</a>
-<a class="sourceLine" id="cb58-4" title="4">    <span class="dt">optimizer =</span> <span class="st">&quot;adam&quot;</span>,</a>
-<a class="sourceLine" id="cb58-5" title="5">    <span class="dt">metrics =</span> <span class="st">&quot;accuracy&quot;</span></a>
-<a class="sourceLine" id="cb58-6" title="6">  )</a></code></pre></div>
+<h3><span class="header-section-number">4.1.3</span> Compile the model</h3>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb110-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb110-2" title="2"><span class="st">  </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb110-3" title="3">    <span class="dt">loss =</span> <span class="st">&quot;sparse_categorical_crossentropy&quot;</span>,</a>
+<a class="sourceLine" id="cb110-4" title="4">    <span class="dt">optimizer =</span> <span class="st">&quot;adam&quot;</span>,</a>
+<a class="sourceLine" id="cb110-5" title="5">    <span class="dt">metrics =</span> <span class="st">&quot;accuracy&quot;</span></a>
+<a class="sourceLine" id="cb110-6" title="6">  )</a></code></pre></div>
 </div>
 <div id="fit-the-model" class="section level3">
-<h3><span class="header-section-number">4.2.4</span> Fit the model</h3>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb59-2" title="2"><span class="st">  </span><span class="kw">fit</span>(</a>
-<a class="sourceLine" id="cb59-3" title="3">    <span class="dt">x =</span> mnist<span class="op">$</span>train<span class="op">$</span>x, <span class="dt">y =</span> mnist<span class="op">$</span>train<span class="op">$</span>y,</a>
-<a class="sourceLine" id="cb59-4" title="4">    <span class="dt">epochs =</span> <span class="dv">5</span>, <span class="co"># iterations</span></a>
-<a class="sourceLine" id="cb59-5" title="5">    <span class="dt">validation_split =</span> <span class="fl">0.3</span>, <span class="co"># fraction of the training data to be used as validation data</span></a>
-<a class="sourceLine" id="cb59-6" title="6">    <span class="dt">verbose =</span> <span class="dv">2</span> <span class="co"># 0= silent, 1=progress bar,2=one line per epoch</span></a>
-<a class="sourceLine" id="cb59-7" title="7">  )</a></code></pre></div>
+<h3><span class="header-section-number">4.1.4</span> Fit the model</h3>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb111-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb111-2" title="2"><span class="st">  </span><span class="kw">fit</span>(</a>
+<a class="sourceLine" id="cb111-3" title="3">    <span class="dt">x =</span> mnist<span class="op">$</span>train<span class="op">$</span>x, <span class="dt">y =</span> mnist<span class="op">$</span>train<span class="op">$</span>y,</a>
+<a class="sourceLine" id="cb111-4" title="4">    <span class="dt">epochs =</span> <span class="dv">5</span>, <span class="co"># iterations</span></a>
+<a class="sourceLine" id="cb111-5" title="5">    <span class="dt">validation_split =</span> <span class="fl">0.3</span>, <span class="co"># fraction of the training data to be used as validation data</span></a>
+<a class="sourceLine" id="cb111-6" title="6">    <span class="dt">verbose =</span> <span class="dv">2</span> <span class="co"># 0= silent, 1=progress bar,2=one line per epoch</span></a>
+<a class="sourceLine" id="cb111-7" title="7">  )</a></code></pre></div>
 </div>
 <div id="make-predictions" class="section level3">
-<h3><span class="header-section-number">4.2.5</span> Make predictions</h3>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" title="1">predictions &lt;-<span class="st"> </span><span class="kw">predict</span>(model, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb60-2" title="2"><span class="kw">head</span>(predictions, <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb60-3" title="3">predictions &lt;-<span class="st"> </span><span class="kw">predict_classes</span>(model, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb60-4" title="4"><span class="kw">head</span>(predictions, <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb60-5" title="5">predictions &lt;-<span class="st"> </span><span class="kw">predict_proba</span>(model, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb60-6" title="6"><span class="kw">head</span>(predictions, <span class="dv">2</span>)</a></code></pre></div>
+<h3><span class="header-section-number">4.1.5</span> Make predictions</h3>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" title="1">predictions &lt;-<span class="st"> </span><span class="kw">predict</span>(model, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb112-2" title="2"><span class="kw">head</span>(predictions, <span class="dv">2</span>)</a></code></pre></div>
+<pre><code>##              [,1]         [,2]         [,3]         [,4]         [,5]
+## [1,] 3.529128e-06 5.023255e-08 6.188818e-06 0.0011937367 4.015424e-10
+## [2,] 3.211236e-08 3.743406e-03 9.961239e-01 0.0001220347 1.333065e-11
+##              [,6]         [,7]         [,8]        [,9]        [,10]
+## [1,] 2.261655e-08 1.261817e-12 9.987532e-01 6.27417e-07 4.259534e-05
+## [2,] 3.711051e-06 2.744141e-07 2.890228e-13 6.79126e-06 9.612983e-15</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" title="1">predictions &lt;-<span class="st"> </span><span class="kw">predict_classes</span>(model, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb114-2" title="2"><span class="kw">head</span>(predictions, <span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] 7 2</code></pre>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" title="1">predictions &lt;-<span class="st"> </span><span class="kw">predict_proba</span>(model, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb116-2" title="2"><span class="kw">head</span>(predictions, <span class="dv">2</span>)</a></code></pre></div>
+<pre><code>##              [,1]         [,2]         [,3]         [,4]         [,5]
+## [1,] 3.529128e-06 5.023255e-08 6.188818e-06 0.0011937367 4.015424e-10
+## [2,] 3.211236e-08 3.743406e-03 9.961239e-01 0.0001220347 1.333065e-11
+##              [,6]         [,7]         [,8]        [,9]        [,10]
+## [1,] 2.261655e-08 1.261817e-12 9.987532e-01 6.27417e-07 4.259534e-05
+## [2,] 3.711051e-06 2.744141e-07 2.890228e-13 6.79126e-06 9.612983e-15</code></pre>
 </div>
 <div id="evaluate-the-model" class="section level3">
-<h3><span class="header-section-number">4.2.6</span> Evaluate the model</h3>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb61-2" title="2"><span class="st">  </span><span class="kw">evaluate</span>(mnist<span class="op">$</span>test<span class="op">$</span>x, mnist<span class="op">$</span>test<span class="op">$</span>y, <span class="dt">verbose =</span> <span class="dv">0</span>)</a></code></pre></div>
+<h3><span class="header-section-number">4.1.6</span> Evaluate the model</h3>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb118-2" title="2"><span class="st">  </span><span class="kw">evaluate</span>(mnist<span class="op">$</span>test<span class="op">$</span>x, mnist<span class="op">$</span>test<span class="op">$</span>y, <span class="dt">verbose =</span> <span class="dv">0</span>)</a></code></pre></div>
+<pre><code>## $loss
+## [1] 0.09325283
+## 
+## $accuracy
+## [1] 0.9727</code></pre>
 </div>
 <div id="save-the-model" class="section level3">
-<h3><span class="header-section-number">4.2.7</span> Save the model</h3>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" title="1"><span class="kw">save_model_tf</span>(<span class="dt">object =</span> model, <span class="dt">filepath =</span> <span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/mnist&quot;</span>)</a>
-<a class="sourceLine" id="cb62-2" title="2"><span class="kw">save_model_hdf5</span>(<span class="dt">object =</span> model, <span class="dt">filepath =</span> <span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/Mnist_hdf5&quot;</span>)</a></code></pre></div>
+<h3><span class="header-section-number">4.1.7</span> Save the model</h3>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" title="1"><span class="kw">save_model_tf</span>(<span class="dt">object =</span> model, <span class="dt">filepath =</span> <span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/mnist&quot;</span>)</a>
+<a class="sourceLine" id="cb120-2" title="2"><span class="kw">save_model_hdf5</span>(<span class="dt">object =</span> model, <span class="dt">filepath =</span> <span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/Mnist_hdf5&quot;</span>)</a></code></pre></div>
 </div>
 <div id="reload-the-model" class="section level3">
-<h3><span class="header-section-number">4.2.8</span> reload the model</h3>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" title="1">reloaded_model &lt;-<span class="st"> </span><span class="kw">load_model_tf</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/mnist&quot;</span>)</a>
-<a class="sourceLine" id="cb63-2" title="2">reloaded_model_hdf5 =<span class="st"> </span><span class="kw">load_model_hdf5</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/Mnist_hdf5&quot;</span>)</a>
-<a class="sourceLine" id="cb63-3" title="3"></a>
-<a class="sourceLine" id="cb63-4" title="4">predictions_reloaded =<span class="st"> </span><span class="kw">predict</span>(reloaded_model_hdf5, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb63-5" title="5"><span class="kw">head</span>(predictions_reloaded) </a>
-<a class="sourceLine" id="cb63-6" title="6"><span class="kw">head</span>(predictions)</a></code></pre></div>
+<h3><span class="header-section-number">4.1.8</span> reload the model</h3>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb121-1" title="1">reloaded_model &lt;-<span class="st"> </span><span class="kw">load_model_tf</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/mnist&quot;</span>)</a>
+<a class="sourceLine" id="cb121-2" title="2">reloaded_model_hdf5 =<span class="st"> </span><span class="kw">load_model_hdf5</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/Mnist_hdf5&quot;</span>)</a>
+<a class="sourceLine" id="cb121-3" title="3"></a>
+<a class="sourceLine" id="cb121-4" title="4">predictions_reloaded =<span class="st"> </span><span class="kw">predict</span>(reloaded_model_hdf5, mnist<span class="op">$</span>test<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb121-5" title="5"><span class="kw">head</span>(predictions_reloaded) </a></code></pre></div>
+<pre><code>##              [,1]         [,2]         [,3]         [,4]         [,5]
+## [1,] 3.529128e-06 5.023255e-08 6.188818e-06 1.193737e-03 4.015424e-10
+## [2,] 3.211236e-08 3.743406e-03 9.961239e-01 1.220347e-04 1.333065e-11
+## [3,] 2.589487e-07 9.985394e-01 1.053339e-04 2.851183e-05 2.373429e-05
+## [4,] 9.996665e-01 2.241493e-08 1.531596e-05 1.124228e-06 9.338348e-07
+## [5,] 1.878520e-06 4.146345e-08 9.855919e-06 3.727743e-06 9.916103e-01
+## [6,] 4.119136e-10 9.997892e-01 7.075888e-07 5.189237e-07 1.103822e-06
+##              [,6]         [,7]         [,8]         [,9]        [,10]
+## [1,] 2.261655e-08 1.261817e-12 9.987532e-01 6.274170e-07 4.259534e-05
+## [2,] 3.711051e-06 2.744141e-07 2.890228e-13 6.791260e-06 9.612983e-15
+## [3,] 2.637429e-05 2.095207e-05 1.111350e-03 1.431736e-04 8.765668e-07
+## [4,] 2.384290e-06 2.039706e-04 8.382809e-05 2.111165e-08 2.596046e-05
+## [5,] 1.645499e-06 2.099444e-05 3.041392e-05 1.886919e-06 8.319193e-03
+## [6,] 1.491091e-08 1.555326e-08 2.077410e-04 8.532269e-07 1.392535e-08</code></pre>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb123-1" title="1"><span class="kw">head</span>(predictions)</a></code></pre></div>
+<pre><code>##              [,1]         [,2]         [,3]         [,4]         [,5]
+## [1,] 3.529128e-06 5.023255e-08 6.188818e-06 1.193737e-03 4.015424e-10
+## [2,] 3.211236e-08 3.743406e-03 9.961239e-01 1.220347e-04 1.333065e-11
+## [3,] 2.589487e-07 9.985394e-01 1.053339e-04 2.851183e-05 2.373429e-05
+## [4,] 9.996665e-01 2.241493e-08 1.531596e-05 1.124228e-06 9.338348e-07
+## [5,] 1.878520e-06 4.146345e-08 9.855919e-06 3.727743e-06 9.916103e-01
+## [6,] 4.119136e-10 9.997892e-01 7.075888e-07 5.189237e-07 1.103822e-06
+##              [,6]         [,7]         [,8]         [,9]        [,10]
+## [1,] 2.261655e-08 1.261817e-12 9.987532e-01 6.274170e-07 4.259534e-05
+## [2,] 3.711051e-06 2.744141e-07 2.890228e-13 6.791260e-06 9.612983e-15
+## [3,] 2.637429e-05 2.095207e-05 1.111350e-03 1.431736e-04 8.765668e-07
+## [4,] 2.384290e-06 2.039706e-04 8.382809e-05 2.111165e-08 2.596046e-05
+## [5,] 1.645499e-06 2.099444e-05 3.041392e-05 1.886919e-06 8.319193e-03
+## [6,] 1.491091e-08 1.555326e-08 2.077410e-04 8.532269e-07 1.392535e-08</code></pre>
 </div>
 </div>
 <div id="introduction-to-convolution-neural-networks" class="section level2">
-<h2><span class="header-section-number">4.3</span> Introduction to COnvolution Neural Networks</h2>
+<h2><span class="header-section-number">4.2</span> Introduction to Convolution Neural Networks</h2>
 <div id="example" class="section level3">
-<h3><span class="header-section-number">4.3.1</span> Example</h3>
+<h3><span class="header-section-number">4.2.1</span> Example</h3>
 <p>The following lines of code show a basic convnet model structure. It is a stack of <code>layer_conv_2d</code> and <code>layer_max_pooling_2d</code> layers.</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" title="1"><span class="kw">library</span>(keras)</a>
-<a class="sourceLine" id="cb64-2" title="2"></a>
-<a class="sourceLine" id="cb64-3" title="3">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb64-4" title="4"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb64-5" title="5"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb64-6" title="6"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb64-7" title="7"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb64-8" title="8"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" title="1"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb125-2" title="2"></a>
+<a class="sourceLine" id="cb125-3" title="3">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb125-4" title="4"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb125-5" title="5"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb125-6" title="6"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb125-7" title="7"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb125-8" title="8"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>)</a></code></pre></div>
 <p>A convnet takes as input tensors of shape <code>(image_height, image_width, image_channels)</code>. In the example above, we configured the convnet to process inputs of size <code>(28, 28, 1)</code> by specifying the argument <code>input_shape = c(28,28,1)</code>.</p>
-<p>Let’s show the odel architecture</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" title="1">model</a></code></pre></div>
+<p>Let’s show the model architecture</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" title="1">model</a></code></pre></div>
+<pre><code>## Model
+## Model: &quot;sequential_2&quot;
+## ________________________________________________________________________________
+## Layer (type)                        Output Shape                    Param #     
+## ================================================================================
+## conv2d (Conv2D)                     (None, 26, 26, 32)              320         
+## ________________________________________________________________________________
+## max_pooling2d (MaxPooling2D)        (None, 13, 13, 32)              0           
+## ________________________________________________________________________________
+## conv2d_1 (Conv2D)                   (None, 11, 11, 64)              18496       
+## ________________________________________________________________________________
+## max_pooling2d_1 (MaxPooling2D)      (None, 5, 5, 64)                0           
+## ________________________________________________________________________________
+## conv2d_2 (Conv2D)                   (None, 3, 3, 64)                36928       
+## ================================================================================
+## Total params: 55,744
+## Trainable params: 55,744
+## Non-trainable params: 0
+## ________________________________________________________________________________</code></pre>
 <p>Then we feed the last output tensor (of shape <code>(3,3,64)</code>) into a densly connected classifier network. Since the classifiers process vectors (1D), we need to flatten the 3D outputs to 1D before adding dense layers on top.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" title="1">model =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb66-2" title="2"><span class="st">  </span><span class="kw">layer_flatten</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb66-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">64</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb66-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
-<a class="sourceLine" id="cb66-5" title="5">model</a></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" title="1">model =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb128-2" title="2"><span class="st">  </span><span class="kw">layer_flatten</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb128-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">64</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb128-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
+<a class="sourceLine" id="cb128-5" title="5">model</a></code></pre></div>
+<pre><code>## Model
+## Model: &quot;sequential_2&quot;
+## ________________________________________________________________________________
+## Layer (type)                        Output Shape                    Param #     
+## ================================================================================
+## conv2d (Conv2D)                     (None, 26, 26, 32)              320         
+## ________________________________________________________________________________
+## max_pooling2d (MaxPooling2D)        (None, 13, 13, 32)              0           
+## ________________________________________________________________________________
+## conv2d_1 (Conv2D)                   (None, 11, 11, 64)              18496       
+## ________________________________________________________________________________
+## max_pooling2d_1 (MaxPooling2D)      (None, 5, 5, 64)                0           
+## ________________________________________________________________________________
+## conv2d_2 (Conv2D)                   (None, 3, 3, 64)                36928       
+## ________________________________________________________________________________
+## flatten_1 (Flatten)                 (None, 576)                     0           
+## ________________________________________________________________________________
+## dense_8 (Dense)                     (None, 64)                      36928       
+## ________________________________________________________________________________
+## dense_9 (Dense)                     (None, 10)                      650         
+## ================================================================================
+## Total params: 93,322
+## Trainable params: 93,322
+## Non-trainable params: 0
+## ________________________________________________________________________________</code></pre>
 <p>We see that the <code>(3,3,64)</code> ouputs are flattened into vectors of shape <code>(576)</code> before being feeded to dense layers.</p>
 <p>Now let’s train the convnet on the MNIST digits data.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" title="1">mnist =<span class="st"> </span><span class="kw">dataset_mnist</span>()</a>
-<a class="sourceLine" id="cb67-2" title="2"><span class="kw">c</span>(<span class="kw">c</span>(train_images, train_labels), <span class="kw">c</span>(test_images, test_labels)) <span class="op">%&lt;-%</span><span class="st"> </span>mnist</a>
-<a class="sourceLine" id="cb67-3" title="3">train_images =<span class="st"> </span><span class="kw">array_reshape</span>(train_images, <span class="kw">c</span>(<span class="dv">60000</span>, <span class="dv">28</span>, <span class="dv">28</span>, <span class="dv">1</span>))</a>
-<a class="sourceLine" id="cb67-4" title="4">train_images =<span class="st"> </span>train_images <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
-<a class="sourceLine" id="cb67-5" title="5">test_images =<span class="st"> </span><span class="kw">array_reshape</span>(test_images, <span class="kw">c</span>(<span class="dv">10000</span>, <span class="dv">28</span>, <span class="dv">28</span>, <span class="dv">1</span>))</a>
-<a class="sourceLine" id="cb67-6" title="6">test_images =<span class="st"> </span>test_images <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
-<a class="sourceLine" id="cb67-7" title="7">train_labels =<span class="st"> </span><span class="kw">to_categorical</span>(train_labels)</a>
-<a class="sourceLine" id="cb67-8" title="8">test_labels =<span class="st"> </span><span class="kw">to_categorical</span>(test_labels)</a>
-<a class="sourceLine" id="cb67-9" title="9">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">compile</span>(</a>
-<a class="sourceLine" id="cb67-10" title="10">  <span class="dt">optimizer =</span> <span class="st">&quot;rmsprop&quot;</span>,</a>
-<a class="sourceLine" id="cb67-11" title="11">  <span class="dt">loss =</span> <span class="st">&quot;categorical_crossentropy&quot;</span>,</a>
-<a class="sourceLine" id="cb67-12" title="12">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;accuracy&quot;</span>)</a>
-<a class="sourceLine" id="cb67-13" title="13">)</a>
-<a class="sourceLine" id="cb67-14" title="14"></a>
-<a class="sourceLine" id="cb67-15" title="15">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit</span>(</a>
-<a class="sourceLine" id="cb67-16" title="16">  train_images, train_labels,</a>
-<a class="sourceLine" id="cb67-17" title="17">  <span class="dt">epochs =</span> <span class="dv">5</span>, <span class="dt">batch_size =</span> <span class="dv">64</span></a>
-<a class="sourceLine" id="cb67-18" title="18">)</a></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb130-1" title="1">mnist =<span class="st"> </span><span class="kw">dataset_mnist</span>()</a>
+<a class="sourceLine" id="cb130-2" title="2"><span class="kw">c</span>(<span class="kw">c</span>(train_images, train_labels), <span class="kw">c</span>(test_images, test_labels)) <span class="op">%&lt;-%</span><span class="st"> </span>mnist</a>
+<a class="sourceLine" id="cb130-3" title="3">train_images =<span class="st"> </span><span class="kw">array_reshape</span>(train_images, <span class="kw">c</span>(<span class="dv">60000</span>, <span class="dv">28</span>, <span class="dv">28</span>, <span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb130-4" title="4">train_images =<span class="st"> </span>train_images <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
+<a class="sourceLine" id="cb130-5" title="5">test_images =<span class="st"> </span><span class="kw">array_reshape</span>(test_images, <span class="kw">c</span>(<span class="dv">10000</span>, <span class="dv">28</span>, <span class="dv">28</span>, <span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb130-6" title="6">test_images =<span class="st"> </span>test_images <span class="op">/</span><span class="st"> </span><span class="dv">255</span></a>
+<a class="sourceLine" id="cb130-7" title="7">train_labels =<span class="st"> </span><span class="kw">to_categorical</span>(train_labels)</a>
+<a class="sourceLine" id="cb130-8" title="8">test_labels =<span class="st"> </span><span class="kw">to_categorical</span>(test_labels)</a>
+<a class="sourceLine" id="cb130-9" title="9">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb130-10" title="10">  <span class="dt">optimizer =</span> <span class="st">&quot;rmsprop&quot;</span>,</a>
+<a class="sourceLine" id="cb130-11" title="11">  <span class="dt">loss =</span> <span class="st">&quot;categorical_crossentropy&quot;</span>,</a>
+<a class="sourceLine" id="cb130-12" title="12">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;accuracy&quot;</span>)</a>
+<a class="sourceLine" id="cb130-13" title="13">)</a>
+<a class="sourceLine" id="cb130-14" title="14"></a>
+<a class="sourceLine" id="cb130-15" title="15">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit</span>(</a>
+<a class="sourceLine" id="cb130-16" title="16">  train_images, train_labels,</a>
+<a class="sourceLine" id="cb130-17" title="17">  <span class="dt">epochs =</span> <span class="dv">5</span>, <span class="dt">batch_size =</span> <span class="dv">64</span></a>
+<a class="sourceLine" id="cb130-18" title="18">)</a></code></pre></div>
 <p>let’s evaluate the model on the test data</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" title="1">results =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">evaluate</span>(test_images, test_labels)</a>
-<a class="sourceLine" id="cb68-2" title="2">results</a></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb131-1" title="1">results =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">evaluate</span>(test_images, test_labels)</a>
+<a class="sourceLine" id="cb131-2" title="2">results</a></code></pre></div>
+<pre><code>## $loss
+## [1] 0.03118547
+## 
+## $accuracy
+## [1] 0.9914</code></pre>
 </div>
 <div id="the-convolution-operation" class="section level3">
-<h3><span class="header-section-number">4.3.2</span> The convolution operation</h3>
+<h3><span class="header-section-number">4.2.2</span> The convolution operation</h3>
 <p>The objective of convolution layers is to learn local patterns. They have two main charecteristics:</p>
 <ul>
 <li>They are translation invariant</li>
@@ -401,21 +480,21 @@ Convolutions are defined based on two main parameters:</p>
 <p>The convolutio works by sliding windows of size 3x3 or 5x5 over the input feature map and extracting at every location the patch of features. Each patch is then transformed in a 1D vector by computing a tensor product with the weight matrix called <em>convolution kernel</em>.
 We remark that the output width and height can be different from the input widthand height because of border effects and used <em>strides</em>.</p>
 <div id="border-effects-and-padding" class="section level4">
-<h4><span class="header-section-number">4.3.2.1</span> Border effects and padding</h4>
+<h4><span class="header-section-number">4.2.2.1</span> Border effects and padding</h4>
 <p>Border effects make that the output size feature map of convolution is less large that the input feature map (in the previous example from 28x28 to 26x26). We can avoid this effect by using <em>padding</em>, which consists on adding an appropriate number of rows and columns on each side of the input feature map to make it possible to fit center convolution windows around every input tile.</p>
 </div>
 <div id="convolution-strides" class="section level4">
-<h4><span class="header-section-number">4.3.2.2</span> Convolution strides</h4>
+<h4><span class="header-section-number">4.2.2.2</span> Convolution strides</h4>
 <p>The <em>stride</em> represents the distance between two successive windows.</p>
 </div>
 </div>
 <div id="the-max-pooling-operation" class="section level3">
-<h3><span class="header-section-number">4.3.3</span> The max-pooling operation</h3>
+<h3><span class="header-section-number">4.2.3</span> The max-pooling operation</h3>
 <p>Max pooling consists of extracting windows from the input feature maps and outputting the max value of each channel. It is usually done with 2x2 windows and stride of 2, in order to downsample the feature maps by a factor of 2. This operation helps in reducing he number of feature-map coeficients to process.</p>
 </div>
 </div>
 <div id="architectures-of-cnn" class="section level2">
-<h2><span class="header-section-number">4.4</span> Architectures of CNN</h2>
+<h2><span class="header-section-number">4.3</span> Architectures of CNN</h2>
 <ul>
 <li>LeNet-5 (1998)
 It has 2 convolutional with average pooling and 3 fully-connected layers. The activation function is <code>Tanh</code>.</li>
@@ -467,295 +546,393 @@ It has 2 convolutional with average pooling and 3 fully-connected layers. The ac
 <li>MobileNet</li>
 </ul>
 </div>
-<div id="application-dog-vs-cats" class="section level2">
-<h2><span class="header-section-number">4.5</span> Application Dog VS Cats</h2>
-<div id="downloading-data" class="section level3">
-<h3><span class="header-section-number">4.5.1</span> Downloading data</h3>
+<div id="classifcation-examples" class="section level2">
+<h2><span class="header-section-number">4.4</span> Classifcation examples</h2>
+<div id="dataset-dog-vs-cats" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Dataset: Dog VS Cats</h3>
+<div id="downloading-data" class="section level4">
+<h4><span class="header-section-number">4.4.1.1</span> Downloading data</h4>
 <p>We will use the cats vs dogs dataset from kaggle. It contains 25,000 images of dogs and cates (12,500 for each class).
 After downloading the data we will create a new dataset containing three subsets: a training set with 1,000 samples of each class, a validation set with 500 samples of each class, and a test set with 500 samples of each class.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" title="1">original_dataset_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/dogs-vs-cats/train/train&quot;</span></a>
-<a class="sourceLine" id="cb69-2" title="2"></a>
-<a class="sourceLine" id="cb69-3" title="3"><span class="co"># ----------------------- Create base directories</span></a>
-<a class="sourceLine" id="cb69-4" title="4"><span class="co"># base_dir</span></a>
-<a class="sourceLine" id="cb69-5" title="5">base_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/cats_and_dogs_small&quot;</span></a>
-<a class="sourceLine" id="cb69-6" title="6"><span class="kw">dir.create</span>(base_dir)</a>
-<a class="sourceLine" id="cb69-7" title="7"><span class="co"># train_dir</span></a>
-<a class="sourceLine" id="cb69-8" title="8">train_dir =<span class="st"> </span><span class="kw">file.path</span>(base_dir, <span class="st">&quot;train&quot;</span>)</a>
-<a class="sourceLine" id="cb69-9" title="9"><span class="kw">dir.create</span>(train_dir)</a>
-<a class="sourceLine" id="cb69-10" title="10"><span class="co"># validation_dir</span></a>
-<a class="sourceLine" id="cb69-11" title="11">validation_dir =<span class="st"> </span><span class="kw">file.path</span>(base_dir, <span class="st">&quot;validation&quot;</span>)</a>
-<a class="sourceLine" id="cb69-12" title="12"><span class="kw">dir.create</span>(validation_dir)</a>
-<a class="sourceLine" id="cb69-13" title="13"><span class="co"># test_dir</span></a>
-<a class="sourceLine" id="cb69-14" title="14">test_dir =<span class="st"> </span><span class="kw">file.path</span>(base_dir, <span class="st">&quot;test&quot;</span>)</a>
-<a class="sourceLine" id="cb69-15" title="15"><span class="kw">dir.create</span>(test_dir)</a>
-<a class="sourceLine" id="cb69-16" title="16"></a>
-<a class="sourceLine" id="cb69-17" title="17"><span class="co"># ----------------------- train directories</span></a>
-<a class="sourceLine" id="cb69-18" title="18"><span class="co"># train_cats_dir</span></a>
-<a class="sourceLine" id="cb69-19" title="19">train_cats_dir =<span class="st"> </span><span class="kw">file.path</span>(train_dir, <span class="st">&quot;cats&quot;</span>)</a>
-<a class="sourceLine" id="cb69-20" title="20"><span class="kw">dir.create</span>(train_cats_dir)</a>
-<a class="sourceLine" id="cb69-21" title="21"><span class="co"># train_dogs_dir</span></a>
-<a class="sourceLine" id="cb69-22" title="22">train_dogs_dir =<span class="st"> </span><span class="kw">file.path</span>(train_dir, <span class="st">&quot;dogs&quot;</span>)</a>
-<a class="sourceLine" id="cb69-23" title="23"><span class="kw">dir.create</span>(train_dogs_dir)</a>
-<a class="sourceLine" id="cb69-24" title="24"></a>
-<a class="sourceLine" id="cb69-25" title="25"><span class="co"># ----------------------- validation directories</span></a>
-<a class="sourceLine" id="cb69-26" title="26"><span class="co"># validation_cats_dir</span></a>
-<a class="sourceLine" id="cb69-27" title="27">validation_cats_dir =<span class="st"> </span><span class="kw">file.path</span>(validation_dir, <span class="st">&quot;cats&quot;</span>)</a>
-<a class="sourceLine" id="cb69-28" title="28"><span class="kw">dir.create</span>(validation_cats_dir)</a>
-<a class="sourceLine" id="cb69-29" title="29"><span class="co"># validation_dogs_dir</span></a>
-<a class="sourceLine" id="cb69-30" title="30">validation_dogs_dir =<span class="st"> </span><span class="kw">file.path</span>(validation_dir, <span class="st">&quot;dogs&quot;</span>)</a>
-<a class="sourceLine" id="cb69-31" title="31"><span class="kw">dir.create</span>(validation_dogs_dir)</a>
-<a class="sourceLine" id="cb69-32" title="32"></a>
-<a class="sourceLine" id="cb69-33" title="33"><span class="co"># ----------------------- test directories</span></a>
-<a class="sourceLine" id="cb69-34" title="34"><span class="co"># test_cats_dir</span></a>
-<a class="sourceLine" id="cb69-35" title="35">test_cats_dir =<span class="st"> </span><span class="kw">file.path</span>(test_dir, <span class="st">&quot;cats&quot;</span>)</a>
-<a class="sourceLine" id="cb69-36" title="36"><span class="kw">dir.create</span>(test_cats_dir)</a>
-<a class="sourceLine" id="cb69-37" title="37"><span class="co"># test_dogs_dir</span></a>
-<a class="sourceLine" id="cb69-38" title="38">test_dogs_dir =<span class="st"> </span><span class="kw">file.path</span>(test_dir, <span class="st">&quot;dogs&quot;</span>)</a>
-<a class="sourceLine" id="cb69-39" title="39"><span class="kw">dir.create</span>(test_dogs_dir)</a>
-<a class="sourceLine" id="cb69-40" title="40"></a>
-<a class="sourceLine" id="cb69-41" title="41"><span class="co"># ----------------------- copy and rename files</span></a>
-<a class="sourceLine" id="cb69-42" title="42"><span class="co"># ---------- cats</span></a>
-<a class="sourceLine" id="cb69-43" title="43"><span class="co"># train_cats_dir</span></a>
-<a class="sourceLine" id="cb69-44" title="44">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;cat.&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb69-45" title="45"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
-<a class="sourceLine" id="cb69-46" title="46">          <span class="kw">file.path</span>(train_cats_dir))</a>
-<a class="sourceLine" id="cb69-47" title="47"><span class="co"># validation_cats_dir</span></a>
-<a class="sourceLine" id="cb69-48" title="48">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;cat.&quot;</span>,<span class="dv">1001</span><span class="op">:</span><span class="dv">1500</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb69-49" title="49"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
-<a class="sourceLine" id="cb69-50" title="50">          <span class="kw">file.path</span>(validation_cats_dir))</a>
-<a class="sourceLine" id="cb69-51" title="51"><span class="co"># test_cats_dir</span></a>
-<a class="sourceLine" id="cb69-52" title="52">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;cat.&quot;</span>,<span class="dv">1501</span><span class="op">:</span><span class="dv">2000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb69-53" title="53"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
-<a class="sourceLine" id="cb69-54" title="54">          <span class="kw">file.path</span>(test_cats_dir))</a>
-<a class="sourceLine" id="cb69-55" title="55"><span class="co"># ---------- dogs</span></a>
-<a class="sourceLine" id="cb69-56" title="56"><span class="co"># train_dogs_dir</span></a>
-<a class="sourceLine" id="cb69-57" title="57">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;dog.&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb69-58" title="58"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
-<a class="sourceLine" id="cb69-59" title="59">          <span class="kw">file.path</span>(train_dogs_dir))</a>
-<a class="sourceLine" id="cb69-60" title="60"><span class="co"># validation_dogs_dir</span></a>
-<a class="sourceLine" id="cb69-61" title="61">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;dog.&quot;</span>,<span class="dv">1001</span><span class="op">:</span><span class="dv">1500</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb69-62" title="62"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
-<a class="sourceLine" id="cb69-63" title="63">          <span class="kw">file.path</span>(validation_dogs_dir))</a>
-<a class="sourceLine" id="cb69-64" title="64"><span class="co"># test_dogs_dir</span></a>
-<a class="sourceLine" id="cb69-65" title="65">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;dog.&quot;</span>,<span class="dv">1501</span><span class="op">:</span><span class="dv">2000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb69-66" title="66"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
-<a class="sourceLine" id="cb69-67" title="67">          <span class="kw">file.path</span>(test_dogs_dir))</a>
-<a class="sourceLine" id="cb69-68" title="68"></a>
-<a class="sourceLine" id="cb69-69" title="69"><span class="co"># check</span></a>
-<a class="sourceLine" id="cb69-70" title="70"><span class="kw">cat</span>(<span class="st">&quot;total training cat images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(train_cats_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb69-71" title="71"><span class="kw">cat</span>(<span class="st">&quot;total training dog images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(train_dogs_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb69-72" title="72"></a>
-<a class="sourceLine" id="cb69-73" title="73"><span class="kw">cat</span>(<span class="st">&quot;total validation cat images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(validation_cats_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb69-74" title="74"><span class="kw">cat</span>(<span class="st">&quot;total validation dog images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(validation_dogs_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb69-75" title="75"></a>
-<a class="sourceLine" id="cb69-76" title="76"><span class="kw">cat</span>(<span class="st">&quot;total test cat images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(test_cats_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb69-77" title="77"><span class="kw">cat</span>(<span class="st">&quot;total test dog images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(test_dogs_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb133-1" title="1">original_dataset_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/dogs-vs-cats/train/train&quot;</span></a>
+<a class="sourceLine" id="cb133-2" title="2"></a>
+<a class="sourceLine" id="cb133-3" title="3"><span class="co"># ----------------------- Create base directories</span></a>
+<a class="sourceLine" id="cb133-4" title="4"><span class="co"># base_dir</span></a>
+<a class="sourceLine" id="cb133-5" title="5">base_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/cats_and_dogs_small&quot;</span></a>
+<a class="sourceLine" id="cb133-6" title="6"><span class="kw">dir.create</span>(base_dir)</a>
+<a class="sourceLine" id="cb133-7" title="7"><span class="co"># train_dir</span></a>
+<a class="sourceLine" id="cb133-8" title="8">train_dir =<span class="st"> </span><span class="kw">file.path</span>(base_dir, <span class="st">&quot;train&quot;</span>)</a>
+<a class="sourceLine" id="cb133-9" title="9"><span class="kw">dir.create</span>(train_dir)</a>
+<a class="sourceLine" id="cb133-10" title="10"><span class="co"># validation_dir</span></a>
+<a class="sourceLine" id="cb133-11" title="11">validation_dir =<span class="st"> </span><span class="kw">file.path</span>(base_dir, <span class="st">&quot;validation&quot;</span>)</a>
+<a class="sourceLine" id="cb133-12" title="12"><span class="kw">dir.create</span>(validation_dir)</a>
+<a class="sourceLine" id="cb133-13" title="13"><span class="co"># test_dir</span></a>
+<a class="sourceLine" id="cb133-14" title="14">test_dir =<span class="st"> </span><span class="kw">file.path</span>(base_dir, <span class="st">&quot;test&quot;</span>)</a>
+<a class="sourceLine" id="cb133-15" title="15"><span class="kw">dir.create</span>(test_dir)</a>
+<a class="sourceLine" id="cb133-16" title="16"></a>
+<a class="sourceLine" id="cb133-17" title="17"><span class="co"># ----------------------- train directories</span></a>
+<a class="sourceLine" id="cb133-18" title="18"><span class="co"># train_cats_dir</span></a>
+<a class="sourceLine" id="cb133-19" title="19">train_cats_dir =<span class="st"> </span><span class="kw">file.path</span>(train_dir, <span class="st">&quot;cats&quot;</span>)</a>
+<a class="sourceLine" id="cb133-20" title="20"><span class="kw">dir.create</span>(train_cats_dir)</a>
+<a class="sourceLine" id="cb133-21" title="21"><span class="co"># train_dogs_dir</span></a>
+<a class="sourceLine" id="cb133-22" title="22">train_dogs_dir =<span class="st"> </span><span class="kw">file.path</span>(train_dir, <span class="st">&quot;dogs&quot;</span>)</a>
+<a class="sourceLine" id="cb133-23" title="23"><span class="kw">dir.create</span>(train_dogs_dir)</a>
+<a class="sourceLine" id="cb133-24" title="24"></a>
+<a class="sourceLine" id="cb133-25" title="25"><span class="co"># ----------------------- validation directories</span></a>
+<a class="sourceLine" id="cb133-26" title="26"><span class="co"># validation_cats_dir</span></a>
+<a class="sourceLine" id="cb133-27" title="27">validation_cats_dir =<span class="st"> </span><span class="kw">file.path</span>(validation_dir, <span class="st">&quot;cats&quot;</span>)</a>
+<a class="sourceLine" id="cb133-28" title="28"><span class="kw">dir.create</span>(validation_cats_dir)</a>
+<a class="sourceLine" id="cb133-29" title="29"><span class="co"># validation_dogs_dir</span></a>
+<a class="sourceLine" id="cb133-30" title="30">validation_dogs_dir =<span class="st"> </span><span class="kw">file.path</span>(validation_dir, <span class="st">&quot;dogs&quot;</span>)</a>
+<a class="sourceLine" id="cb133-31" title="31"><span class="kw">dir.create</span>(validation_dogs_dir)</a>
+<a class="sourceLine" id="cb133-32" title="32"></a>
+<a class="sourceLine" id="cb133-33" title="33"><span class="co"># ----------------------- test directories</span></a>
+<a class="sourceLine" id="cb133-34" title="34"><span class="co"># test_cats_dir</span></a>
+<a class="sourceLine" id="cb133-35" title="35">test_cats_dir =<span class="st"> </span><span class="kw">file.path</span>(test_dir, <span class="st">&quot;cats&quot;</span>)</a>
+<a class="sourceLine" id="cb133-36" title="36"><span class="kw">dir.create</span>(test_cats_dir)</a>
+<a class="sourceLine" id="cb133-37" title="37"><span class="co"># test_dogs_dir</span></a>
+<a class="sourceLine" id="cb133-38" title="38">test_dogs_dir =<span class="st"> </span><span class="kw">file.path</span>(test_dir, <span class="st">&quot;dogs&quot;</span>)</a>
+<a class="sourceLine" id="cb133-39" title="39"><span class="kw">dir.create</span>(test_dogs_dir)</a>
+<a class="sourceLine" id="cb133-40" title="40"></a>
+<a class="sourceLine" id="cb133-41" title="41"><span class="co"># ----------------------- copy and rename files</span></a>
+<a class="sourceLine" id="cb133-42" title="42"><span class="co"># ---------- cats</span></a>
+<a class="sourceLine" id="cb133-43" title="43"><span class="co"># train_cats_dir</span></a>
+<a class="sourceLine" id="cb133-44" title="44">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;cat.&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb133-45" title="45"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
+<a class="sourceLine" id="cb133-46" title="46">          <span class="kw">file.path</span>(train_cats_dir))</a>
+<a class="sourceLine" id="cb133-47" title="47"><span class="co"># validation_cats_dir</span></a>
+<a class="sourceLine" id="cb133-48" title="48">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;cat.&quot;</span>,<span class="dv">1001</span><span class="op">:</span><span class="dv">1500</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb133-49" title="49"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
+<a class="sourceLine" id="cb133-50" title="50">          <span class="kw">file.path</span>(validation_cats_dir))</a>
+<a class="sourceLine" id="cb133-51" title="51"><span class="co"># test_cats_dir</span></a>
+<a class="sourceLine" id="cb133-52" title="52">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;cat.&quot;</span>,<span class="dv">1501</span><span class="op">:</span><span class="dv">2000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb133-53" title="53"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
+<a class="sourceLine" id="cb133-54" title="54">          <span class="kw">file.path</span>(test_cats_dir))</a>
+<a class="sourceLine" id="cb133-55" title="55"><span class="co"># ---------- dogs</span></a>
+<a class="sourceLine" id="cb133-56" title="56"><span class="co"># train_dogs_dir</span></a>
+<a class="sourceLine" id="cb133-57" title="57">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;dog.&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb133-58" title="58"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
+<a class="sourceLine" id="cb133-59" title="59">          <span class="kw">file.path</span>(train_dogs_dir))</a>
+<a class="sourceLine" id="cb133-60" title="60"><span class="co"># validation_dogs_dir</span></a>
+<a class="sourceLine" id="cb133-61" title="61">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;dog.&quot;</span>,<span class="dv">1001</span><span class="op">:</span><span class="dv">1500</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb133-62" title="62"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
+<a class="sourceLine" id="cb133-63" title="63">          <span class="kw">file.path</span>(validation_dogs_dir))</a>
+<a class="sourceLine" id="cb133-64" title="64"><span class="co"># test_dogs_dir</span></a>
+<a class="sourceLine" id="cb133-65" title="65">fnames =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;dog.&quot;</span>,<span class="dv">1501</span><span class="op">:</span><span class="dv">2000</span>, <span class="st">&quot;.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb133-66" title="66"><span class="kw">file.copy</span>(<span class="kw">file.path</span>(original_dataset_dir, fnames),</a>
+<a class="sourceLine" id="cb133-67" title="67">          <span class="kw">file.path</span>(test_dogs_dir))</a>
+<a class="sourceLine" id="cb133-68" title="68"></a>
+<a class="sourceLine" id="cb133-69" title="69"><span class="co"># check</span></a>
+<a class="sourceLine" id="cb133-70" title="70"><span class="kw">cat</span>(<span class="st">&quot;total training cat images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(train_cats_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb133-71" title="71"><span class="kw">cat</span>(<span class="st">&quot;total training dog images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(train_dogs_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb133-72" title="72"></a>
+<a class="sourceLine" id="cb133-73" title="73"><span class="kw">cat</span>(<span class="st">&quot;total validation cat images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(validation_cats_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb133-74" title="74"><span class="kw">cat</span>(<span class="st">&quot;total validation dog images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(validation_dogs_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb133-75" title="75"></a>
+<a class="sourceLine" id="cb133-76" title="76"><span class="kw">cat</span>(<span class="st">&quot;total test cat images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(test_cats_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb133-77" title="77"><span class="kw">cat</span>(<span class="st">&quot;total test dog images:&quot;</span>, <span class="kw">length</span>(<span class="kw">list.files</span>(test_dogs_dir)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a></code></pre></div>
 </div>
-<div id="building-the-network" class="section level3">
-<h3><span class="header-section-number">4.5.2</span> Building the network</h3>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" title="1"><span class="kw">library</span>(keras)</a>
-<a class="sourceLine" id="cb70-2" title="2">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-3" title="3"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>,<span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-4" title="4"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-5" title="5"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-6" title="6"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-7" title="7"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-8" title="8"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb70-9" title="9"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-10" title="10"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb70-11" title="11"><span class="st">  </span><span class="kw">layer_flatten</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-12" title="12"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">512</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb70-13" title="13"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;sigmoid&quot;</span>) </a>
-<a class="sourceLine" id="cb70-14" title="14"></a>
-<a class="sourceLine" id="cb70-15" title="15"><span class="kw">summary</span>(model)</a></code></pre></div>
+<div id="building-the-network" class="section level4">
+<h4><span class="header-section-number">4.4.1.2</span> Building the network</h4>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" title="1"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb134-2" title="2">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-3" title="3"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>,<span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-4" title="4"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-5" title="5"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-6" title="6"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-7" title="7"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-8" title="8"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb134-9" title="9"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">128</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-10" title="10"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb134-11" title="11"><span class="st">  </span><span class="kw">layer_flatten</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-12" title="12"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">512</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb134-13" title="13"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">1</span>, <span class="dt">activation =</span> <span class="st">&quot;sigmoid&quot;</span>) </a>
+<a class="sourceLine" id="cb134-14" title="14"></a>
+<a class="sourceLine" id="cb134-15" title="15"><span class="kw">summary</span>(model)</a></code></pre></div>
+<pre><code>## Model: &quot;sequential_3&quot;
+## ________________________________________________________________________________
+## Layer (type)                        Output Shape                    Param #     
+## ================================================================================
+## conv2d_3 (Conv2D)                   (None, 148, 148, 32)            896         
+## ________________________________________________________________________________
+## max_pooling2d_2 (MaxPooling2D)      (None, 74, 74, 32)              0           
+## ________________________________________________________________________________
+## conv2d_4 (Conv2D)                   (None, 72, 72, 64)              18496       
+## ________________________________________________________________________________
+## max_pooling2d_3 (MaxPooling2D)      (None, 36, 36, 64)              0           
+## ________________________________________________________________________________
+## conv2d_5 (Conv2D)                   (None, 34, 34, 128)             73856       
+## ________________________________________________________________________________
+## max_pooling2d_4 (MaxPooling2D)      (None, 17, 17, 128)             0           
+## ________________________________________________________________________________
+## conv2d_6 (Conv2D)                   (None, 15, 15, 128)             147584      
+## ________________________________________________________________________________
+## max_pooling2d_5 (MaxPooling2D)      (None, 7, 7, 128)               0           
+## ________________________________________________________________________________
+## flatten_2 (Flatten)                 (None, 6272)                    0           
+## ________________________________________________________________________________
+## dense_10 (Dense)                    (None, 512)                     3211776     
+## ________________________________________________________________________________
+## dense_11 (Dense)                    (None, 1)                       513         
+## ================================================================================
+## Total params: 3,453,121
+## Trainable params: 3,453,121
+## Non-trainable params: 0
+## ________________________________________________________________________________</code></pre>
 <p>For the compilation, we will use the <code>RMSprop</code> optimizer. Because the network ended with a sngle sigmoid unit, we will use binary crossentropy as the loss.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">compile</span>(</a>
-<a class="sourceLine" id="cb71-2" title="2">  <span class="dt">loss =</span> <span class="st">&quot;binary_crossentropy&quot;</span>,</a>
-<a class="sourceLine" id="cb71-3" title="3">  <span class="dt">optimizer =</span> <span class="kw">optimizer_rmsprop</span>(<span class="dt">lr =</span> <span class="fl">0.001</span>),</a>
-<a class="sourceLine" id="cb71-4" title="4">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;acc&quot;</span>)</a>
-<a class="sourceLine" id="cb71-5" title="5">)</a></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb136-1" title="1">model <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb136-2" title="2">  <span class="dt">loss =</span> <span class="st">&quot;binary_crossentropy&quot;</span>,</a>
+<a class="sourceLine" id="cb136-3" title="3">  <span class="dt">optimizer =</span> <span class="kw">optimizer_rmsprop</span>(<span class="dt">lr =</span> <span class="fl">0.001</span>),</a>
+<a class="sourceLine" id="cb136-4" title="4">  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;acc&quot;</span>)</a>
+<a class="sourceLine" id="cb136-5" title="5">)</a></code></pre></div>
 </div>
-<div id="data-preprocessing" class="section level3">
-<h3><span class="header-section-number">4.5.3</span> Data preprocessing</h3>
+<div id="data-preprocessing" class="section level4">
+<h4><span class="header-section-number">4.4.1.3</span> Data preprocessing</h4>
 <p>We need to preprocess the image data before feeding the network: decode the JPEG content to RGB grids of pixels, convert them into floating-point tensors, and rescaling the pixel values from [0,255] to [0,1] interval.
 Keras provides some image processing tools like <code>image_data_generator</code> function that turn auomatically image files on disk into batches of preprocessed tnesors.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" title="1"><span class="co"># rescale all images bu 1/255</span></a>
-<a class="sourceLine" id="cb72-2" title="2">train_datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(<span class="dt">rescale =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>)</a>
-<a class="sourceLine" id="cb72-3" title="3">validation_datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(<span class="dt">rescale =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>)</a>
-<a class="sourceLine" id="cb72-4" title="4"></a>
-<a class="sourceLine" id="cb72-5" title="5">train_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
-<a class="sourceLine" id="cb72-6" title="6">  train_dir, <span class="co"># Traget directory</span></a>
-<a class="sourceLine" id="cb72-7" title="7">  train_datagen, <span class="co"># training data generator</span></a>
-<a class="sourceLine" id="cb72-8" title="8">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>, <span class="dv">150</span>), <span class="co"># resize all images to 150 x 150</span></a>
-<a class="sourceLine" id="cb72-9" title="9">  <span class="dt">batch_size =</span> <span class="dv">20</span>,</a>
-<a class="sourceLine" id="cb72-10" title="10">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span> <span class="co"># because we use binary_crossentropy loss</span></a>
-<a class="sourceLine" id="cb72-11" title="11">)</a>
-<a class="sourceLine" id="cb72-12" title="12"></a>
-<a class="sourceLine" id="cb72-13" title="13">validation_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
-<a class="sourceLine" id="cb72-14" title="14">  validation_dir,</a>
-<a class="sourceLine" id="cb72-15" title="15">  validation_datagen,</a>
-<a class="sourceLine" id="cb72-16" title="16">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>, <span class="dv">150</span>),</a>
-<a class="sourceLine" id="cb72-17" title="17">  <span class="dt">batch_size =</span> <span class="dv">20</span>,</a>
-<a class="sourceLine" id="cb72-18" title="18">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span></a>
-<a class="sourceLine" id="cb72-19" title="19">)</a></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb137-1" title="1"><span class="co"># specify dir</span></a>
+<a class="sourceLine" id="cb137-2" title="2">train_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/cats_and_dogs_small/train&quot;</span></a>
+<a class="sourceLine" id="cb137-3" title="3">validation_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/cats_and_dogs_small/validation&quot;</span></a>
+<a class="sourceLine" id="cb137-4" title="4"></a>
+<a class="sourceLine" id="cb137-5" title="5"><span class="co"># rescale all images bu 1/255</span></a>
+<a class="sourceLine" id="cb137-6" title="6">train_datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(<span class="dt">rescale =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>)</a>
+<a class="sourceLine" id="cb137-7" title="7">validation_datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(<span class="dt">rescale =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>)</a>
+<a class="sourceLine" id="cb137-8" title="8"></a>
+<a class="sourceLine" id="cb137-9" title="9">train_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
+<a class="sourceLine" id="cb137-10" title="10">  train_dir, <span class="co"># Traget directory</span></a>
+<a class="sourceLine" id="cb137-11" title="11">  train_datagen, <span class="co"># training data generator</span></a>
+<a class="sourceLine" id="cb137-12" title="12">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>, <span class="dv">150</span>), <span class="co"># resize all images to 150 x 150</span></a>
+<a class="sourceLine" id="cb137-13" title="13">  <span class="dt">batch_size =</span> <span class="dv">20</span>,</a>
+<a class="sourceLine" id="cb137-14" title="14">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span> <span class="co"># because we use binary_crossentropy loss</span></a>
+<a class="sourceLine" id="cb137-15" title="15">)</a>
+<a class="sourceLine" id="cb137-16" title="16"></a>
+<a class="sourceLine" id="cb137-17" title="17">validation_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
+<a class="sourceLine" id="cb137-18" title="18">  validation_dir,</a>
+<a class="sourceLine" id="cb137-19" title="19">  validation_datagen,</a>
+<a class="sourceLine" id="cb137-20" title="20">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>, <span class="dv">150</span>),</a>
+<a class="sourceLine" id="cb137-21" title="21">  <span class="dt">batch_size =</span> <span class="dv">20</span>,</a>
+<a class="sourceLine" id="cb137-22" title="22">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span></a>
+<a class="sourceLine" id="cb137-23" title="23">)</a></code></pre></div>
 <p>The output of these generators constists on batches of 150x150 RGB iages and binary labels. Each batch contains 20 samples (batch size).</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1">batch =<span class="st"> </span><span class="kw">generator_next</span>(train_generator)</a>
-<a class="sourceLine" id="cb73-2" title="2"><span class="kw">str</span>(batch)</a></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb138-1" title="1">batch =<span class="st"> </span><span class="kw">generator_next</span>(train_generator)</a>
+<a class="sourceLine" id="cb138-2" title="2"><span class="kw">str</span>(batch)</a></code></pre></div>
+<pre><code>## List of 2
+##  $ : num [1:20, 1:150, 1:150, 1:3] 0.749 0.592 0.392 1 0.251 ...
+##  $ : num [1:20(1d)] 0 0 1 1 0 1 1 0 1 1 ...</code></pre>
 <p>We use the <code>fit_generator</code> function to fit the model using the generator. The fitting process needs to know how many samples to draw from the genrator before declaring an epoch over. In this example, we have batches of 20 amples, so we need 100 batches to process the whole 2000 samples. We need to specify the same thing for the validation data. Since we have 1000 validation samples, we need 50 validation steps of batches of 20 images.</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" title="1">history =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit_generator</span>(</a>
-<a class="sourceLine" id="cb74-2" title="2">  train_generator,</a>
-<a class="sourceLine" id="cb74-3" title="3">  <span class="dt">steps_per_epoch =</span> <span class="dv">100</span>,</a>
-<a class="sourceLine" id="cb74-4" title="4">  <span class="dt">epochs =</span> <span class="dv">5</span>,</a>
-<a class="sourceLine" id="cb74-5" title="5">  <span class="dt">validation_data =</span> validation_generator,</a>
-<a class="sourceLine" id="cb74-6" title="6">  <span class="dt">validation_steps =</span> <span class="dv">50</span></a>
-<a class="sourceLine" id="cb74-7" title="7">)</a></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb140-1" title="1">history =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit_generator</span>(</a>
+<a class="sourceLine" id="cb140-2" title="2">  train_generator,</a>
+<a class="sourceLine" id="cb140-3" title="3">  <span class="dt">steps_per_epoch =</span> <span class="dv">100</span>,</a>
+<a class="sourceLine" id="cb140-4" title="4">  <span class="dt">epochs =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb140-5" title="5">  <span class="dt">validation_data =</span> validation_generator,</a>
+<a class="sourceLine" id="cb140-6" title="6">  <span class="dt">validation_steps =</span> <span class="dv">50</span></a>
+<a class="sourceLine" id="cb140-7" title="7">)</a></code></pre></div>
 <p>We can save our model</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">save_model_hdf5</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/cats_and_dogs_small_1.h5&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb141-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">save_model_hdf5</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/cats_and_dogs_small_1.h5&quot;</span>)</a></code></pre></div>
 <p>We can plot the loss and accuracy of the model over the training and validation data during training. It shows an overfitting phenomenon. The training accuracy increases linearly over time wheras tha validation accuracy stops under a less important vale.</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb76-1" title="1"><span class="kw">plot</span>(history)</a></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb142-1" title="1"><span class="kw">plot</span>(history)</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 </div>
-<div id="data-augmentation" class="section level3">
-<h3><span class="header-section-number">4.5.4</span> Data augmentation</h3>
-<p>Iverfitting can be caused by the small quantity of samples for learning. Data augmentation onsists of generating more training data from existing training samples,by <em>augmenting</em> the samples via a number of random transformations that generates realistic and possible images. This helps in exposing the model to more aspects of the data and generalize better.</p>
-<p>In keras, we candefine a number of random trasformations on the images with <code>image_data_generator</code></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" title="1">datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(</a>
-<a class="sourceLine" id="cb77-2" title="2">  <span class="dt">rescale =</span>  <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>,</a>
-<a class="sourceLine" id="cb77-3" title="3">  <span class="dt">rotation_range =</span> <span class="dv">40</span>, <span class="co"># randomly rotate the pictures</span></a>
-<a class="sourceLine" id="cb77-4" title="4">  <span class="dt">width_shift_range =</span> <span class="fl">0.2</span>, <span class="co"># a fraction of total width within which translate pictires horizontally</span></a>
-<a class="sourceLine" id="cb77-5" title="5">  <span class="dt">height_shift_range =</span> <span class="fl">0.2</span>, <span class="co"># a fraction of total height within which translate pictires vertically</span></a>
-<a class="sourceLine" id="cb77-6" title="6">  <span class="dt">shear_range =</span> <span class="fl">0.2</span>, <span class="co"># shifting image</span></a>
-<a class="sourceLine" id="cb77-7" title="7">  <span class="dt">zoom_range =</span> <span class="fl">0.2</span>, <span class="co"># zooming inside the picture</span></a>
-<a class="sourceLine" id="cb77-8" title="8">  <span class="dt">horizontal_flip =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb77-9" title="9">  <span class="dt">fill_mode =</span> <span class="st">&quot;nearest&quot;</span></a>
-<a class="sourceLine" id="cb77-10" title="10">)</a></code></pre></div>
+<div id="data-augmentation-1" class="section level4">
+<h4><span class="header-section-number">4.4.1.4</span> Data augmentation</h4>
+<p>Overfitting can be caused by the small quantity of samples for learning. Data augmentation consists of generating more training data from existing training samples by <em>augmenting</em> the samples via a number of random transformations that generates realistic and possible images. This helps in exposing the model to more aspects of the data and generalize better.</p>
+<p>In keras, we can define a number of random trasformations on the images with <code>image_data_generator</code></p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb143-1" title="1">datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(</a>
+<a class="sourceLine" id="cb143-2" title="2">  <span class="dt">rescale =</span>  <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>,</a>
+<a class="sourceLine" id="cb143-3" title="3">  <span class="dt">rotation_range =</span> <span class="dv">40</span>, <span class="co"># randomly rotate the pictures</span></a>
+<a class="sourceLine" id="cb143-4" title="4">  <span class="dt">width_shift_range =</span> <span class="fl">0.2</span>, <span class="co"># a fraction of total width within which translate pictires horizontally</span></a>
+<a class="sourceLine" id="cb143-5" title="5">  <span class="dt">height_shift_range =</span> <span class="fl">0.2</span>, <span class="co"># a fraction of total height within which translate pictires vertically</span></a>
+<a class="sourceLine" id="cb143-6" title="6">  <span class="dt">shear_range =</span> <span class="fl">0.2</span>, <span class="co"># shifting image</span></a>
+<a class="sourceLine" id="cb143-7" title="7">  <span class="dt">zoom_range =</span> <span class="fl">0.2</span>, <span class="co"># zooming inside the picture</span></a>
+<a class="sourceLine" id="cb143-8" title="8">  <span class="dt">horizontal_flip =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb143-9" title="9">  <span class="dt">fill_mode =</span> <span class="st">&quot;nearest&quot;</span></a>
+<a class="sourceLine" id="cb143-10" title="10">)</a></code></pre></div>
 <p>We can plot transformation effects one sample of image</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" title="1">fnames =<span class="st"> </span><span class="kw">list.files</span>(train_cats_dir, <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb78-2" title="2">img_path =<span class="st"> </span>fnames[[<span class="dv">2</span>]] <span class="co"># choose one image to argument</span></a>
-<a class="sourceLine" id="cb78-3" title="3"></a>
-<a class="sourceLine" id="cb78-4" title="4">img =<span class="st"> </span><span class="kw">image_load</span>(img_path, <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>)) <span class="co"># read the image and resize it</span></a>
-<a class="sourceLine" id="cb78-5" title="5">img_array =<span class="st"> </span><span class="kw">image_to_array</span>(img) <span class="co"># convert the image to an array of shape (150,150,3)</span></a>
-<a class="sourceLine" id="cb78-6" title="6">img_array =<span class="st"> </span><span class="kw">array_reshape</span>(img_array, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">150</span>,<span class="dv">150</span>,<span class="dv">3</span>)) <span class="co"># reshape the array</span></a>
-<a class="sourceLine" id="cb78-7" title="7"></a>
-<a class="sourceLine" id="cb78-8" title="8"><span class="co"># generate batches of randomly transformed images</span></a>
-<a class="sourceLine" id="cb78-9" title="9">augmentation_generator =<span class="st"> </span><span class="kw">flow_images_from_data</span>(</a>
-<a class="sourceLine" id="cb78-10" title="10">  img_array,</a>
-<a class="sourceLine" id="cb78-11" title="11">  <span class="dt">generator =</span> datagen,</a>
-<a class="sourceLine" id="cb78-12" title="12">  <span class="dt">batch_size =</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb78-13" title="13">)</a>
-<a class="sourceLine" id="cb78-14" title="14"></a>
-<a class="sourceLine" id="cb78-15" title="15"><span class="co"># plot the images</span></a>
-<a class="sourceLine" id="cb78-16" title="16">op =<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">pty =</span> <span class="st">&quot;s&quot;</span>, <span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>))</a>
-<a class="sourceLine" id="cb78-17" title="17"><span class="cf">for</span> ( i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>){</a>
-<a class="sourceLine" id="cb78-18" title="18">  batch =<span class="st"> </span><span class="kw">generator_next</span>(augmentation_generator)</a>
-<a class="sourceLine" id="cb78-19" title="19">  <span class="kw">plot</span>(<span class="kw">as.raster</span>(batch[<span class="dv">1</span>,,,]))</a>
-<a class="sourceLine" id="cb78-20" title="20">}</a>
-<a class="sourceLine" id="cb78-21" title="21"><span class="kw">par</span>(op)</a></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb144-1" title="1"><span class="co"># specify dir</span></a>
+<a class="sourceLine" id="cb144-2" title="2">train_cats_dir =<span class="st"> &quot;D:/image/DeepLearning-ComputerVision/data/cats_and_dogs_small/train/cats&quot;</span></a>
+<a class="sourceLine" id="cb144-3" title="3"><span class="co"># load data</span></a>
+<a class="sourceLine" id="cb144-4" title="4">fnames =<span class="st"> </span><span class="kw">list.files</span>(train_cats_dir, <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb144-5" title="5">img_path =<span class="st"> </span>fnames[[<span class="dv">2</span>]] <span class="co"># choose one image to argument</span></a>
+<a class="sourceLine" id="cb144-6" title="6"></a>
+<a class="sourceLine" id="cb144-7" title="7">img =<span class="st"> </span><span class="kw">image_load</span>(img_path, <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>)) <span class="co"># read the image and resize it</span></a>
+<a class="sourceLine" id="cb144-8" title="8">img_array =<span class="st"> </span><span class="kw">image_to_array</span>(img) <span class="co"># convert the image to an array of shape (150,150,3)</span></a>
+<a class="sourceLine" id="cb144-9" title="9">img_array =<span class="st"> </span><span class="kw">array_reshape</span>(img_array, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">150</span>,<span class="dv">150</span>,<span class="dv">3</span>)) <span class="co"># reshape the array</span></a>
+<a class="sourceLine" id="cb144-10" title="10"></a>
+<a class="sourceLine" id="cb144-11" title="11"><span class="co"># generate batches of randomly transformed images</span></a>
+<a class="sourceLine" id="cb144-12" title="12">augmentation_generator =<span class="st"> </span><span class="kw">flow_images_from_data</span>(</a>
+<a class="sourceLine" id="cb144-13" title="13">  img_array,</a>
+<a class="sourceLine" id="cb144-14" title="14">  <span class="dt">generator =</span> datagen,</a>
+<a class="sourceLine" id="cb144-15" title="15">  <span class="dt">batch_size =</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb144-16" title="16">)</a>
+<a class="sourceLine" id="cb144-17" title="17"></a>
+<a class="sourceLine" id="cb144-18" title="18"><span class="co"># plot the images</span></a>
+<a class="sourceLine" id="cb144-19" title="19">op =<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">pty =</span> <span class="st">&quot;s&quot;</span>, <span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>))</a>
+<a class="sourceLine" id="cb144-20" title="20"><span class="cf">for</span> ( i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>){</a>
+<a class="sourceLine" id="cb144-21" title="21">  batch =<span class="st"> </span><span class="kw">generator_next</span>(augmentation_generator)</a>
+<a class="sourceLine" id="cb144-22" title="22">  <span class="kw">plot</span>(<span class="kw">as.raster</span>(batch[<span class="dv">1</span>,,,]))</a>
+<a class="sourceLine" id="cb144-23" title="23">}</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb145-1" title="1"><span class="kw">par</span>(op)</a></code></pre></div>
 <p>Now wa can train the network using data augmentation generator</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" title="1"><span class="co"># apply data augmentation generator to train</span></a>
-<a class="sourceLine" id="cb79-2" title="2">train_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
-<a class="sourceLine" id="cb79-3" title="3">  train_dir,<span class="co">#traget directory</span></a>
-<a class="sourceLine" id="cb79-4" title="4">  datagen,<span class="co"># data generator</span></a>
-<a class="sourceLine" id="cb79-5" title="5">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>),</a>
-<a class="sourceLine" id="cb79-6" title="6">  <span class="dt">batch_size =</span> <span class="dv">32</span>,</a>
-<a class="sourceLine" id="cb79-7" title="7">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span></a>
-<a class="sourceLine" id="cb79-8" title="8">)</a>
-<a class="sourceLine" id="cb79-9" title="9"><span class="co"># load test data</span></a>
-<a class="sourceLine" id="cb79-10" title="10">test_datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(<span class="dt">resscale =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>)</a>
-<a class="sourceLine" id="cb79-11" title="11"><span class="co"># the validation data shouldn&#39;t be augmented</span></a>
-<a class="sourceLine" id="cb79-12" title="12">validation_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
-<a class="sourceLine" id="cb79-13" title="13">  validation_dir,</a>
-<a class="sourceLine" id="cb79-14" title="14">  test_datagen,</a>
-<a class="sourceLine" id="cb79-15" title="15">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>),</a>
-<a class="sourceLine" id="cb79-16" title="16">  <span class="dt">batch_size =</span> <span class="dv">32</span>,</a>
-<a class="sourceLine" id="cb79-17" title="17">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span></a>
-<a class="sourceLine" id="cb79-18" title="18">)</a>
-<a class="sourceLine" id="cb79-19" title="19"><span class="co"># fit the model</span></a>
-<a class="sourceLine" id="cb79-20" title="20">history =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit_generator</span>(</a>
-<a class="sourceLine" id="cb79-21" title="21">  train_generator,</a>
-<a class="sourceLine" id="cb79-22" title="22">  <span class="dt">steps_per_epoch =</span> <span class="dv">100</span>,</a>
-<a class="sourceLine" id="cb79-23" title="23">  <span class="dt">epochs =</span> <span class="dv">5</span>,</a>
-<a class="sourceLine" id="cb79-24" title="24">  <span class="dt">validation_data =</span> validation_generator,</a>
-<a class="sourceLine" id="cb79-25" title="25">  <span class="dt">validation_steps =</span> <span class="dv">50</span></a>
-<a class="sourceLine" id="cb79-26" title="26">)</a></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb146-1" title="1"><span class="co"># apply data augmentation generator to train</span></a>
+<a class="sourceLine" id="cb146-2" title="2">train_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
+<a class="sourceLine" id="cb146-3" title="3">  train_dir,<span class="co">#traget directory</span></a>
+<a class="sourceLine" id="cb146-4" title="4">  datagen,<span class="co"># data generator</span></a>
+<a class="sourceLine" id="cb146-5" title="5">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>),</a>
+<a class="sourceLine" id="cb146-6" title="6">  <span class="dt">batch_size =</span> <span class="dv">32</span>,</a>
+<a class="sourceLine" id="cb146-7" title="7">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span></a>
+<a class="sourceLine" id="cb146-8" title="8">)</a>
+<a class="sourceLine" id="cb146-9" title="9"><span class="co"># load test data</span></a>
+<a class="sourceLine" id="cb146-10" title="10">test_datagen =<span class="st"> </span><span class="kw">image_data_generator</span>(<span class="dt">rescale =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">255</span>)</a>
+<a class="sourceLine" id="cb146-11" title="11"><span class="co"># the validation data shouldn&#39;t be augmented</span></a>
+<a class="sourceLine" id="cb146-12" title="12">validation_generator =<span class="st"> </span><span class="kw">flow_images_from_directory</span>(</a>
+<a class="sourceLine" id="cb146-13" title="13">  validation_dir,</a>
+<a class="sourceLine" id="cb146-14" title="14">  test_datagen,</a>
+<a class="sourceLine" id="cb146-15" title="15">  <span class="dt">target_size =</span> <span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">150</span>),</a>
+<a class="sourceLine" id="cb146-16" title="16">  <span class="dt">batch_size =</span> <span class="dv">32</span>,</a>
+<a class="sourceLine" id="cb146-17" title="17">  <span class="dt">class_mode =</span> <span class="st">&quot;binary&quot;</span></a>
+<a class="sourceLine" id="cb146-18" title="18">)</a>
+<a class="sourceLine" id="cb146-19" title="19"><span class="co"># fit the model</span></a>
+<a class="sourceLine" id="cb146-20" title="20">history =<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fit_generator</span>(</a>
+<a class="sourceLine" id="cb146-21" title="21">  train_generator,</a>
+<a class="sourceLine" id="cb146-22" title="22">  <span class="dt">steps_per_epoch =</span> <span class="dv">100</span>,</a>
+<a class="sourceLine" id="cb146-23" title="23">  <span class="dt">epochs =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb146-24" title="24">  <span class="dt">validation_data =</span> validation_generator,</a>
+<a class="sourceLine" id="cb146-25" title="25">  <span class="dt">validation_steps =</span> <span class="dv">50</span></a>
+<a class="sourceLine" id="cb146-26" title="26">)</a></code></pre></div>
 <p>let’s save the model</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">save_model_hdf5</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/cats_and_dogs_small_2.h5&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" title="1"><span class="kw">plot</span>(history)</a></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb147-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">save_model_hdf5</span>(<span class="st">&quot;D:/image/DeepLearning-ComputerVision/models/cats_and_dogs_small_2.h5&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" title="1"><span class="kw">plot</span>(history)</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
 </div>
 </div>
-<div id="cnn-with-cifar10-dataset" class="section level2">
-<h2><span class="header-section-number">4.6</span> CNN with CIFAR10 dataset</h2>
-<div id="download-and-prepare-the-cifar10-dataset" class="section level3">
-<h3><span class="header-section-number">4.6.1</span> Download and prepare the CIFAR10 dataset</h3>
+<div id="dataset-cifar10" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Dataset: CIFAR10</h3>
+<div id="download-and-prepare-the-cifar10-dataset" class="section level4">
+<h4><span class="header-section-number">4.4.2.1</span> Download and prepare the CIFAR10 dataset</h4>
 <p>We will use CNN to classifiy CIFAR10 dataset which consists of 60,000 color images in 10 classes (6,000 images in each class). It contains 50,000 images for training and 10,000 images for testing.</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" title="1"><span class="kw">library</span>(tensorflow)</a>
-<a class="sourceLine" id="cb82-2" title="2"><span class="kw">library</span>(keras)</a>
-<a class="sourceLine" id="cb82-3" title="3">cifar =<span class="st"> </span><span class="kw">dataset_cifar10</span>()</a>
-<a class="sourceLine" id="cb82-4" title="4"><span class="kw">dim</span>(cifar<span class="op">$</span>train<span class="op">$</span>x)</a></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb149-1" title="1"><span class="kw">library</span>(tensorflow)</a></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;tensorflow&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:caret&#39;:
+## 
+##     train</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb152-1" title="1"><span class="kw">library</span>(keras)</a>
+<a class="sourceLine" id="cb152-2" title="2">cifar =<span class="st"> </span><span class="kw">dataset_cifar10</span>()</a>
+<a class="sourceLine" id="cb152-3" title="3"><span class="kw">dim</span>(cifar<span class="op">$</span>train<span class="op">$</span>x)</a></code></pre></div>
+<pre><code>## [1] 50000    32    32     3</code></pre>
 <p>We can plot the first 25 images to verify the data:</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb83-1" title="1">cifar =<span class="st"> </span><span class="kw">dataset_cifar10</span>()</a>
-<a class="sourceLine" id="cb83-2" title="2"></a>
-<a class="sourceLine" id="cb83-3" title="3"></a>
-<a class="sourceLine" id="cb83-4" title="4">class_names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;airplane&#39;</span>, <span class="st">&#39;automobile&#39;</span>, <span class="st">&#39;bird&#39;</span>, <span class="st">&#39;cat&#39;</span>, <span class="st">&#39;deer&#39;</span>,</a>
-<a class="sourceLine" id="cb83-5" title="5">                 <span class="st">&#39;dog&#39;</span>, <span class="st">&#39;frog&#39;</span>, <span class="st">&#39;horse&#39;</span>, <span class="st">&#39;ship&#39;</span>, <span class="st">&#39;truck&#39;</span>)</a>
-<a class="sourceLine" id="cb83-6" title="6"></a>
-<a class="sourceLine" id="cb83-7" title="7">index &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">30</span></a>
-<a class="sourceLine" id="cb83-8" title="8"></a>
-<a class="sourceLine" id="cb83-9" title="9"><span class="kw">par</span>(<span class="dt">mfcol =</span> <span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>), <span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">1</span>, <span class="dv">4</span>), <span class="dt">oma =</span> <span class="kw">rep</span>(<span class="fl">0.2</span>, <span class="dv">4</span>))</a>
-<a class="sourceLine" id="cb83-10" title="10">cifar<span class="op">$</span>train<span class="op">$</span>x[index,,,] <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb83-11" title="11"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">array_tree</span>(<span class="dv">1</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb83-12" title="12"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">set_names</span>(class_names[cifar<span class="op">$</span>train<span class="op">$</span>y[index] <span class="op">+</span><span class="st"> </span><span class="dv">1</span>]) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb83-13" title="13"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">map</span>(as.raster, <span class="dt">max =</span> <span class="dv">255</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb83-14" title="14"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">iwalk</span>(<span class="op">~</span>{<span class="kw">plot</span>(.x); <span class="kw">title</span>(.y)})</a></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb154-1" title="1">cifar =<span class="st"> </span><span class="kw">dataset_cifar10</span>()</a>
+<a class="sourceLine" id="cb154-2" title="2"></a>
+<a class="sourceLine" id="cb154-3" title="3"></a>
+<a class="sourceLine" id="cb154-4" title="4">class_names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;airplane&#39;</span>, <span class="st">&#39;automobile&#39;</span>, <span class="st">&#39;bird&#39;</span>, <span class="st">&#39;cat&#39;</span>, <span class="st">&#39;deer&#39;</span>,</a>
+<a class="sourceLine" id="cb154-5" title="5">                 <span class="st">&#39;dog&#39;</span>, <span class="st">&#39;frog&#39;</span>, <span class="st">&#39;horse&#39;</span>, <span class="st">&#39;ship&#39;</span>, <span class="st">&#39;truck&#39;</span>)</a>
+<a class="sourceLine" id="cb154-6" title="6"></a>
+<a class="sourceLine" id="cb154-7" title="7">index &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">30</span></a>
+<a class="sourceLine" id="cb154-8" title="8"></a>
+<a class="sourceLine" id="cb154-9" title="9"><span class="kw">par</span>(<span class="dt">mfcol =</span> <span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>), <span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">1</span>, <span class="dv">4</span>), <span class="dt">oma =</span> <span class="kw">rep</span>(<span class="fl">0.2</span>, <span class="dv">4</span>))</a>
+<a class="sourceLine" id="cb154-10" title="10">cifar<span class="op">$</span>train<span class="op">$</span>x[index,,,] <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb154-11" title="11"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">array_tree</span>(<span class="dv">1</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb154-12" title="12"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">set_names</span>(class_names[cifar<span class="op">$</span>train<span class="op">$</span>y[index] <span class="op">+</span><span class="st"> </span><span class="dv">1</span>]) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb154-13" title="13"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">map</span>(as.raster, <span class="dt">max =</span> <span class="dv">255</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb154-14" title="14"><span class="st">  </span>purrr<span class="op">::</span><span class="kw">iwalk</span>(<span class="op">~</span>{<span class="kw">plot</span>(.x); <span class="kw">title</span>(.y)})</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
 </div>
-<div id="build-the-model-1" class="section level3">
-<h3><span class="header-section-number">4.6.2</span> Build the model</h3>
+<div id="build-the-model-1" class="section level4">
+<h4><span class="header-section-number">4.4.2.2</span> Build the model</h4>
 <p>We will build a convolution base for the model follwing a common pattern: a stck of Conv2D and MaxPooling2D layers.
 As input, a CNN takes tensors of shape (image_height, image_width, channels). The format of cifar images is <code>(32,32,3)</code>.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb84-2" title="2"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">32</span>,<span class="dv">32</span>,<span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb84-3" title="3"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb84-4" title="4"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb84-5" title="5"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb84-6" title="6"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>)</a>
-<a class="sourceLine" id="cb84-7" title="7"></a>
-<a class="sourceLine" id="cb84-8" title="8"><span class="kw">summary</span>(model)</a></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb155-1" title="1">model =<span class="st"> </span><span class="kw">keras_model_sequential</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb155-2" title="2"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">32</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>, <span class="dt">input_shape =</span> <span class="kw">c</span>(<span class="dv">32</span>,<span class="dv">32</span>,<span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb155-3" title="3"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb155-4" title="4"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb155-5" title="5"><span class="st">  </span><span class="kw">layer_max_pooling_2d</span>(<span class="dt">pool_size =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb155-6" title="6"><span class="st">  </span><span class="kw">layer_conv_2d</span>(<span class="dt">filters =</span> <span class="dv">64</span>, <span class="dt">kernel_size =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>), <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>)</a>
+<a class="sourceLine" id="cb155-7" title="7"></a>
+<a class="sourceLine" id="cb155-8" title="8"><span class="kw">summary</span>(model)</a></code></pre></div>
+<pre><code>## Model: &quot;sequential_4&quot;
+## ________________________________________________________________________________
+## Layer (type)                        Output Shape                    Param #     
+## ================================================================================
+## conv2d_7 (Conv2D)                   (None, 30, 30, 32)              896         
+## ________________________________________________________________________________
+## max_pooling2d_6 (MaxPooling2D)      (None, 15, 15, 32)              0           
+## ________________________________________________________________________________
+## conv2d_8 (Conv2D)                   (None, 13, 13, 64)              18496       
+## ________________________________________________________________________________
+## max_pooling2d_7 (MaxPooling2D)      (None, 6, 6, 64)                0           
+## ________________________________________________________________________________
+## conv2d_9 (Conv2D)                   (None, 4, 4, 64)                36928       
+## ================================================================================
+## Total params: 56,320
+## Trainable params: 56,320
+## Non-trainable params: 0
+## ________________________________________________________________________________</code></pre>
 <p>We will add a dense layr on the top of our covolutional base. Dense layers take vectors as input (which are 1D). So, we need to flatten the 3D output of the convoltion base to 1D before adding layers on top. CIFAR data has 10 output classes, so the last layer need 10 outputs and a softmax activation.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb85-2" title="2"><span class="st">  </span><span class="kw">layer_flatten</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb85-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">64</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb85-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
-<a class="sourceLine" id="cb85-5" title="5"></a>
-<a class="sourceLine" id="cb85-6" title="6"><span class="kw">summary</span>(model)</a></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb157-1" title="1">model <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb157-2" title="2"><span class="st">  </span><span class="kw">layer_flatten</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb157-3" title="3"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">64</span>, <span class="dt">activation =</span> <span class="st">&quot;relu&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb157-4" title="4"><span class="st">  </span><span class="kw">layer_dense</span>(<span class="dt">units =</span> <span class="dv">10</span>, <span class="dt">activation =</span> <span class="st">&quot;softmax&quot;</span>)</a>
+<a class="sourceLine" id="cb157-5" title="5"></a>
+<a class="sourceLine" id="cb157-6" title="6"><span class="kw">summary</span>(model)</a></code></pre></div>
+<pre><code>## Model: &quot;sequential_4&quot;
+## ________________________________________________________________________________
+## Layer (type)                        Output Shape                    Param #     
+## ================================================================================
+## conv2d_7 (Conv2D)                   (None, 30, 30, 32)              896         
+## ________________________________________________________________________________
+## max_pooling2d_6 (MaxPooling2D)      (None, 15, 15, 32)              0           
+## ________________________________________________________________________________
+## conv2d_8 (Conv2D)                   (None, 13, 13, 64)              18496       
+## ________________________________________________________________________________
+## max_pooling2d_7 (MaxPooling2D)      (None, 6, 6, 64)                0           
+## ________________________________________________________________________________
+## conv2d_9 (Conv2D)                   (None, 4, 4, 64)                36928       
+## ________________________________________________________________________________
+## flatten_3 (Flatten)                 (None, 1024)                    0           
+## ________________________________________________________________________________
+## dense_12 (Dense)                    (None, 64)                      65600       
+## ________________________________________________________________________________
+## dense_13 (Dense)                    (None, 10)                      650         
+## ================================================================================
+## Total params: 122,570
+## Trainable params: 122,570
+## Non-trainable params: 0
+## ________________________________________________________________________________</code></pre>
 </div>
-<div id="compile-and-train-the-model" class="section level3">
-<h3><span class="header-section-number">4.6.3</span> Compile and train the model</h3>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" title="1"><span class="co"># launch TensorBoard (data won&#39;t show up until after the first epoch)</span></a>
-<a class="sourceLine" id="cb86-2" title="2"><span class="co"># tensorboard(&quot;logs/run_a&quot;)</span></a>
-<a class="sourceLine" id="cb86-3" title="3"></a>
-<a class="sourceLine" id="cb86-4" title="4">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">compile</span>(</a>
-<a class="sourceLine" id="cb86-5" title="5">  <span class="dt">optimizer =</span> <span class="st">&quot;adam&quot;</span>,</a>
-<a class="sourceLine" id="cb86-6" title="6">  <span class="dt">loss =</span> <span class="st">&quot;sparse_categorical_crossentropy&quot;</span>,</a>
-<a class="sourceLine" id="cb86-7" title="7">  <span class="dt">metrics =</span> <span class="st">&quot;accuracy&quot;</span></a>
-<a class="sourceLine" id="cb86-8" title="8">)</a>
-<a class="sourceLine" id="cb86-9" title="9"></a>
-<a class="sourceLine" id="cb86-10" title="10">history &lt;-<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb86-11" title="11"><span class="st">  </span><span class="kw">fit</span>(</a>
-<a class="sourceLine" id="cb86-12" title="12">    <span class="dt">x =</span> cifar<span class="op">$</span>train<span class="op">$</span>x, <span class="dt">y =</span> cifar<span class="op">$</span>train<span class="op">$</span>y,</a>
-<a class="sourceLine" id="cb86-13" title="13">    <span class="dt">epochs =</span> <span class="dv">5</span>,</a>
-<a class="sourceLine" id="cb86-14" title="14">    <span class="dt">validation_data =</span> <span class="kw">unname</span>(cifar<span class="op">$</span>test),</a>
-<a class="sourceLine" id="cb86-15" title="15">    <span class="dt">verbose =</span> <span class="dv">2</span></a>
-<a class="sourceLine" id="cb86-16" title="16">    <span class="co"># callbacks = callback_tensorboard(&quot;logs/run_a&quot;)</span></a>
-<a class="sourceLine" id="cb86-17" title="17">  )</a></code></pre></div>
+<div id="compile-and-train-the-model" class="section level4">
+<h4><span class="header-section-number">4.4.2.3</span> Compile and train the model</h4>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb159-1" title="1"><span class="co"># launch TensorBoard (data won&#39;t show up until after the first epoch)</span></a>
+<a class="sourceLine" id="cb159-2" title="2"><span class="co"># tensorboard(&quot;logs/run_a&quot;)</span></a>
+<a class="sourceLine" id="cb159-3" title="3"></a>
+<a class="sourceLine" id="cb159-4" title="4">model <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">compile</span>(</a>
+<a class="sourceLine" id="cb159-5" title="5">  <span class="dt">optimizer =</span> <span class="st">&quot;adam&quot;</span>,</a>
+<a class="sourceLine" id="cb159-6" title="6">  <span class="dt">loss =</span> <span class="st">&quot;sparse_categorical_crossentropy&quot;</span>,</a>
+<a class="sourceLine" id="cb159-7" title="7">  <span class="dt">metrics =</span> <span class="st">&quot;accuracy&quot;</span></a>
+<a class="sourceLine" id="cb159-8" title="8">)</a>
+<a class="sourceLine" id="cb159-9" title="9"></a>
+<a class="sourceLine" id="cb159-10" title="10">history &lt;-<span class="st"> </span>model <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb159-11" title="11"><span class="st">  </span><span class="kw">fit</span>(</a>
+<a class="sourceLine" id="cb159-12" title="12">    <span class="dt">x =</span> cifar<span class="op">$</span>train<span class="op">$</span>x, <span class="dt">y =</span> cifar<span class="op">$</span>train<span class="op">$</span>y,</a>
+<a class="sourceLine" id="cb159-13" title="13">    <span class="dt">epochs =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb159-14" title="14">    <span class="dt">validation_data =</span> <span class="kw">unname</span>(cifar<span class="op">$</span>test),</a>
+<a class="sourceLine" id="cb159-15" title="15">    <span class="dt">verbose =</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb159-16" title="16">    <span class="co"># callbacks = callback_tensorboard(&quot;logs/run_a&quot;)</span></a>
+<a class="sourceLine" id="cb159-17" title="17">  )</a></code></pre></div>
 </div>
-<div id="evaluate-the-model-1" class="section level3">
-<h3><span class="header-section-number">4.6.4</span> Evaluate the model</h3>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb87-1" title="1"><span class="kw">plot</span>(history)</a>
-<a class="sourceLine" id="cb87-2" title="2"><span class="kw">evaluate</span>(model, cifar<span class="op">$</span>test<span class="op">$</span>x, cifar<span class="op">$</span>test<span class="op">$</span>y, <span class="dt">verbose =</span> <span class="dv">0</span>)</a></code></pre></div>
-</div>
-</div>
-<div id="cnn-with-fruits-images" class="section level2">
-<h2><span class="header-section-number">4.7</span> CNN with fruits images</h2>
+<div id="evaluate-the-model-1" class="section level4">
+<h4><span class="header-section-number">4.4.2.4</span> Evaluate the model</h4>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb160-1" title="1"><span class="kw">plot</span>(history)</a></code></pre></div>
+<p><img src="DeepLearning-ComputerVision_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb161-1" title="1"><span class="kw">evaluate</span>(model, cifar<span class="op">$</span>test<span class="op">$</span>x, cifar<span class="op">$</span>test<span class="op">$</span>y, <span class="dt">verbose =</span> <span class="dv">0</span>)</a></code></pre></div>
+<pre><code>## $loss
+## [1] 1.175468
+## 
+## $accuracy
+## [1] 0.5889</code></pre>
 
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -814,6 +991,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
